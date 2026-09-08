@@ -257,7 +257,7 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
     --ptt1-highlight: var(--accc1);}
 
 [data-color-scheme="dark"] .sceditor-toolbar {
-    background: var(--statut-bg) !important;
+    background: var(--statut-texte) !important;
     border-bottom: 1px solid var(--bordure-claire) !important;
     padding: 8px 10px;
     display: flex;
