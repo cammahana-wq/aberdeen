@@ -27,6 +27,7 @@
     --fond-titre-section: #f7f7f7;
     --bordure-tres-claire: #f2f2f2;
     --gris-champ: #444;
+    --structure: #e8e8e8;
 
     /* Gris et bordures utilisés dans la liste des forums / textes divers */
     --gris-fonce: #4a4a4a;
@@ -131,6 +132,7 @@ table.forumline {
     --gris-champ: #d8cec5;
     --black: #f5efe9;
     --accc2: var(--textes);
+    --structure: var(--degrag);
 }
 [data-color-scheme="dark"] body {
     background-color: var(--background) !important;
@@ -258,7 +260,7 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
     padding: 8px 0;
     z-index: 999;
 }
-#navtop, .navtop { background-color: var(--degrag) !important; }
+#navtop, .navtop { background-color: var(--structure) !important; }
 #navtop a, .navtop a, #navtop span, .navtop span, #navtop li, .navtop li { color: var(--white) !important; }
 .navtop td {
     text-align: center;
@@ -407,7 +409,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 /* liens de navigation (haut) */
 .link_pa {
     grid-area: 1 / 1 / 1 / -1;
-    background-color: var(--degrag);
+    background-color: var(--structure);
     opacity: 97%;
     border-radius: 4px;
     font-size: 10px;
@@ -2608,7 +2610,7 @@ div.cont_code {
    BARRES catHead / catBottom + WIDGETS NATIFS MASQUÉS
    ============================================================ */
 .catBottom {
-    background: var(--degrag) !important;
+    background: var(--structure) !important;
     border: 1px solid var(--bordure-carte);
     border-radius: 8px;
     height: 25px !important;
@@ -2637,7 +2639,7 @@ img.sprite-tabs_more {
 }
 
 .catHead {
-    background: var(--degrag) !important;
+    background: var(--structure) !important;
     height: 15px !important;
     border: 1px solid var(--btn-violet-hover-texte);
     border-radius: 15px 15px 0 0;
