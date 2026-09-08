@@ -388,7 +388,7 @@ a.nav:hover {
 .bodyline {
     background: var(--white) !important;
     border-radius: 12px;
-    overflow: hidden;
+   
 }
 
 /* NOTE : les deux variantes (page-accueil / not(page-accueil)) fixaient
