@@ -176,7 +176,8 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 [data-color-scheme="dark"] .spaceRow {
     background: var(--white) !important;
 }
-[data-color-scheme="dark"] a:visited {
+[data-color-scheme="dark"] a:visited
+[data-color-scheme="dark"] a:link {
    color: var(--statut-texte) !important;
 }
 [data-color-scheme="dark"] .forum-tags-title {
