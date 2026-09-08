@@ -206,7 +206,7 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
   background-color: #534842 !important;
 }
 [data-color-scheme="dark"] .catBottom a {
-  background-color: #534842 !important;
+ color: #534842 !important;
 }
 [data-color-scheme="dark"] td.cat,
 [data-color-scheme="dark"] td.catHead,
