@@ -200,6 +200,16 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 [data-color-scheme="dark"] .catHead {
   background-color: #534842 !important;
 }
+[data-color-scheme="dark"] td.cat,
+[data-color-scheme="dark"] td.catHead,
+[data-color-scheme="dark"] td.catSides,
+[data-color-scheme="dark"] td.catLeft,
+[data-color-scheme="dark"] td.catRight,
+[data-color-scheme="dark"] td.catBottom {
+  background-image: none !important;
+  background-color: #534842 !important;
+  border-color: #6b5f58 !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
