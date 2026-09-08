@@ -127,6 +127,7 @@
     --gris-titre: #e8ded6;
     --gris-champ: #d8cec5;
     --black: #f5efe9;
+    --accc2: var(--textes);
 }
 [data-color-scheme="dark"] body {
     background-color: var(--background) !important;
