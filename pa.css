@@ -180,6 +180,7 @@
 [data-color-scheme="dark"] #smileyContainer,
 [data-color-scheme="dark"] #smileyContainer iframe.row1 {
   border: 1px solid #4a4442 !important;
+  background-color: #201c1a !important;
 }
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
