@@ -255,6 +255,18 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
     --ptt1-spacing: 2px;
     --ptt1-color: var(--highlight);
     --ptt1-highlight: var(--accc1);}
+
+[data-color-scheme="dark"] .sceditor-toolbar {
+    background: var(--bordure-fine) !important;
+    border-bottom: 1px solid var(--bordure-claire) !important;
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 .color-scheme-toggle {
     position: fixed;
     bottom: 110px;
