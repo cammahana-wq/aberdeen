@@ -612,11 +612,13 @@
 .insta-post {
   max-width: 400px;
   margin: 20px auto;
-  background: #1a2a1a;
+  background: var(--white);
+  border: 1px solid var(--bordure-carte);
   border-radius: 16px;
   overflow: hidden;
   font: 13px/145% Roboto;
-  color: #e8ded6;
+  color: var(--textes);
+  box-shadow: 0 2px 8px var(--ombre-carte);
 }
 
 .insta-post-header {
@@ -632,7 +634,7 @@
   border-radius: 100%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 2px solid #e07850;
+  border: 2px solid var(--accc1);
 }
 
 .insta-post-header .insta-post-avatar img {
@@ -644,15 +646,14 @@
 .insta-post-header .insta-post-pseudo {
   font-weight: 700;
   font-size: 14px;
-  color: #fff;
+  color: var(--textes);
   flex-grow: 1;
 }
 
-.insta-post-header .insta-post-more {
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: #e8ded6;
-  cursor: default;
+.insta-post-header .insta-post-more svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--textes);
 }
 
 .insta-post-image {
@@ -673,7 +674,14 @@
   align-items: center;
   gap: 14px;
   padding: 12px 16px 4px;
-  font-size: 20px;
+}
+
+.insta-post-actions svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--textes);
+  stroke-width: 1.6;
 }
 
 .insta-post-actions .insta-post-spacer {
@@ -683,7 +691,7 @@
 .insta-post-likes {
   padding: 4px 16px 0;
   font-weight: 700;
-  color: #fff;
+  color: var(--textes);
 }
 
 .insta-post-caption {
@@ -691,9 +699,9 @@
 }
 
 .insta-post-caption b {
-  color: #fff;
+  color: var(--textes);
 }
 
 .insta-post-caption .insta-post-tag {
-  color: #a89e95;
+  color: var(--gris-moyen);
 }
