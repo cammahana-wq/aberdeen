@@ -2635,7 +2635,7 @@ div.cont_code {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     align-items: start;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
 }
 .bottin-colonne-titre {
