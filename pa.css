@@ -177,6 +177,10 @@
 [data-color-scheme="dark"] .sceditor-container {
     background: var(--white) !important;
 }
+[data-color-scheme="dark"] #smileyContainer,
+[data-color-scheme="dark"] #smileyContainer iframe.row1 {
+  border-color: #4a4442 !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
