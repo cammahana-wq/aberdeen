@@ -2607,7 +2607,7 @@ div.cont_code {
 .bottin-ligne {
     font-size: 12px;
     line-height: 1.9;
-    padding: 3px 0;
+    padding: 3px 0 0px 5px;
 }
 .bottin-groupe > .bottin-ligne:last-of-type {
     border-bottom: 1px solid var(--bordure-tres-claire);
