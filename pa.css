@@ -1556,12 +1556,16 @@ table.forumline:has(th.thCornerR) .postbody {
    ============================================================ */
 .colonne-auteur {
     width: 200px;
-    background: var(--profil);
     border-radius: 8px;
     padding: 10px;
     text-align: center;
     vertical-align: top;
     font-family: 'Segoe UI', Arial, sans-serif;
+}
+.colonne-auteur-inner {
+    background: var(--profil);
+    border-radius: 8px;
+    padding: 10px;
 }
 .profil-scroll-wrap {
     border: 1px solid var(--border);
