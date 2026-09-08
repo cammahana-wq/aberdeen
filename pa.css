@@ -231,6 +231,12 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
   border-color: #201c1a !important;
   background-color: #201c1a !important;
 }
+[data-color-scheme="dark"] .bodyline {
+    background: var(--white) !important;
+    border-radius: 12px;
+    overflow: hidden;
+    border: #2a2522;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
