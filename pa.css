@@ -166,6 +166,9 @@
 [data-color-scheme="dark"] .spaceRow {
     background: var(--white) !important;
 }
+[data-color-scheme="dark"] .forum-tags-title {
+    color: var(--textes) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
