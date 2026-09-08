@@ -718,3 +718,7 @@
 .insta-post-caption .insta-post-tag {
   color: var(--gris-moyen);
 }
+
+.insta-post-actions i.bi-heart-fill {
+  color: #e0245e;
+}
