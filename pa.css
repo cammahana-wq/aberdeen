@@ -1561,6 +1561,10 @@ table.forumline:has(th.thCornerR) .postbody {
     vertical-align: top;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
+td.row1.colonne-auteur,
+td.row2.colonne-auteur {
+    background-color: transparent !important;
+}
 .colonne-auteur-inner {
     background: var(--profil);
     border-radius: 8px;
