@@ -102,7 +102,7 @@
     --impt1-border: var(--border);
 }
 table.forumline {
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
 }
 /* ============================================================
