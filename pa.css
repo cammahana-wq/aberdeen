@@ -425,7 +425,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     flex: 1;
 }
 .link_pa a {
-    color: var(--white);
+    color: var(--textes);
     text-decoration: none;
 }
 
