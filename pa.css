@@ -163,6 +163,9 @@
 [data-color-scheme="dark"] .postbody {
     color: var(--textes) !important;
 }
+[data-color-scheme="dark"] .spaceRow {
+    background: var(--white) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
