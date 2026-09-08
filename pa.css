@@ -160,6 +160,9 @@
     background: var(--white) !important;
     color: var(--textes) !important;
 }
+[data-color-scheme="dark"] .postbody {
+    color: var(--textes) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
