@@ -155,7 +155,7 @@
 }
 [data-color-scheme="dark"] .thHead {
     background: var(--degrag) !important;
-    color: var(--gris-lien) !important;
+    color: #534842; !important;
 }
 [data-color-scheme="dark"] td.row1 {
     background: var(--white) !important;
