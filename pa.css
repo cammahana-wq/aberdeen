@@ -2646,7 +2646,7 @@ div.cont_code {
     letter-spacing: 2px;
     color: var(--accc1);
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--bordure-claire);
 }
