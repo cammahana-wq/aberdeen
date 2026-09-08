@@ -2439,7 +2439,6 @@ info b {
    ============================================================ */
 .back-to-top,
 .back-to-bottom {
-    --mcolor1: var(--backtotop-clair);
     --mcolor2: var(--backtotop-fonce);
     align-items: center;
     background: var(--mcolor1);
