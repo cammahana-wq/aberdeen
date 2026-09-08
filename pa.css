@@ -2470,7 +2470,44 @@ div.cont_code {
     font-style: italic;
     margin-left: 6px;
 }
+/* ============================================================
+   BOTTIN DES AVATARS — variante deux colonnes (prénoms / noms)
+   ============================================================ */
+.bottin-avatars.deux-colonnes {
+    max-width: 900px;
+}
+.bottin-deux-colonnes {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    margin-top: 10px;
+}
+.bottin-colonne {
+    flex: 1;
+    min-width: 0;
+}
+.bottin-colonne-titre {
+    font-family: var(--ptt1-font);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accc1);
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bordure-claire);
+}
+.bottin-colonne .bottin-groupe {
+    margin-bottom: 12px;
+}
 
+@media (max-width: 700px) {
+    .bottin-deux-colonnes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 /* ============================================================
    CONTEXTE / RÈGLEMENT / PREMIERS PAS (pages type "contexte-page")
    ============================================================ */
