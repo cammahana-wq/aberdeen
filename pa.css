@@ -640,10 +640,7 @@ a {
     object-fit: cover;
 }
 .bulle {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -655,6 +652,7 @@ a {
     visibility: hidden;
     transition: opacity 0.2s ease;
     z-index: 998;
+     pointer-events: none;
 }
 .bulle-titre {
     display: block;
@@ -664,11 +662,6 @@ a {
 .bulle-nom {
     display: block;
 }
-.lab:hover .bulle {
-    opacity: 1;
-    visibility: visible;
-}
-
 /* votes */
 .blocvotes {
     grid-area: 4 / 3 / -1 / 3;
