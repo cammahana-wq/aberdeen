@@ -150,6 +150,9 @@
 [data-color-scheme="dark"] .gensmall {
     color: #d3cfcd !important;
 }
+th.thHead:has(a[href*="optionsitems"]) .gen {
+  color: #534842 !important;
+}
 [data-color-scheme="dark"] .sceditor-container textarea {
     color: var(--textes) !important;
 }
