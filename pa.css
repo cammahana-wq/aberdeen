@@ -1,0 +1,2852 @@
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+:root {
+    --accc1: #8e3e49;
+    --accc2: #1a070a;
+    --white: #fff;
+    --black: #000;
+    --border: #ededed;
+    --background: #ebebeb;
+    --degrag: #c1a89a;
+    --accent: #3e718e;
+    --highlight: #f2e6d8;
+    --profil: #faf9fc;
+    --cadres: #e8e8e8;
+    --textes: #534842;
+    --liensbefore: #6b5a51;
+    --liensactif: #8e3e49;
+    --cadrestables: #8c5b3e;
+    --messagetx: #888b71;
+    --catright: #888b71;
+    --bordure-carte: #e4e4e4;
+    --ombre-carte: rgba(0, 0, 0, 0.04);
+    --bordure-avatar: #e0e0e0;
+    --gris-titre: #333;
+    --bordure-legere: #ddd;
+    --fond-titre-section: #f7f7f7;
+    --bordure-tres-claire: #f2f2f2;
+    --gris-champ: #444;
+
+[data-color-scheme="dark"]{color-scheme:dark;}
+.color-scheme-toggle,[data-color-scheme="light"] 
+.color-scheme-toggle .dark,[data-color-scheme="dark"] 
+.color-scheme-toggle .light{
+    display:flex;
+}
+[data-color-scheme="dark"] 
+.color-scheme-toggle .dark,[data-color-scheme="light"] 
+.color-scheme-toggle .light{
+    display:none;
+}
+.color-scheme-toggle{
+    position:fixed;
+    bottom:110px;
+    right:10px;width:30px;
+    height:40px;
+    background-color:var(--statut-bg);
+    color:var(--textes);
+    font-size:18px;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    z-index:99;
+}
+.color-scheme-toggle:hover{background-color:var(--btn-violet-hover-1);}
+    /* Gris et bordures utilisés dans la liste des forums / textes divers */
+    --gris-fonce: #4a4a4a;
+    --gris-moyen: #999;
+    --gris-clair: #aaa;
+    --gris-lien: #666;
+    --bordure-claire: #e5e0d5;
+    --bordure-fine: #eee;
+    --bordure-tag: #ccccccb7;
+    --statut-bg: #f4f4f4;
+    --statut-texte: #777;
+    --postdetails-couleur: #8a7a8c;
+[data-color-scheme="dark"] td.row1:hover,
+[data-color-scheme="dark"] td.row3.over:hover {
+    background-color: var(--white) !important;
+}
+[data-color-scheme="dark"] .contexte,
+[data-color-scheme="dark"] .credits {
+    color: var(--liensbefore);
+}
+    /* Ombres */
+    --ombre-legere: rgba(0, 0, 0, 0.08);
+    --ombre-violette-hover: rgba(180, 150, 190, 0.35);
+
+    /* Survol des boutons d'action (post-options) */
+    --btn-violet-hover-1: #c1a89a;
+    --btn-violet-hover-2: #ac9182;
+    --btn-violet-hover-texte: #534842;
+
+    /* Bouton j'aime */
+    --like-1: #fbdfe6;
+    --like-2: #f6c9d4;
+    --like-border: #f0b3c0;
+    --like-texte: #a14f6b;
+    --like-hover-1: #f6c9d4;
+    --like-hover-2: #f0aebd;
+    --like-actif: #ce1b1b;
+
+    /* Bouton retour en haut / bas */
+    --backtotop-clair: #a49689;
+    --backtotop-fonce: #2b302a;
+
+    /* TDF1 — grand titre */
+    --tdf1-font: Georgia, "Times New Roman", serif;
+    --tdf1-size: 30px;
+    --tdf1-preview-size: 15px;
+    --tdf1-weight: normal;
+    --tdf1-spacing: 2px;
+    --tdf1-color: var(--accc1);
+
+    /* ST1 — sous-titre */
+    --st1-font: Georgia, "Times New Roman", serif;
+    --st1-size: 21px;
+    --st1-preview-size: 14px;
+    --st1-weight: normal;
+    --st1-spacing: 1px;
+    --st1-color: var(--black);
+
+    /* PTT1 — petit titre */
+    --ptt1-font: "Times New Roman", Times, serif;
+    --ptt1-size: 13px;
+    --ptt1-weight: bold;
+    --ptt1-spacing: 2px;
+    --ptt1-color: var(--accc1);
+    --ptt1-highlight: var(--highlight);
+
+    /* QUT1 — citation */
+    --qut1-font: Georgia, "Times New Roman", serif;
+    --qut1-size: 15px;
+    --qut1-color: var(--accc2);
+    --qut1-quote: var(--degrag);
+
+    /* NTE1 — note */
+    --nte1-size: 13px;
+    --nte1-color: var(--accc2);
+
+    /* IMPT1 — important */
+    --impt1-color: var(--accc2);
+    --impt1-border: var(--border);
+}
+
+/* ============================================================
+   BARRE DE NAVIGATION (haut de page)
+   ============================================================ */
+.navtop {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    background-color: var(--highlight);
+    padding: 8px 0;
+    z-index: 999;
+}
+#navtop, .navtop { background-color: var(--degrag) !important; }
+#navtop a, .navtop a, #navtop span, .navtop span, #navtop li, .navtop li { color: var(--white) !important; }
+.navtop td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.navtop td > div {
+    margin-left: 0 !important;
+    font-size: 0;
+}
+.navtop a.mainmenu {
+    font-size: 8px;
+    margin: 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--textes);
+}
+.navtop a.mainmenu img {
+    display: none;
+}
+a.mainmenu[href*="/calendar"] { display: none; }
+a.mainmenu[href*="/images"] { display: none; }
+a.mainmenu[href*="/discover"] { display: none; }
+a.mainmenu[href*="/faq"] { display: none; }
+
+/* Fil d'ariane : on ne garde que les vrais fils d'ariane (2+ liens),
+   pas les blocs "aberdeen" isolés (page d'accueil) qui n'ont qu'un seul lien */
+div.nav:not(:has(a.nav ~ a.nav)) {
+    display: none;
+}
+a.nav {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    font-style: italic;
+    text-transform: lowercase;
+    padding-left: 5px;
+    color: var(--gris-moyen);
+    text-decoration: none;
+}
+a.nav:hover {
+    color: var(--accc1);
+}
+
+.gensmall2 {
+    display: none;
+}
+.gensmall3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.gensmall3 br {
+    display: none;
+}
+
+/* Boutons "Nouveau sujet" / "Répondre" (texte, remplace les images natives) */
+.btn-newtopic-reply {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    background: var(--statut-bg);
+    color: var(--statut-texte);
+    transition: all 0.2s ease;
+    margin-right: 6px;
+}
+.btn-newtopic-reply:hover {
+    background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
+    color: var(--btn-violet-hover-texte);
+}
+
+/* ============================================================
+   TOOLBAR FORUMACTIF (#fa_toolbar) — "Bienvenue" + Notifications
+   ============================================================ */
+#fa_left,
+#fa_search,
+#fa_share,
+#fa_hide {
+    display: none !important;
+}
+#fa_toolbar {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    pointer-events: none; /* laisse les clics traverser jusqu'à la navtop en dessous */
+}
+#fa_menu,
+#fa_notifications,
+#fa_menulist,
+#notif_list {
+    pointer-events: auto; /* reste cliquable malgré le pointer-events:none du parent */
+}
+#fa_notifications {
+    padding-right: 8px !important;
+}
+
+/* ============================================================
+   PAGE D'ACCUEIL
+   ============================================================ */
+.bodyline {
+    background: var(--white) !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* NOTE : les deux variantes (page-accueil / not(page-accueil)) fixaient
+   exactement les mêmes valeurs — fusionnées en une seule règle */
+#page-body {
+    margin-top: -10px;
+    position: relative;
+}
+
+/* ---- Grille principale (.pa_1) ---- */
+.pa_1 {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 10px;
+    display: grid;
+    text-align: center;
+    grid-gap: 7px;
+    grid-template: 50px 70px 50px 80px / 1fr 1.2fr 0.95fr;
+    padding: 5px 10px 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.pa_1 .contexte {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pa_1 .sous_titre {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+table.forumline > tbody > tr > td.row1:has(.pa_1) {
+    background: var(--white) !important;
+}
+
+/* liens de navigation (haut) */
+.link_pa {
+    grid-area: 1 / 1 / 1 / -1;
+    background-color: var(--degrag);
+    opacity: 97%;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 10px;
+    display: inline-flex;
+    padding: 15px 0;
+    gap: 20px;
+    justify-content: space-around;
+    flex: 1;
+}
+.link_pa a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* contexte / règlement / crédits : même gabarit de bloc texte, réutilisé
+   par .cadre1 (contexte), .cadre3 (règles) et .cadre6 (crédits) */
+.cadre1,
+.cadre3 {
+    border: 1px var(--border);
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+}
+.cadre1 {
+    grid-area: 2 / 2 / 4 / 2;
+}
+.cadre3 {
+    grid-area: 2 / 3 / 4 / 3;
+}
+.contexte {
+    margin-top: 1%;
+    padding: 10px;
+    width: auto;
+    min-width: 0;
+    font-family: verdana;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: justify;
+    overflow: auto;
+    overflow-wrap: break-word;
+    background-color: var(--white);
+    justify-content: flex-start;
+    flex: 1;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+}
+
+/* staff */
+.cadre2 {
+    grid-area: 2 / 1 / 2 / 3;
+    display: flex;
+}
+.staff {
+    border-radius: 10px;
+    width: 50px;
+    height: 70px;
+    padding: 2px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+.interne {
+    grid-area: 3 / 1 / 3 / 3;
+}
+.lab {
+    position: relative;
+    margin-left: 5px;
+}
+.lab:hover {
+    opacity: 0.8;
+}
+.contenu {
+    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    box-sizing: border-box;
+    margin-top: 5px;
+    opacity: 0;
+    padding: 4px 4;
+    position: absolute;
+    scrollbar-width: none;
+    text-align: center;
+    visibility: hidden;
+    width: 240px; /* doit avoir la même largeur que onglets_pa */
+    height: 36px;
+    text-transform: uppercase;
+}
+.contenu.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.nom {
+    color: var(--accc1);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 1%;
+}
+.sous_titre {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+/* règle globale : tous les liens héritent la couleur du texte parent */
+a {
+    color: inherit;
+}
+
+/* membres du mois */
+.blocmdm {
+    margin-top: 1px;
+    grid-area: 4 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+.cadre4 {
+    display: flex;
+    justify-content: center;
+}
+.titremdm {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.mdm {
+    border-radius: 10px;
+    width: 50px;
+    height: 60px;
+    padding: 2px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+.bulle {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 998;
+}
+.bulle-titre {
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.bulle-nom {
+    display: block;
+}
+.lab:hover .bulle {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* votes */
+.blocvotes {
+    grid-area: 4 / 3 / -1 / 3;
+}
+.cadre5 {
+    border: 1px var(--border);
+    border-radius: 10px;
+}
+.topsites {
+    padding: 20px;
+    min-width: 0;
+    font-family: verdana;
+    font-size: 30px;
+    line-height: 12px;
+    overflow: auto;
+    background-color: var(--white);
+    flex: 1;
+}
+.titrevotes {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 6px;
+    text-transform: lowercase;
+    padding-top: 2px;
+}
+
+/* crédits */
+.cadre6 {
+    grid-area: 4 / 1 / 4 / 1;
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+}
+.credits {
+    margin-top: 1%;
+    padding: 10px;
+    width: auto;
+    min-width: 0;
+    font-family: verdana;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: justify;
+    overflow: auto;
+    overflow-wrap: break-word;
+    background-color: var(--white);
+    justify-content: flex-start;
+    flex: 1;
+}
+.gen:has(script) {
+    font-size: 0; /* réduit la hauteur de la ligne vide créée par le script */
+    line-height: 0;
+}
+
+/* ============================================================
+   LISTE DES FORUMS / CATÉGORIES
+   ============================================================ */
+.forumline {
+    border: none;
+    border-collapse: collapse;
+    background: var(--white);
+}
+img[height="5"] {
+    display: none !important;
+}
+.secondarytitle {
+    background: var(--white);
+    padding: 0px 0 4px 30px;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    position: relative;
+    border-bottom: none;
+    margin-top: -6px;
+}
+.secondarytitle::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: -50px;
+    bottom: 0;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--bordure-claire), transparent 80%);
+}
+.secondarytitle h2 {
+    color: var(--accc1) !important;
+    font-size: 18px !important;
+    font-weight: normal;
+}
+.liste-forums td.row1 img[alt$="messages"] {
+    display: none;
+}
+.liste-forums td.row1 {
+    position: relative;
+}
+.liste-forums td.row1:not(.over) {
+    border-radius: 8px 0 0 8px;
+    box-shadow: inset 3px 0 0 0 var(--degrag);
+}
+.liste-forums tr:has(img[alt="Nouveaux messages"]) td.row1:not(.over) {
+    box-shadow: inset 3px 0 0 0 var(--accc1);
+}
+.liste-forums th:not(.secondarytitle) {
+    background: transparent !important;
+    color: var(--gris-moyen);
+    font-weight: normal;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--bordure-claire);
+    padding: 8px 0;
+}
+.liste-forums {
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+.liste-forums td.row1.over,
+.liste-forums td.row1 {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-right: none;
+    border-left: none;
+    padding: 14px 10px;
+    height: 110px; /* même valeur que .row3.over */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.liste-forums td.row1.over {
+    border-radius: 0px 0px 0px 0px;
+}
+.liste-forums td.row3.over {
+    border-radius: 0 8px 8px 0;
+}
+.forumlink, .forumlink a {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.forumlink,
+.forumlink a,
+.forumlink a:link,
+.forumlink a:visited {
+    color: var(--liensbefore) !important;
+}
+.forumlink a:hover {
+    color: var(--accc1) !important;
+}
+.genmed {
+    display: block;
+    max-height: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--gris-moyen);
+    font-size: 11px;
+    line-height: 1.5;
+    font-style: italic;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--degrag) transparent;
+}
+.genmed::-webkit-scrollbar {
+    width: 4px;
+}
+.genmed::-webkit-scrollbar-track {
+    background: transparent;
+}
+.genmed::-webkit-scrollbar-thumb {
+    background-color: var(--degrag);
+    border-radius: 10px;
+}
+.genmed::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accc1);
+}
+/* tags/liens des sous-forums (LES ANNONCES, ABSENCES...) */
+.supvirg a {
+    display: inline-block;
+    margin: 6px 4px 0 0;
+    padding: 3px 10px;
+    border: 1px solid var(--bordure-tag);
+    border-radius: 20px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: var(--gris-lien);
+}
+.row2, .row3 {
+    background: var(--white);
+    color: var(--gris-clair);
+    font-size: 11px;
+}
+.liste-forums th[width="150"] {
+    visibility: hidden;
+}
+/* bloc "dernier message", à droite */
+.row3.over {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: none;
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 110px; /* identique à .liste-forums td.row1 */
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.row3.over > div {
+    display: none;
+}
+.row3-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+.row3.over .lastpost-avatar {
+    display: block;
+    margin: 0 auto 8px auto;
+}
+.row3.over .gensmall {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    font-size: 11px;
+}
+.row3.over .gensmall > span > a:first-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.row3.over .gensmall > span > a:first-child + br {
+    display: none;
+}
+.lastpost-avatar img {
+    border-radius: 50%;
+    width: 36px;
+    height: 60px;
+    object-fit: cover;
+}
+.lastpost-avatar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.lastpost-date {
+    font-size: 10px;
+    padding-top: 1%;
+    color: var(--gris-moyen);
+    font-style: oblique;
+}
+.spaceRow {
+    background: transparent;
+}
+.liste-forums th[width="50"],
+.liste-forums td.row3:not(.over),
+.liste-forums td.row2 {
+    display: none;
+}
+.liste-forums .hierarchy {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+.stats-forum {
+    display: inline;
+    font-size: 10px;
+    color: var(--gris-moyen);
+    font-weight: normal;
+    text-transform: none;
+    margin-left: 8px;
+}
+
+/* ============================================================
+   LISTE DES SUJETS D'UNE CATÉGORIE
+   (table.forumline:has(th[width="80"]) — table des sujets uniquement,
+   distinguée des autres tableaux .forumline par sa colonne "Réponses")
+   ============================================================ */
+table.forumline:has(th[width="80"]) {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    background: transparent;
+}
+table.forumline:has(th[width="80"]) th {
+    background: transparent !important;
+    color: var(--gris-moyen);
+    font-weight: normal;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--bordure-claire);
+    padding: 8px 4px;
+}
+table.forumline:has(th[width="80"]) th[colspan="3"] {
+    width: 260px;
+}
+table.forumline:has(th[width="80"]) th[width="150"] {
+    width: 220px;
+}
+table.forumline:has(th[width="80"]) td[width="20"] {
+    width: 4px;
+    padding: 0;
+}
+table.forumline:has(th[width="80"]) td[width="20"] img {
+    display: none;
+}
+table.forumline:has(th[width="80"]) tr:has(td.row1) > td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+table.forumline:has(th[width="80"]) tr:has(td.row1) > td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+body.page-sujets .liste-forums td.row1.over,
+body.page-sujets .liste-forums td.row1 {
+    height: 70px;
+}
+body.page-sujets .row3.over {
+    height: 70px;
+}
+body.page-sujets .genmed {
+    max-height: 30px;
+}
+
+/* lignes : fond blanc uni, séparées par un simple filet */
+table.forumline:has(th[width="80"]) td.row1,
+table.forumline:has(th[width="80"]) td.row2,
+table.forumline:has(th[width="80"]) td.row3,
+table.forumline:has(th[width="80"]) td.row3Right {
+    background: var(--white) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--bordure-tres-claire) !important;
+    padding: 12px 8px !important;
+    height: 34px !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+table.forumline:has(th[width="80"]) td[width="100%"] > .gensmall {
+    display: none;
+}
+/* masque le texte fantôme (  + spans vides) laissé après le titre */
+table.forumline:has(th[width="80"]) td[width="100%"] {
+    font-size: 0;
+    line-height: 0;
+}
+
+/* --- cellule titre (icône + badge + h2) --- */
+table.forumline:has(th[width="80"]) div.topictitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    max-height: 20px;
+    overflow: visible;
+}
+table.forumline:has(th[width="80"]) div.topictitle img {
+    display: none;
+}
+
+/* badge "A" / "N" (Annonce globale: / Note:) */
+table.forumline:has(th[width="80"]) .topictitle strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background: var(--highlight);
+    color: var(--accc1);
+    font-family: var(--ptt1-font);
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* encadrement du badge A/N quand il y a un nouveau message
+   (outline plutôt que border : ne décale jamais la mise en page du flex) */
+table.forumline:has(th[width="80"]) .topictitle strong.non-lu {
+    outline: 2px solid var(--accc1);
+    outline-offset: -1px;
+}
+
+/* pastille de statut lu/non-lu, sujets normaux (sans badge A/N) */
+table.forumline:has(th[width="80"]) .statut-pastille {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bordure-claire);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+table.forumline:has(th[width="80"]) .statut-pastille.non-lu {
+    background: var(--accc1);
+}
+
+/* ligne de séparation plus marquée entre les annonces/notes et les sujets normaux */
+table.forumline:has(th[width="80"]) tr.derniere-note {
+    border-bottom: 1px solid var(--degrag) !important;
+}
+
+/* la cellule titre peut s'étendre librement dans les lignes restructurées
+   (le plafond 260px ci-dessous ne s'applique donc plus qu'aux éventuels
+   autres usages hors lignes de sujet) */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td[width="100%"] {
+    max-width: none;
+    width: auto;
+}
+
+table.forumline:has(th[width="80"]) .topic-title,
+table.forumline:has(th[width="80"]) a.topictitle {
+    font-family: inherit; /* reprend la police du texte de description (.genmed) */
+    font-style: italic;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    color: var(--textes) !important;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: visible;
+    display: inline-block;
+}
+table.forumline:has(th[width="80"]) a.topictitle:hover {
+    color: var(--accc1) !important;
+}
+table.forumline:has(th[width="80"]) .topic-title {
+    display: inline;
+}
+
+table.forumline:has(th[width="80"]) td.row2 .postdetails,
+table.forumline:has(th[width="80"]) td.row3 .name {
+    font-size: 12px;
+}
+table.forumline:has(th[width="80"]) td.row3 .name a {
+    color: var(--liensbefore) !important;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+}
+table.forumline:has(th[width="80"]) td.row3 .name a:hover {
+    color: var(--accc1) !important;
+}
+
+/* --- restructuration en grille de chaque ligne de sujet ---
+   (titre en haut, "par : pseudo" dessous, réponses/vues groupées,
+   dernier message sur toute la hauteur, en-tête natif masqué) */
+table.forumline:has(th[width="80"]) tr:has(th) {
+    display: none;
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) {
+    display: grid;
+    grid-template-columns: 8px 8px 1fr 80px 220px;
+    grid-template-rows: auto auto;
+    align-items: stretch;
+    align-content: start; /* évite un espace en trop entre titre et auteur */
+    min-height: 50px;
+    border-bottom: 1px solid var(--bordure-tres-claire);
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td {
+    border-bottom: none !important; /* une seule bordure par ligne, sur le tr */
+}
+
+/* icônes de statut (1re et 2e cellule) */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+/* titre */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+    height: auto !important;
+    padding: 4px 8px 0 !important;
+}
+/* réponses */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
+    height: auto !important;
+    padding: 4px 8px 0 !important;
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(4) .postdetails::before {
+    content: "réponses : ";
+    color: var(--gris-moyen);
+}
+/* auteur, sous le titre */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: left !important;
+    height: auto !important;
+    padding: 0 8px 4px !important;
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(5) .name {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--gris-moyen);
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(5) .name::before {
+    content: "par : ";
+    font-style: normal;
+}
+/* vues, sous les réponses */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(6) {
+    grid-column: 4;
+    grid-row: 2;
+    height: auto !important;
+    padding: 0 8px 4px !important;
+}
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(6) .postdetails::before {
+    content: "vues : ";
+    color: var(--gris-moyen);
+}
+/* dernier message : occupe toute la hauteur des deux lignes */
+table.forumline:has(th[width="80"]) tr:has(td[width="100%"]) td:nth-child(7) {
+    grid-column: 5;
+    grid-row: 1 / span 2;
+    height: auto !important;
+}
+
+/* dernier message : avatar + date + auteur (ciblé aussi via [onmouseover]
+   car le script du thème change la classe row3Right -> row1 au survol) */
+table.forumline:has(th[width="80"]) td.row3Right,
+table.forumline:has(th[width="80"]) td[onmouseover*="row1"] {
+    text-align: left;
+    max-width: 220px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+table.forumline:has(th[width="80"]) td.row3Right .postdetails,
+table.forumline:has(th[width="80"]) td[onmouseover*="row1"] .postdetails {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 40px);
+    white-space: nowrap;
+    font-size: 11px;
+    line-height: 1.4;
+}
+table.forumline:has(th[width="80"]) td.row3Right > div,
+table.forumline:has(th[width="80"]) td[onmouseover*="row1"] > div {
+    display: none;
+}
+table.forumline:has(th[width="80"]) .lastpost-avatar img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+table.forumline:has(th[width="80"]) .lastpost-avatar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* supprime la barre blanche vide entre les sous-forums et le tableau des sujets */
+tr:has(> td.row3[height="10"]:empty) {
+    display: none !important;
+}
+/* retire le dégradé de survol JS natif (onmouseover row1/row2) */
+table.forumline:has(th[width="80"]) td[onmouseover] {
+    background: var(--white) !important;
+}
+/* masque l'en-tête "Auteur / Message" (page d'affichage d'un sujet) */
+tr:has(> th.thLeft, > th.thRight) {
+    display: none;
+}
+/* ============================================================
+   RÉSULTATS DE RECHERCHE — même style que la liste des sujets
+   ============================================================ */
+
+/* masque l'en-tête natif */
+table.forumline:has(th.thCornerL) tr:has(th) {
+    display: none;
+}
+
+/* transforme chaque ligne de résultat en grille */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) {
+    display: grid;
+    grid-template-columns: 8px 1fr 70px 80px 220px;
+    grid-template-rows: auto auto;
+    align-items: stretch;
+    align-content: start;
+    min-height: 50px;
+    border-bottom: 1px solid var(--bordure-tres-claire);
+    column-gap: 12px;
+}
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td {
+    background: var(--white) !important;
+    border: none !important;
+    padding: 4px 8px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+/* les 2 icônes de statut fusionnées dans une seule colonne fine, images cachées */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(1),
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding: 0 !important;
+}
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(1) img,
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(2) img {
+    display: none;
+}
+
+/* titre */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+table.forumline:has(th.thCornerL) h2.topic-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+table.forumline:has(th.thCornerL) h2.topic-title img,
+table.forumline:has(th.thCornerL) td:nth-child(3) > br,
+table.forumline:has(th.thCornerL) td:nth-child(3) > span.gensmall {
+    display: none; /* retire l'image et le vide (br + gensmall vide) qui suivait le titre */
+}
+table.forumline:has(th.thCornerL) h2.topic-title strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background: var(--highlight);
+    color: var(--accc1);
+    font-family: var(--ptt1-font);
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 4px;
+}
+table.forumline:has(th.thCornerL) a.topictitle {
+    font-family: inherit;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--textes) !important;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table.forumline:has(th.thCornerL) a.topictitle:hover {
+    color: var(--accc1) !important;
+}
+
+/* auteur, sous le titre */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+}
+table.forumline:has(th.thCornerL) td:nth-child(6) .name {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--gris-moyen);
+}
+table.forumline:has(th.thCornerL) td:nth-child(6) .name::before {
+    content: "par : ";
+    font-style: normal;
+}
+
+/* "rechercher dans" : petit tag centré, sur toute la hauteur */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+table.forumline:has(th.thCornerL) td:nth-child(4) .postdetails a {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--statut-bg);
+    color: var(--gris-lien);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+/* réponses / vues, empilées */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1 ;
+}
+table.forumline:has(th.thCornerL) td:nth-child(5) .postdetails::before {
+    content: "réponses : ";
+    color: var(--gris-moyen);
+}
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(7) {
+    grid-column: 3;
+    grid-row: 2;
+}
+table.forumline:has(th.thCornerL) td:nth-child(7) .postdetails::before {
+    content: "vues : ";
+    color: var(--gris-moyen);
+}
+
+/* dernier message */
+table.forumline:has(th.thCornerL) tr:has(td[onmouseover]) td:nth-child(8) {
+    grid-column: 5;
+    grid-row: 1 / span 2;
+    text-align: left;
+}
+/* ============================================================
+   AFFICHAGE D'UN RÉSULTAT DE RECHERCHE (aperçu d'un message)
+   ============================================================ */
+
+/* masque l'en-tête "Auteur / Message" */
+table.forumline:has(th.thCornerR) tr:has(th) {
+    display: none;
+}
+
+/* masque la grosse image cassée devant "Sujet: ..." */
+table.forumline:has(th.thCornerR) .topictitle img {
+    display: none;
+}
+
+/* titre du sujet, même style que partout ailleurs */
+table.forumline:has(th.thCornerR) a.topictitle {
+    font-style: italic;
+    color: var(--textes) !important;
+    text-decoration: none;
+}
+table.forumline:has(th.thCornerR) a.topictitle:hover {
+    color: var(--accc1) !important;
+}
+
+/* colonne auteur (pseudo + réponses/vues), façon fiche */
+table.forumline:has(th.thCornerR) td[width="150"] {
+    text-align: center;
+    vertical-align: top;
+    background: var(--profil);
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+table.forumline:has(th.thCornerR) td[width="150"] .name {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--textes);
+}
+table.forumline:has(th.thCornerR) td[width="150"] .postdetails {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--gris-moyen);
+    text-align: left;
+}
+
+/* "Rechercher dans : PORTRAITS", en petit tag comme sur la liste des résultats */
+table.forumline:has(th.thCornerR) td[width="100%"] .postdetails a.postdetails {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--statut-bg);
+    color: var(--gris-lien);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+/* masque les petites icônes décoratives (empty.gif) */
+table.forumline:has(th.thCornerR) img.sprite-icon_minipost,
+table.forumline:has(th.thCornerR) img.sprite-icon_miniposted {
+    display: none;
+}
+
+/* corps du message, même confort de lecture qu'un message classique */
+table.forumline:has(th.thCornerR) .postbody {
+    padding: 15px 20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--textes);
+}
+/* ============================================================
+   QUI EST EN LIGNE (QEEL)
+   ============================================================ */
+.qui-en-ligne-titre,
+.qui-en-ligne-souscol,
+.qui-en-ligne-fiche .gensmall {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+}
+.qui-en-ligne-fiche {
+    border: 1px solid var(--bordure-carte);
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: separate;
+    margin: 15px 0;
+    box-shadow: 0 1px 4px var(--ombre-carte);
+    table-layout: fixed;
+}
+.qui-en-ligne-header {
+    background: var(--fond-titre-section);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--bordure-legere);
+    text-align: center;
+}
+.qui-en-ligne-titre {
+    font-family: var(--ptt1-font);
+    text-transform: uppercase;
+    font-size: var(--ptt1-size);
+    font-weight: var(--ptt1-weight);
+    letter-spacing: var(--ptt1-spacing);
+    color: var(--ptt1-color) !important;
+    text-decoration: none;
+}
+.qui-en-ligne-col {
+    width: 50%;
+    vertical-align: top;
+    padding: 14px 18px;
+    color: var(--textes);
+}
+.qui-en-ligne-col-gauche {
+    border-right: 1px solid var(--bordure-fine);
+}
+.qui-en-ligne-souscol {
+    font-family: var(--ptt1-font);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gris-lien);
+    background: var(--statut-bg);
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.qui-en-ligne-col .gensmall {
+    font-size: var(--nte1-size);
+    line-height: 1.6;
+    color: var(--textes);
+}
+.qui-en-ligne-col a {
+    color: var(--liensbefore);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.qui-en-ligne-col a:hover {
+    color: var(--accc1);
+}
+.qui-en-ligne-row {
+    padding: 8px 14px;
+    color: var(--messagetx);
+    border-top: 1px solid var(--bordure-fine);
+    text-align: center;
+}
+
+/* ============================================================
+   PROFIL / FICHE MEMBRE (colonne auteur d'un message)
+   ============================================================ */
+.colonne-auteur {
+    width: 200px;
+    background: var(--profil);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.profil-scroll-wrap {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 6px 8px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--degrag) transparent;
+}
+.profil-scroll-wrap::-webkit-scrollbar {
+    width: 4px;
+}
+.profil-scroll-wrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+.profil-scroll-wrap::-webkit-scrollbar-thumb {
+    background-color: var(--degrag);
+    border-radius: 10px;
+}
+/* plus de cadre ici : la bordure vit maintenant sur .profil-scroll-wrap ci-dessus */
+.colonne-auteur .cadre-infos {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 0;
+}
+.colonne-auteur img:not(.spacer) {
+    border-radius: 6px;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px var(--ombre-legere);
+}
+.colonne-auteur .name strong {
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+.colonne-auteur .champ-perso {
+    padding: 3px 0;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 11px;
+    overflow-wrap: break-word;
+}
+.colonne-auteur .champ-perso-label {
+    display: block;
+    color: var(--textes);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.colonne-auteur .champ-perso-valeur {
+    display: block;
+    color: var(--textes);
+    font-weight: 400;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+.colonne-auteur .rang {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--accc2);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.colonne-auteur .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.contact-icons a[href*="mode=email"] {
+    display: none;
+}
+.contact-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--statut-bg);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+.contact-icons a:hover {
+    background: var(--btn-violet-hover-1);
+}
+.colonne-auteur .contact-icons img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+/* Fiche de présentation et fiche de liens : icônes CSS,
+   ciblées par l'image réelle plutôt que par position (fiable même si
+   un membre n'a rempli qu'un des deux champs) */
+.contact-icons a:has(img[src*="icon_contact_email"]) img,
+.contact-icons a:has(img[src*="envelope-full"]) img {
+    display: none;
+}
+.contact-icons a:has(img[src*="icon_contact_email"])::before {
+    content: '\270E'; /* ✎ fiche de présentation */
+    font-size: 13px;
+    color: var(--gris-lien);
+}
+.contact-icons a:has(img[src*="envelope-full"])::before {
+    content: '\1F517'; /* 🔗 fiche de liens */
+    font-size: 13px;
+    color: var(--gris-lien);
+}
+.contact-icons a:hover::before {
+    color: var(--btn-violet-hover-texte);
+}
+.contact-icons a:hover {
+    text-decoration: none !important;
+}
+/* Profil et MP : icônes CSS, même principe que les fiches */
+.contact-icons a:has(img.i_icon_profile) img,
+.contact-icons a:has(img.i_icon_pm) img {
+    display: none;
+}
+.contact-icons a:has(img.i_icon_profile)::before {
+    content: '\2727'; /* ✧ profil */
+    font-size: 15px;
+    color: var(--gris-lien);
+}
+.contact-icons a:has(img.i_icon_pm)::before {
+    content: '\2709'; /* ✉ message privé */
+    font-size: 15px;
+    color: var(--gris-lien);
+}
+.colonne-auteur .rang:empty,
+.colonne-auteur .rank-image:empty {
+    display: none;
+}
+.colonne-auteur .rang:empty + br,
+.colonne-auteur .rank-image:empty + br {
+    display: none;
+}
+.colonne-message .postbody {
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+/* cadre autour du nom/rang */
+.colonne-auteur .cadre-nom {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.colonne-auteur .cadre-nom strong {
+    margin-top: 0;
+    line-height: 1.2;
+}
+.colonne-auteur .cadre-nom .rang {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.colonne-auteur .statut-ligne {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: var(--statut-bg);
+    color: var(--statut-texte);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.messaging {
+    display: none;
+}
+
+/* ---- Carte profil (page profil complète) ---- */
+.rpgprofile {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--gris-fonce);
+}
+.rpgprofile-header {
+    background: var(--white);
+    border: 1px solid var(--bordure-carte);
+    border-radius: 10px;
+    padding: 50px;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px var(--ombre-carte);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.rpgprofile-avatar img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--statut-bg);
+    box-shadow: 0 0 0 1px var(--bordure-avatar);
+    flex-shrink: 0;
+}
+.rpgprofile-header-info {
+    min-width: 0;
+}
+.rpgprofile-username {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gris-titre);
+}
+.rpgprofile-rank {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--gris-clair);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+.rpgprofile-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: var(--statut-bg);
+    color: var(--statut-texte);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.rpgprofile-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.rpgprofile-friend-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpgprofile-friend-actions a {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--bordure-legere);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris-lien);
+    text-decoration: none;
+    text-align: center;
+    min-width: 140px;
+}
+.rpgprofile-friend-actions br {
+    display: none;
+}
+.rpgprofile-tabs-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpgprofile-tab {
+   min-width: 90px;
+}
+.rpgprofile-friend-actions a:hover {
+    background: var(--statut-bg);
+}
+.rpgprofile-actions .button1 {
+    background: var(--white);
+    border: 1px solid var(--bordure-legere);
+    padding: 6px 6px;
+    border-radius: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--gris-lien);
+}
+.rpgprofile-actions .button1:hover {
+    background: var(--statut-bg);
+}
+.rpgprofile-section {
+    background: var(--white);
+    border: 1px solid var(--bordure-carte);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--ombre-carte);
+}
+.rpgprofile-section-title {
+    background: var(--fond-titre-section);
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--gris-lien);
+    border-bottom: 1px solid var(--bordure-carte);
+}
+.rpgprofile-field {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--bordure-tres-claire);
+}
+.rpgprofile-field:last-child {
+    border-bottom: none;
+}
+.rpgprofile-field-label {
+    width: 35%;
+    min-width: 130px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris-clair);
+    font-weight: 600;
+}
+.rpgprofile-field-content {
+    width: 60%;
+    flex: 1;
+    font-size: 13px;
+    color: var(--gris-champ);
+    line-height: 1.5;
+}
+.rpgprofile-awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px 20px;
+}
+@media (max-width: 700px) {
+    .rpgprofile-field-label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+}
+.rpgprofile-tab {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 20px;
+    background: var(--white);
+    border: 1px solid var(--bordure-legere);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris-lien);
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+.rpgprofile-tab:hover {
+    background: var(--statut-bg);
+    text-decoration: none !important;
+}
+.rpgprofile-tab:hover {
+    background: var(--statut-bg);
+    text-decoration: none !important;
+}
+/* ---- Icônes de contact sur la page de profil complète ---- */
+.rpgprofile-field-content a:has(#i_icon_pm),
+.rpgprofile-field-content a:has(img[src*="icon_contact_email"]),
+.rpgprofile-field-content a:has(img[src*="envelope-full"]) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--statut-bg);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+.rpgprofile-field-content a:hover {
+    background: var(--btn-violet-hover-1);
+    text-decoration: none !important;
+}
+.rpgprofile-field-content a:has(#i_icon_pm) img,
+.rpgprofile-field-content a:has(img[src*="icon_contact_email"]) img,
+.rpgprofile-field-content a:has(img[src*="envelope-full"]) img {
+    display: none;
+}
+.rpgprofile-field-content a:has(#i_icon_pm)::before {
+    content: '\2709'; /* ✉ message privé */
+    font-size: 15px;
+    color: var(--gris-lien);
+}
+.rpgprofile-field-content a:has(img[src*="icon_contact_email"])::before {
+    content: '\270E'; /* ✎ fiche de présentation */
+    font-size: 13px;
+    color: var(--gris-lien);
+}
+.rpgprofile-field-content a:has(img[src*="envelope-full"])::before {
+    content: '\1F517'; /* 🔗 fiche de liens */
+    font-size: 13px;
+    color: var(--gris-lien);
+}
+.rpgprofile-field-content a:hover::before {
+    color: var(--btn-violet-hover-texte);
+}
+.rpgprofile-field:has(#i_icon_email) {
+    display: none;
+}
+.followBtn {
+    display: none !important;
+}
+/* ---- Fiche personnage custom (ficheadmin>) ---- */
+ficheadmin .rpgprofile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 30px 10px 10px 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+ficheadmin .rpgprofile-top-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 60px 1fr;
+    gap: 4px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+ficheadmin .fiche-icons {
+    display: contents;
+}
+ficheadmin .fiche-icons img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px var(--ombre-carte);
+}
+ficheadmin .fiche-icons img:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+ficheadmin .fiche-icons img:last-child {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+ficheadmin .rpgprofile-header-info {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    text-align: center;
+    padding-left: 10px;
+}
+ficheadmin .rpgprofile-header-info tdf1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: normal;
+}
+ficheadmin .rpgprofile-header > .rpgprofile-section {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 5px;
+    max-height: none;
+}
+ficheadmin .rpgprofile-left {
+    display: contents;
+}
+
+/* trigger warnings floutés */
+tw-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+tw-block infos {
+    display: block;
+    font-size: 9px;
+}
+tw-block tw {
+    display: block;
+    font-size: 10px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    color: var(--textes);
+    filter: blur(4px);
+    transition: filter 0.2s ease;
+    cursor: pointer;
+}
+tw-block tw:hover,
+tw-block tw.revele {
+    filter: blur(0);
+}
+
+/* ============================================================
+   MESSAGES (posts)
+   ============================================================ */
+.postdetails:not(.poster-profile) {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--postdetails-couleur);
+    letter-spacing: 0.3px;
+    border-radius: 20%;
+    white-space: nowrap;
+}
+.postdetails:not(.poster-profile) img {
+    opacity: 0.6;
+    vertical-align: end;
+    margin-right: 3px;
+}
+.postdetails a[href^="#p"] {
+    text-decoration: none;
+}
+.postdetails img.sprite-icon_minipost {
+    display: none;
+}
+
+/* boutons d'action (citer, éditer, IP...) */
+.post-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 4px 0;
+    text-align: right;
+}
+.post-options a {
+    display: inline-flex !important;
+    align-items: flex-end;
+    gap: 4px;
+    padding: 5px 13px !important;
+    border-radius: 20px !important;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    background: var(--statut-bg);
+    color: var(--statut-texte);
+    transition: all 0.2s ease;
+}
+.post-options a:hover {
+    background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
+    color: var(--btn-violet-hover-texte);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px var(--ombre-violette-hover);
+}
+
+/* bouton "Envoyer" (action principale du formulaire de réponse) */
+input.button1[type="submit"],
+input[name="post"] {
+    background: var(--degrag);
+    color: var(--white) !important;
+    border: 1px solid var(--degrag);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+input.button1[type="submit"]:hover,
+input[name="post"]:hover {
+    background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
+    color: var(--btn-violet-hover-texte) !important;
+    border-color: var(--btn-violet-hover-1);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px var(--ombre-violette-hover);
+}
+/* bouton "Prévisualisation" (action secondaire) */
+input.button2[type="submit"],
+input[name="preview"] {
+    background: var(--white);
+    color: var(--gris-lien) !important;
+    border: 1px solid var(--bordure-legere);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+input.button2[type="submit"]:hover,
+input[name="preview"]:hover {
+    background: var(--statut-bg);
+    border-color: var(--degrag);
+}
+
+/* ============================================================
+   BALISES PERSO (tdf1, st1, ptt1, qut1, nte1, impt1, info/infos)
+   ============================================================ */
+ficheadmin {
+    display: block;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px var(--bordure-claire);
+}
+tdf1 {
+    display: block;
+    font-family: var(--tdf1-font);
+    font-size: var(--tdf1-size);
+    font-weight: var(--tdf1-weight);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: var(--tdf1-spacing);
+    color: var(--tdf1-color);
+    margin: 15px 0;
+}
+st1 {
+    display: block;
+    font-family: var(--st1-font);
+    font-size: var(--st1-size);
+    font-weight: var(--st1-weight);
+    text-transform: lowercase;
+    letter-spacing: var(--st1-spacing);
+    color: var(--st1-color);
+    margin: 25px 0 10px;
+}
+ptt1 {
+    position: relative;
+    display: inline-block;
+    font-family: var(--ptt1-font);
+    font-size: var(--ptt1-size);
+    font-weight: var(--ptt1-weight);
+    text-transform: lowercase;
+    letter-spacing: var(--ptt1-spacing);
+    color: var(--ptt1-color);
+    margin: 20px 5px 8px;
+    padding: 2px 6px;
+    z-index: 0;
+}
+ptt1::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -4px;
+    right: -6px;
+    bottom: 2px;
+    height: 8px;
+    background: var(--ptt1-highlight);
+    transform: rotate(-0.8deg);
+    border-radius: 2px;
+}
+qut1 {
+    display: block;
+    font-family: var(--qut1-font);
+    font-size: var(--qut1-size);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--qut1-color);
+    margin: 10px 15px;
+}
+qut1::before {
+    position: relative;
+    content: "\201C";
+    font-size: 25px;
+    color: var(--qut1-quote);
+    vertical-align: -3px;
+    margin-right: 4px;
+}
+qut1::after {
+    position: relative;
+    content: "\201D";
+    font-size: 25px;
+    color: var(--qut1-quote);
+    vertical-align: -18px;
+    margin-left: 4px;
+}
+nte1 {
+    display: block;
+    font-size: var(--nte1-size);
+    font-style: italic;
+    color: var(--nte1-color);
+    opacity: .7;
+    margin: 10px 0;
+}
+impt1 {
+    display: block;
+    font-weight: bold;
+    color: var(--impt1-color);
+    border-left: 4px solid var(--impt1-border);
+    padding-left: 12px;
+    margin: 15px 0;
+}
+info {
+    display: block;
+    padding: 15px 25px;
+    font-size: 13px;
+    color: var(--gris-champ);
+    line-height: 2;
+    text-align: justify;
+}
+infos {
+    display: inline;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--accc1);
+}
+info b {
+    color: var(--accc1);
+}
+
+/* barre des balises (aperçu cliquable dans l'éditeur) */
+.forum-tags-panel {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.forum-tags-title {
+    background: var(--background);
+    color: var(--accc2);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+.forum-tags-title:hover {
+    color: var(--accc1);
+}
+.forum-tags-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+}
+.forum-tags-buttons [data-open] {
+    position: relative;
+    border: 0;
+    background: transparent;
+    padding: 3px 6px;
+    margin: 0;
+    cursor: pointer;
+    transition: transform .15s ease;
+}
+.forum-tags-buttons [data-open]:hover {
+    transform: translateY(-1px);
+}
+.forum-tags-buttons [data-open="tdf1"] {
+    font-family: var(--tdf1-font);
+    font-size: var(--tdf1-preview-size);
+    font-weight: var(--tdf1-weight);
+    text-transform: uppercase;
+    letter-spacing: var(--tdf1-spacing);
+    color: var(--tdf1-color);
+}
+.forum-tags-buttons [data-open="st1"] {
+    font-family: var(--st1-font);
+    font-size: var(--st1-preview-size);
+    font-weight: var(--st1-weight);
+    text-transform: lowercase;
+    letter-spacing: var(--st1-spacing);
+    color: var(--st1-color);
+}
+.forum-tags-buttons [data-open="ptt1"] {
+    font-family: var(--ptt1-font);
+    font-size: 11px;
+    font-weight: var(--ptt1-weight);
+    text-transform: lowercase;
+    letter-spacing: var(--ptt1-spacing);
+    color: var(--ptt1-color);
+    z-index: 0;
+}
+.forum-tags-buttons [data-open="ptt1"]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    right: 0;
+    bottom: 3px;
+    height: 7px;
+    background: var(--ptt1-highlight);
+    transform: rotate(-0.8deg);
+    border-radius: 2px;
+}
+.forum-tags-buttons [data-open="qut1"] {
+    font-family: var(--qut1-font);
+    font-size: 13px;
+    font-style: italic;
+    color: var(--qut1-color);
+}
+.forum-tags-buttons [data-open="qut1"]::before {
+    content: "\201C";
+    font-size: 17px;
+    color: var(--qut1-quote);
+    margin-right: 2px;
+    vertical-align: 2px;
+}
+.forum-tags-buttons [data-open="qut1"]::after {
+    content: "\201D";
+    font-size: 17px;
+    color: var(--qut1-quote);
+    margin-left: 2px;
+    vertical-align: -5px;
+}
+.forum-tags-buttons [data-open="nte1"] {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--nte1-color);
+    opacity: .7;
+}
+.forum-tags-buttons [data-open="impt1"] {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--impt1-color);
+    border-left: 3px solid var(--impt1-border);
+    padding-left: 8px;
+}
+.forum-tags-panel.forum-tags-hidden .forum-tags-buttons {
+    display: none;
+}
+
+/* ============================================================
+   BOUTON J'AIME
+   ============================================================ */
+.fa_like_div {
+    padding: 0px;
+}
+.table-like-button {
+    height: 12px;
+}
+.fa_like_div .rep-button, .rep-nb {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+.fa_liked .like-icon {
+    color: var(--like-actif);
+}
+.like-icon {
+    vertical-align: middle;
+}
+.like-icon::before {
+    content: '\2764';
+}
+
+/* ============================================================
+   BACK TO TOP / BACK TO BOTTOM
+   ============================================================ */
+.back-to-top,
+.back-to-bottom {
+    --mcolor1: var(--backtotop-clair);
+    --mcolor2: var(--backtotop-fonce);
+    align-items: center;
+    background: var(--mcolor1);
+    box-shadow: 1px 1px 10px var(--mcolor1);
+    color: var(--mcolor2) !important;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 40px;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    text-decoration: none !important;
+    width: 30px;
+    z-index: 99;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.back-to-top:hover,
+.back-to-bottom:hover {
+    background: var(--mcolor2);
+    color: var(--mcolor1) !important;
+}
+.back-to-top {
+    bottom: 60px;
+}
+.back-to-bottom {
+    bottom: 10px;
+}
+
+/* ============================================================
+   SÉLECTION DE CODE (blocs [code])
+   ============================================================ */
+dt:has(.selectCode) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selectCode {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 10px;
+}
+div.cont_code {
+    clear: right;
+}
+
+/* ============================================================
+   BOTTIN DES AVATARS
+   ============================================================ */
+.bottin-avatars {
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 30px 35px;
+    background: var(--white);
+    border: 1px solid var(--bordure-carte);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--ombre-carte);
+    font-family: verdana, Arial, sans-serif;
+    color: var(--textes);
+    text-align: center;
+    box-sizing: border-box;
+}
+.bottin-avatars tdf1 {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.bottin-avatars st1 {
+    margin-top: 5px;
+}
+.bottin-avatars info {
+    display: block;
+    text-align: justify;
+    font-size: 11px;
+}
+.bottin-legende {
+    margin: 10px 0 20px;
+    font-size: 12px;
+}
+.bottin-statut {
+    font-size: 12px;
+}
+.bottin-statut.reserve {
+    color: #c17a3e;
+    font-style: italic;
+}
+.bottin-nav-lettres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--bordure-claire);
+}
+.bottin-nav-lettres a {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gris-moyen);
+    text-decoration: none;
+}
+.bottin-nav-lettres a:hover {
+    color: var(--accc1);
+}
+.bottin-groupe {
+    text-align: left;
+    margin-bottom: 15px;
+}
+.bottin-ligne {
+    font-size: 12px;
+    line-height: 1.9;
+    padding: 3px 0;
+    border-bottom: 1px solid var(--bordure-tres-claire);
+}
+.bottin-ligne:last-child {
+    border-bottom: none;
+}
+.bottin-ligne a {
+    color: var(--liensbefore);
+    text-decoration: none;
+}
+.bottin-ligne a:hover {
+    color: var(--accc1);
+}
+.bottin-ligne.reserve .bottin-nom {
+    color: #c17a3e;
+    font-style: italic;
+}
+.bottin-date {
+    font-size: 10px;
+    color: var(--gris-moyen);
+    font-style: italic;
+    margin-left: 6px;
+}
+
+/* ============================================================
+   CONTEXTE / RÈGLEMENT / PREMIERS PAS (pages type "contexte-page")
+   ============================================================ */
+.contexte-page {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 20px 30px 30px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.contexte-page tdf1 {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.contexte-page st1 {
+    margin-top: 5px;
+}
+.contexte-page info {
+    display: block;
+    text-align: justify;
+    font-size: 11px;
+}
+.contexte-infos {
+    max-width: 480px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+.contexte-infos infos {
+    display: block;
+    margin-bottom: 6px;
+}
+.contexte-infos info {
+    display: block;
+    padding: 0 0 0 20px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   BARRES catHead / catBottom + WIDGETS NATIFS MASQUÉS
+   ============================================================ */
+.catBottom {
+    background: var(--degrag) !important;
+    border: 1px solid var(--bordure-carte);
+    border-radius: 8px;
+    height: 25px !important;
+    line-height: 25px !important;
+    padding: 0 14px !important;
+    box-sizing: border-box;
+}
+.catBottom a {
+    color: var(--liensbefore);
+    text-decoration: none;
+}
+.catBottom a:hover {
+    text-decoration: underline;
+}
+/* widget natif "Sujets similaires" */
+tr:has(> td.catBottom a[href*="ptrafic"]) {
+    display: none;
+}
+tr:has(> td.row2.postbody) {
+    display: none;
+}
+/* icônes +/- de repli des barres catBottom informatives */
+img.sprite-tabs_less,
+img.sprite-tabs_more {
+    display: none;
+}
+
+.catHead {
+    background: var(--degrag) !important;
+    height: 15px !important;
+    border: 1px solid var(--btn-violet-hover-texte);
+    border-radius: 15px 15px 0 0;
+    line-height: 25px !important;
+    border-bottom: var(--btn-violet-hover-1);
+    padding: 0px 14px !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 90%;
+}
+td.catHead[height] {
+    height: 15px !important;
+}
+table:has(.catHead) {
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+.catHead table {
+    height: 23px !important;
+}
+.catHead table td {
+    height: 23px !important;
+    vertical-align: middle !important;
+}
+.catHead a {
+    color: var(--liensbefore);
+    text-decoration: none;
+}
+.catHead a:hover {
+    text-decoration: underline;
+}
+.catHead h1.cattitle {
+    margin: 0 !important;
+    line-height: 23px;
+    font-size: 14px;
+}
+.catHead table td.browse-arrows {
+    vertical-align: bottom !important;
+    line-height: 23px;
+}
+
+/* retour à la page précédente */
+.bouton-retour {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    line-height: 18px;
+    font-size: 11px;
+    color: var(--liensbefore) !important;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    padding: 1px 8px;
+    border-radius: 4px;
+}
+.bouton-retour:hover {
+    text-decoration: underline;
+}
+
+/* cloche de notification push, barre de partage, menu "Plus !" natifs */
+#push-bell {
+    display: none !important;
+}
+#addthis-toolbar,
+a[href*="showhide(document.getElementById('plus_menu'))"],
+#plus_menu {
+    display: none !important;
+}
+span.gensmall.bold:has(#addthis-toolbar) {
+    display: none !important;
+}
+
+/* ============================================================
+   ÉDITEUR SCEDITOR
+   ============================================================ */
+.sceditor-container {
+    border: 1px solid var(--bordure-carte) !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--ombre-carte);
+}
+.sceditor-container,
+.sceditor-container iframe,
+.sceditor-container textarea {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.sceditor-toolbar {
+    background: var(--white) !important;
+    border-bottom: 1px solid var(--bordure-claire) !important;
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.sceditor-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1px;
+    flex-shrink: 0;
+    border: none !important;
+    background: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.sceditor-group::before,
+.sceditor-group::after {
+    display: none !important;
+    content: none !important;
+}
+.sceditor-button {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    padding: 2px !important;
+}
+.sceditor-button > div {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+}
+.sceditor-button:hover > div {
+    background-color: var(--statut-bg) !important;
+}
+/* zone de texte visible en mode source (pas l'iframe, masquée dans ce mode) */
+.sceditor-container textarea {
+    background: var(--white) !important;
+    padding: 10px !important;
+    border: none !important;
+    box-sizing: border-box !important;
+}
+
+/* ============================================================
+   SWITCHEROO — Gestionnaire de multicompte (par Monomer)
+   ============================================================ */
+.switcheroo {
+    color: var(--cadres);
+    background-color: var(--light);
+    border: var(--border);
+    font-size: 16px;
+    font: 'Open Sans';
+}
+.switcheroo[position="static"] {
+    position: relative;
+}
+.switcheroo[position="top"] {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    z-index: 100;
+}
+.switcheroo[direction="vertical"] {
+    height: 100%;
+}
+.switcheroo__squircles {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 5px;
+    gap: 16px;
+}
+.switcheroo[direction="vertical"] .switcheroo__squircles {
+    flex-direction: column;
+}
+.switcheroo__squircle {
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: var(--gris-clair);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-radius 128ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.switcheroo__squircle:hover {
+    border-radius: 6px;
+    background: var(--gris-moyen);
+}
+.switcheroo__avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: border-radius 128ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    position: relative;
+}
+.switcheroo__avatar img:hover {
+    border-radius: 5px;
+}
+.switcheroo__squircle.active,
+.switcheroo__squircle.active img {
+    border-radius: 6px;
+    cursor: default;
+}
+.switcheroo__squircle:before {
+    content: "";
+    display: block;
+    background-color: var(--border);
+    border: var(--border);
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: -5px;
+    z-index: -1;
+    transform: 128ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 64ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.switcheroo__squircle.active:before {
+    opacity: 1;
+    border-radius: 8px;
+}
+.switcheroo__squircle:hover:before {
+    border-radius: 8px;
+    opacity: 1;
+    transform: 128ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 64ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.switcheroo__delete {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    right: -7px;
+    border-radius: 50%;
+    background-color: var(--accc1);
+    transform: scale(0);
+    opacity: 1;
+    transition: transform 128ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 64ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    cursor: pointer;
+    color: var(--gris-clair);
+}
+.switcheroo__squircle:hover .switcheroo__delete {
+    opacity: 1;
+    transform: scale(1);
+}
+.switcheroo__popper {
+    background-color: var(--degrag);
+    padding: 0.68rem 1rem;
+    position: absolute;
+    width: max-content;
+    border-radius: 4px;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 64ms cubic-bezier(0.4, 0.0, 0.2, 1), transform 128ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    pointer-events: none;
+    color: var(--background);
+    font: 'Open Sans';
+}
+.switcheroo[direction="vertical"] .switcheroo__popper {
+    left: 155%;
+    top: 50%;
+    transform-origin: left;
+    transform: translateY(-50%) scale(0.98);
+}
+.switcheroo__popper:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--degrag);
+    z-index: -1;
+}
+.switcheroo[direction="vertical"] .switcheroo__popper:before {
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.switcheroo[direction="vertical"] .switcheroo__squircle:hover .switcheroo__popper {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+.switcheroo[direction="horizontal"] .switcheroo__squircle:hover .switcheroo__popper {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+.switcheroo__logo {
+    display: none;
+}
+.switcheroo__divider {
+    display: none;
+}
+.switcheroo__squircle--button {
+    transition: border-radius 128ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    color: var(--textes);
+}
+.switcheroo__squircle--button:hover {
+    color: var(--gris-clair);
+    font-weight: bold;
+}
+.monomer-overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s opacity ease;
+    background: rgba(255, 255, 255, 0.6);
+}
+.monomer-modal {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    width: 94%;
+    padding: 24px 20px;
+    transition: 0.2s opacity ease;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: var(--background);
+    border: var(--border);
+    color: var(--textes);
+}
+.switcheroo__form {
+    padding: 48px;
+    background: var(--border);
+    border-radius: 5px;
+}
+.switcheroo__form-row {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.switcheroo__form-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.switcheroo__form-input {
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: var(--profil);
+    border: var(--border) !important;
+    border-bottom: 3px solid var(--gris-clair) !important;
+    color: var(--textes);
+    cursor: text;
+}
+.switcheroo__form-button {
+    border-radius: 8px;
+    padding: 4px 6px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    align-self: flex-end;
+    background-color: var(--background);
+    border: var(--border);
+    cursor: pointer;
+}
+.switcheroo__form-button:hover {
+    border: 1px solid transparent;
+    background: var(--cadres);
+    color: var(--gris-champ);
+}
+.monomer-modal.monomer-open, .monomer-overlay.monomer-open {
+    opacity: 1;
+}
