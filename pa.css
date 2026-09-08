@@ -28,6 +28,7 @@
     --bordure-tres-claire: #f2f2f2;
     --gris-champ: #444;
     --structure: #e8e8e8;
+    --accc3: #660000;
 
     /* Gris et bordures utilisés dans la liste des forums / textes divers */
     --gris-fonce: #4a4a4a;
@@ -138,6 +139,7 @@ hr {
     --accc2: var(--textes);
     --structure: var(--degrag);
     --liensvisibles: #534842;
+    --accc3: #e68787;
     
 }
 [data-color-scheme="dark"] body {
