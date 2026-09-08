@@ -607,3 +607,93 @@
 [data-color-scheme="dark"] .insta-follow-notif-txt b {
   color: #fff;
 }
+
+
+.insta-post {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #1a2a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  font: 13px/145% Roboto;
+  color: #e8ded6;
+}
+
+.insta-post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.insta-post-header .insta-post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #e07850;
+}
+
+.insta-post-header .insta-post-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insta-post-header .insta-post-pseudo {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.insta-post-header .insta-post-more {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #e8ded6;
+  cursor: default;
+}
+
+.insta-post-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.insta-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.insta-post-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px 4px;
+  font-size: 20px;
+}
+
+.insta-post-actions .insta-post-spacer {
+  flex-grow: 1;
+}
+
+.insta-post-likes {
+  padding: 4px 16px 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.insta-post-caption {
+  padding: 4px 16px 16px;
+}
+
+.insta-post-caption b {
+  color: #fff;
+}
+
+.insta-post-caption .insta-post-tag {
+  color: #a89e95;
+}
