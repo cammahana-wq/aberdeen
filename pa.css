@@ -140,7 +140,15 @@
 [data-color-scheme="dark"] .credits {
     color: var(--liensbefore);
 }
-
+[data-color-scheme="dark"] .contenu .sous_titre,
+[data-color-scheme="dark"] .contenu .sous_titre a {
+    color: var(--textes);
+}
+[data-color-scheme="dark"] .gen,
+[data-color-scheme="dark"] .genmed,
+[data-color-scheme="dark"] .gensmall {
+    color: #46464f;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
