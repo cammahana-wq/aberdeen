@@ -207,8 +207,8 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 [data-color-scheme="dark"] td.catRight,
 [data-color-scheme="dark"] td.catBottom {
   background-image: none !important;
-  background-color: #534842 !important;
-  border-color: #6b5f58 !important;
+  background-color: var(--degrag) !important;
+  border-color: var(--degrag) !important;
 }
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
