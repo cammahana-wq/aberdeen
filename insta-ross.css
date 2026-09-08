@@ -650,10 +650,9 @@
   flex-grow: 1;
 }
 
-.insta-post-header .insta-post-more svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--textes);
+.insta-post-header .insta-post-more i {
+  font-size: 18px;
+  color: var(--textes);
 }
 
 .insta-post-image {
@@ -676,12 +675,9 @@
   padding: 12px 16px 4px;
 }
 
-.insta-post-actions svg {
-  width: 22px;
-  height: 22px;
-  fill: none;
-  stroke: var(--textes);
-  stroke-width: 1.6;
+.insta-post-actions i {
+  font-size: 20px;
+  color: var(--textes);
 }
 
 .insta-post-actions .insta-post-spacer {
