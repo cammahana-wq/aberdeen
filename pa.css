@@ -2599,6 +2599,7 @@ div.cont_code {
 .bottin-groupe {
     text-align: left;
     margin-bottom: 5px;
+    padding: 1px 0 2px 0;
 }
 .bottin-ligne {
     font-size: 12px;
