@@ -2030,9 +2030,6 @@ td.row2.colonne-auteur {
     display: none !important;
 }
 /* ---- Fiche personnage custom (balise ficheadmin) ---- */
-.postbody .rpgprofile-section {
-    transform: translateX(-10px);
-}
 ficheadmin .rpgprofile-header {
     display: flex;
     flex-direction: column;
