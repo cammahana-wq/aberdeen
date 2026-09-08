@@ -2598,8 +2598,8 @@ div.cont_code {
 }
 .bottin-groupe {
     text-align: left;
-    margin-bottom: 5px;
-    padding: 1px 0 2px 0;
+    margin-bottom: 4px;
+    padding: 0;
 }
 .bottin-ligne {
     font-size: 12px;
@@ -2655,8 +2655,11 @@ div.cont_code {
     margin-top: 2px;
 }
 
-
-
+@media (max-width: 700px) {
+    .bottin-deux-colonnes {
+        grid-template-columns: 1fr;
+    }
+}
 /* ============================================================
    CONTEXTE / RÈGLEMENT / PREMIERS PAS (pages type "contexte-page")
    ============================================================ */
