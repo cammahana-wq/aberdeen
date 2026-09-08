@@ -247,8 +247,8 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 [data-color-scheme="light"] .color-scheme-toggle .light {
     display: none;
 }
-[data-color-scheme="dark"] .ptt1,
-[data-color-scheme="dark"] .ptt1::before {
+[data-color-scheme="dark"] ptt1,
+[data-color-scheme="dark"] ptt1::before {
     --ptt1-font: "Times New Roman", Times, serif;
     --ptt1-size: 13px;
     --ptt1-weight: bold;
