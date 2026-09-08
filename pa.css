@@ -28,33 +28,6 @@
     --bordure-tres-claire: #f2f2f2;
     --gris-champ: #444;
 
-[data-color-scheme="dark"]{color-scheme:dark;}
-.color-scheme-toggle,[data-color-scheme="light"] 
-.color-scheme-toggle .dark,[data-color-scheme="dark"] 
-.color-scheme-toggle .light{
-    display:flex;
-}
-[data-color-scheme="dark"] 
-.color-scheme-toggle .dark,[data-color-scheme="light"] 
-.color-scheme-toggle .light{
-    display:none;
-}
-.color-scheme-toggle{
-    position:fixed;
-    bottom:110px;
-    right:10px;width:30px;
-    height:40px;
-    background-color:var(--statut-bg);
-    color:var(--textes);
-    font-size:18px;
-    align-items:center;
-    justify-content:center;
-    border-radius:5px;
-    border:none;
-    cursor:pointer;
-    z-index:99;
-}
-.color-scheme-toggle:hover{background-color:var(--btn-violet-hover-1);}
     /* Gris et bordures utilisés dans la liste des forums / textes divers */
     --gris-fonce: #4a4a4a;
     --gris-moyen: #999;
@@ -66,14 +39,7 @@
     --statut-bg: #f4f4f4;
     --statut-texte: #777;
     --postdetails-couleur: #8a7a8c;
-[data-color-scheme="dark"] td.row1:hover,
-[data-color-scheme="dark"] td.row3.over:hover {
-    background-color: var(--white) !important;
-}
-[data-color-scheme="dark"] .contexte,
-[data-color-scheme="dark"] .credits {
-    color: var(--liensbefore);
-}
+
     /* Ombres */
     --ombre-legere: rgba(0, 0, 0, 0.08);
     --ombre-violette-hover: rgba(180, 150, 190, 0.35);
@@ -135,6 +101,75 @@
     --impt1-border: var(--border);
 }
 
+/* ============================================================
+   MODE SOMBRE / CLAIR (bouton + variables + correctifs)
+   ============================================================ */
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+    --white: #201c1a;
+    --background: #14110f;
+    --border: #3a332e;
+    --bordure-carte: #3a332e;
+    --bordure-legere: #3a332e;
+    --bordure-claire: #46392f;
+    --bordure-fine: #3a332e;
+    --bordure-tres-claire: #2a2522;
+    --fond-titre-section: #2a2522;
+    --statut-bg: #2a2522;
+    --statut-texte: #b8aca3;
+    --profil: #201c1a;
+    --textes: #e8ded6;
+    --liensbefore: #d8c3b5;
+    --gris-fonce: #cfc7c0;
+    --gris-moyen: #a89e95;
+    --gris-clair: #b8aea5;
+    --gris-lien: #c2b8ae;
+    --gris-titre: #e8ded6;
+    --gris-champ: #d8cec5;
+    --black: #f5efe9;
+}
+[data-color-scheme="dark"] body {
+    background-color: var(--background) !important;
+    color: var(--textes) !important;
+}
+[data-color-scheme="dark"] td.row1:hover,
+[data-color-scheme="dark"] td.row3.over:hover {
+    background-color: var(--white) !important;
+}
+[data-color-scheme="dark"] .contexte,
+[data-color-scheme="dark"] .credits {
+    color: var(--liensbefore);
+}
+
+/* bouton de bascule clair/sombre */
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+    display: flex;
+}
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light {
+    display: none;
+}
+.color-scheme-toggle {
+    position: fixed;
+    bottom: 110px;
+    right: 10px;
+    width: 30px;
+    height: 40px;
+    background-color: var(--statut-bg);
+    color: var(--textes);
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+}
+.color-scheme-toggle:hover {
+    background-color: var(--btn-violet-hover-1);
+}
 /* ============================================================
    BARRE DE NAVIGATION (haut de page)
    ============================================================ */
@@ -828,7 +863,7 @@ table.forumline:has(th[width="80"]) td.row3Right {
 table.forumline:has(th[width="80"]) td[width="100%"] > .gensmall {
     display: none;
 }
-/* masque le texte fantôme (  + spans vides) laissé après le titre */
+/* masque le texte fantôme (  + spans vides) laissé après le titre */
 table.forumline:has(th[width="80"]) td[width="100%"] {
     font-size: 0;
     line-height: 0;
@@ -1355,6 +1390,9 @@ table.forumline:has(th.thCornerR) .postbody {
     border-top: 1px solid var(--bordure-fine);
     text-align: center;
 }
+.qui-en-ligne-col-droite table td.row1 {
+    background: transparent !important;
+}
 
 /* ============================================================
    PROFIL / FICHE MEMBRE (colonne auteur d'un message)
@@ -1747,10 +1785,6 @@ table.forumline:has(th.thCornerR) .postbody {
     background: var(--statut-bg);
     text-decoration: none !important;
 }
-.rpgprofile-tab:hover {
-    background: var(--statut-bg);
-    text-decoration: none !important;
-}
 /* ---- Icônes de contact sur la page de profil complète ---- */
 .rpgprofile-field-content a:has(#i_icon_pm),
 .rpgprofile-field-content a:has(img[src*="icon_contact_email"]),
@@ -1798,7 +1832,7 @@ table.forumline:has(th.thCornerR) .postbody {
 .followBtn {
     display: none !important;
 }
-/* ---- Fiche personnage custom (ficheadmin>) ---- */
+/* ---- Fiche personnage custom (balise ficheadmin) ---- */
 ficheadmin .rpgprofile-header {
     display: flex;
     flex-direction: column;
