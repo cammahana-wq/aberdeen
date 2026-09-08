@@ -137,6 +137,7 @@ hr {
     --black: #f5efe9;
     --accc2: var(--textes);
     --structure: var(--degrag);
+    --liensvisibles: #534842;
     
 }
 [data-color-scheme="dark"] body {
@@ -168,7 +169,7 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 }
 [data-color-scheme="dark"] .thHead {
     background: var(--degrag) !important;
-    color: #534842; !important;
+    color: var(--liensvisibles); !important;
 }
 [data-color-scheme="dark"] td.row1 {
     background: var(--white) !important;
@@ -213,14 +214,14 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
   border-color: #4a4442 !important;
 }
 [data-color-scheme="dark"] .catHead {
-  background-color: #534842 !important;
+  background-color: var(--liensvisibles) !important;
 }
 [data-color-scheme="dark"] .link_pa a,
 [data-color-scheme="dark"] .link_pa  {
- color: #534842 !important;
+ color: var(--liensvisibles) !important;
 }
 [data-color-scheme="dark"] .catBottom a {
- color: #534842 !important;
+ color: var(--liensvisibles) !important;
 }
 [data-color-scheme="dark"] td.cat,
 [data-color-scheme="dark"] td.catHead,
@@ -231,6 +232,15 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
   background-image: none !important;
   background-color: var(--degrag) !important;
   border-color: var(--degrag) !important;
+}
+[data-color-scheme="dark"] .navtop a.mainmenu {
+    font-size: 8px;
+    margin: 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--liensvisibles);
 }
 [data-color-scheme="dark"] table.forumline:has(td.catBottom input[name="post"]) {
   border-color: #201c1a !important;
