@@ -2474,7 +2474,23 @@ div.cont_code {
     font-size: 12px;
     line-height: 1.7;
 }
-
+.contexte {
+    scrollbar-width: thin;
+    scrollbar-color: var(--degrag) transparent;
+}
+.contexte::-webkit-scrollbar {
+    width: 4px;
+}
+.contexte::-webkit-scrollbar-track {
+    background: transparent;
+}
+.contexte::-webkit-scrollbar-thumb {
+    background-color: var(--degrag);
+    border-radius: 10px;
+}
+.contexte::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accc1);
+}
 /* ============================================================
    BARRES catHead / catBottom + WIDGETS NATIFS MASQUÉS
    ============================================================ */
