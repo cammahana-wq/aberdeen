@@ -152,6 +152,14 @@
 [data-color-scheme="dark"] .sceditor-container textarea {
     color: var(--textes) !important;
 }
+[data-color-scheme="dark"] .thHead {
+    background: var(--fond-titre-section) !important;
+    color: var(--gris-lien) !important;
+}
+[data-color-scheme="dark"] td.row1 {
+    background: var(--white) !important;
+    color: var(--textes) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
