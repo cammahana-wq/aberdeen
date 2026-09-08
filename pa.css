@@ -100,7 +100,10 @@
     --impt1-color: var(--accc2);
     --impt1-border: var(--border);
 }
-
+table.forumline {
+  border-radius: 8px;
+  overflow: hidden;
+}
 /* ============================================================
    MODE SOMBRE / CLAIR (bouton + variables + correctifs)
    ============================================================ */
@@ -330,7 +333,6 @@ a.nav:hover {
     background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
     color: var(--btn-violet-hover-texte);
 }
-
 /* ============================================================
    TOOLBAR FORUMACTIF (#fa_toolbar) — "Bienvenue" + Notifications
    ============================================================ */
