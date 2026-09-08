@@ -582,6 +582,7 @@
   font: 13px/145% Roboto;
   color: #676767;
   max-width: 400px;
+  margin: 0 auto;
 }
 .insta-follow-notif img {
   width: 45px;
