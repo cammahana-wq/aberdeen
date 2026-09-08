@@ -1569,7 +1569,9 @@ table.forumline:has(th.thCornerR) .postbody {
     padding: 8px 6px 8px 8px;
     width: 100%;
     box-sizing: border-box;
+    max-height: 500px;
     overflow-x: hidden;
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--degrag) transparent;
 }
