@@ -722,3 +722,6 @@
 .insta-post-actions i.bi-heart-fill {
   color: #e0245e;
 }
+.insta-post-actions i {
+  cursor: pointer;
+}
