@@ -169,6 +169,13 @@
 [data-color-scheme="dark"] .forum-tags-title {
     color: var(--textes) !important;
 }
+[data-color-scheme="dark"] td.row2 {
+    background: var(--white) !important;
+    color: var(--textes) !important;
+}
+[data-color-scheme="dark"] .sceditor-container {
+    background: var(--white) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
