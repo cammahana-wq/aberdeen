@@ -2630,18 +2630,12 @@ div.cont_code {
 /* ============================================================
    BOTTIN DES AVATARS — variante deux colonnes (prénoms / noms)
    ============================================================ */
-.bottin-avatars.deux-colonnes {
-    max-width: 900px;
-}
 .bottin-deux-colonnes {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
     text-align: left;
     margin-top: 10px;
-}
-.bottin-colonne {
-    flex: 1;
-    min-width: 0;
 }
 .bottin-colonne-titre {
     font-family: var(--ptt1-font);
@@ -2655,15 +2649,14 @@ div.cont_code {
     padding-bottom: 8px;
     border-bottom: 1px solid var(--bordure-claire);
 }
-.bottin-colonne .bottin-groupe {
+.bottin-groupe {
     margin-bottom: 12px;
     margin-top: 2px;
 }
 
 @media (max-width: 700px) {
     .bottin-deux-colonnes {
-        flex-direction: column;
-        gap: 10px;
+        grid-template-columns: 1fr;
     }
 }
 /* ============================================================
