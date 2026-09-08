@@ -1556,7 +1556,6 @@ table.forumline:has(th.thCornerR) .postbody {
    ============================================================ */
 .colonne-auteur {
     width: 200px;
-    border-radius: 8px;
     padding: 10px;
     text-align: center;
     vertical-align: top;
