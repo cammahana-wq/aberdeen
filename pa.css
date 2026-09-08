@@ -389,6 +389,11 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 .cadre2 {
     grid-area: 2 / 1 / 2 / 3;
     display: flex;
+      pointer-events: none;
+}
+.cadre2 .lab,
+.cadre2 .lab img {
+    pointer-events: auto;
 }
 .staff {
     border-radius: 10px;
