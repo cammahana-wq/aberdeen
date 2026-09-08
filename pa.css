@@ -2601,6 +2601,9 @@ div.cont_code {
     margin-bottom: 4px;
     padding: 0;
 }
+.bottin-groupe ptt1 {
+    margin-top: 0;
+}
 .bottin-ligne {
     font-size: 12px;
     line-height: 1.9;
