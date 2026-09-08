@@ -105,6 +105,10 @@ table.forumline {
   border-radius: 15px;
   overflow: hidden;
 }
+
+hr {
+    border: unset !important;
+}
 /* ============================================================
    MODE SOMBRE / CLAIR (bouton + variables + correctifs)
    ============================================================ */
