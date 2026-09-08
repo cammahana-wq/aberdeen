@@ -154,7 +154,7 @@
     color: var(--textes) !important;
 }
 [data-color-scheme="dark"] .thHead {
-    background: var(--fond-titre-section) !important;
+    background: var(--degrag) !important;
     color: var(--gris-lien) !important;
 }
 [data-color-scheme="dark"] td.row1 {
