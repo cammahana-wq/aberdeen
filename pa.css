@@ -1472,6 +1472,27 @@ table.forumline:has(th.thCornerR) .postbody {
     line-height: 1.6;
     color: var(--textes);
 }
+a[href*="ShowHideLayernew"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    position: relative;
+}
+a[href*="ShowHideLayernew"]::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--textes);
+    line-height: 1;
+}
+a[href*="ShowHideLayernew"] img {
+    display: none;
+}
 /* ============================================================
    QUI EST EN LIGNE (QEEL)
    ============================================================ */
