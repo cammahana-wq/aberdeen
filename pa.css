@@ -147,7 +147,7 @@
 [data-color-scheme="dark"] .gen,
 [data-color-scheme="dark"] .genmed,
 [data-color-scheme="dark"] .gensmall {
-    color: #46464f;
+    color: #46464f !important;
 }
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
