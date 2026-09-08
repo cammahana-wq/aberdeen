@@ -1767,7 +1767,38 @@ td.row2.colonne-auteur {
 .messaging {
     display: none;
 }
-
+.profil-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.profil-tabs .profil-tab {
+    flex: 1;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 14px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background: var(--border);
+    color: var(--textes);
+    transition: background 0.2s ease;
+}
+.profil-tabs .profil-tab.active {
+    background: var(--accc1);
+    color: var(--white);
+}
+.champ-perso[data-tab="irl"] {
+    display: none;
+}
+.champ-perso[data-tab="irl"].profil-tab-visible {
+    display: block;
+}
+.champ-perso[data-tab="perso"].profil-tab-hidden {
+    display: none;
+}
 /* ---- Carte profil (page profil complète) ---- */
 .rpgprofile {
     max-width: 900px;
