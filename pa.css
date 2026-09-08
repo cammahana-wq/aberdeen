@@ -1634,7 +1634,7 @@ td.row2.colonne-auteur {
     color: var(--textes);
     font-weight: 400;
     text-transform: lowercase;
-    white-space: nowrap;
+    white-space: normal;
 }
 .colonne-auteur .rang {
     display: inline-block;
