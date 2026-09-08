@@ -1,0 +1,488 @@
+/*
+
+            「 instaplate - profile 」
+     
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+          
+*/
+
+#rinstaplateprofile {
+  width: 650px;
+  padding: 55px 40px;
+  background: #fdfdfd;
+  border: 1px solid #f1f1f1;
+  position: relative;
+  font: 13px/145% Roboto;
+  color: #676767;
+}
+
+#rinstaprofile .rvcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#rinstaplateprofile b {
+  color: #000;
+}
+
+#rinstaplateprofile .rheader {
+  width: 100%;
+  height: 175px;
+}
+
+#rinstaplateprofile .rname {
+  font: 18px/200% Roboto;
+  color: #000;
+  text-align: left;
+  margin: 0 0 15px;
+}
+
+#rinstaplateprofile .rverified {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: -15px 0 -5px 10px;
+  background: url(https://i.imgur.com/eMnOwsj.png) center/cover;
+}
+
+#rinstaplateprofile .rfollowing {
+  width: 100px;
+  background: #3897f0;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  padding: 12px 0 11px;
+  font: 12px/0 Roboto;
+  color: #fff;
+  position: relative;
+  right: 60px;
+  top: 6px;
+}
+
+#rinstaplateprofile .rfollowing::after {
+  width: 100px;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  padding: 12px 0 11px;
+  color: #000;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  content: "Following";
+  opacity: 0;
+  transition: all .1s ease;
+}
+
+#rinstaplateprofile .rheader:hover .rfollowing::after {
+  opacity: 1;
+}
+
+#rinstaplateprofile .ricon {
+  width: 165px;
+  height: 165px;
+  background: url(https://i.imgur.com/lTNPgk2.jpg) center/cover;
+  padding: 4px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+#rinstaplateprofile .ricon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+}
+
+#rinstaplateprofile .rstats {
+  margin: 12px 0 0 35px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#rinstaplateprofile .rstats span {
+  width: 130px;
+  display: inline-block;
+  text-align: left;
+  line-height: 130%;
+}
+
+#rinstaplateprofile .rstats span b {
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+#rinstaplateprofile .rstats input[type="checkbox"] {
+  display: none;
+}
+
+#rinstaplateprofile .rstats label {
+  cursor: crosshair;
+  display: inline-block;
+}
+
+#rinstaplateprofile .rpopup {
+  width: 320px;
+  height: 325px;
+  padding: 20px;
+  background: #2d2d2d52;
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 150px;
+  left: calc(50% - 170px);
+  transition: opacity .2s ease;
+}
+
+#rinstaplateprofile .rusers {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: border-box; 
+  border: 3px solid #fff;
+  padding: 2px;
+  position: relative;
+  z-index: 4;
+}
+
+#rinstaplateprofile .rusers::-webkit-scrollbar {
+  width: 1px;
+}
+
+#rinstaplateprofile .rusers::-webkit-scrollbar-thumb {
+  background: #00000052;
+}
+
+#rinstaplateprofile .rusers title {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+  color: #000;
+  font: bold 15px/100% Roboto;
+  padding: 6px 0;
+  margin-bottom: 10px;
+}
+
+#rinstaplateprofile .rusers title::after {
+  content: "☓";
+  font: 23px/100% Arial;
+  color: #5f5f5f;
+  position: absolute;
+  top: 7px;
+  right: 13px;
+}
+
+#rinstaplateprofile input#rfollowers:checked ~ label .rpopfollowers, #rinstaplateprofile input#rfollowing:checked ~ label .rpopfollowing {
+  display: block;
+}
+
+#rinstaplateprofile .rpopup .ruser {
+  margin: 7px 0;
+  position: relative;
+}
+
+#rinstaplateprofile .rpopup .ruser::after {
+  width: 65px;
+  background: #3897f0;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  padding: 14px 0 12px;
+  font: 12px/0 Roboto;
+  color: #fff;
+  content: "Follow";
+}
+
+#rinstaplateprofile .rpopup .ricon {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+}
+
+#rinstaplateprofile .rpopup .ricon img {
+  border-width: 2px;
+}
+
+#rinstaplateprofile .rusername {
+  width: calc(100% - 100px);
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: .2px;
+  text-align: left;
+  margin: 8px 13px;
+}
+
+#rinstaplateprofile .rusername b {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+#rinstaplateprofile b.rverify::after {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: inline-block;
+  background: url(https://i.imgur.com/eMnOwsj.png) center/cover;
+  position: relative;
+  top: 3px;
+  left: 4px;
+}
+
+#rinstaplateprofile .rdesc {
+  color: #232323;
+  text-align: justify;
+  margin: 15px 0 0 0;
+}
+
+#rinstaplateprofile .rdesc b {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #444;
+}
+
+#rinstaplateprofile .rtv {
+  margin: 40px 0 40px;
+  text-align: justify;
+  padding: 0 0 35px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+#rinstaplateprofile .rtv .rvid {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid #dadada;
+  margin: 0 0 0 30px;
+}
+
+#rinstaplateprofile .rtv .rvid:first-child {
+  margin: 0;
+}
+
+#rinstaplateprofile .rtv .rvid img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 5px;
+}
+
+#rinstaplateprofile .rtv .rvid i {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-style: normal;
+}
+
+#rinstaplateprofile .rfollowed {
+  text-align: justify;
+  margin: 0 0 15px 0;
+}
+
+#rinstaplateprofile .rposts {
+  position: relative;
+}
+
+#rinstaplateprofile .rpost {
+  width: 210px;
+  height: 210px;
+  display: inline-block;
+  margin: 3px;
+  position: relative;
+}
+
+#rinstaplateprofile .rpost img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#rinstaplateprofile .rnotes {
+  width: 100%;
+  height: 100%;
+  background: #0000004f;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+#rinstaplateprofile .rpost:hover .rnotes {
+  opacity: 1;
+}
+
+#rinstaplateprofile .rpost .rnotes div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#rinstaplateprofile .rnotes likes::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(https://i.imgur.com/dEtiwSf.png) center/cover;
+  filter: invert(1);
+  margin: 0 4px -2px 0;
+}
+
+#rinstaplateprofile .rnotes comments::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(https://i.imgur.com/2osxMxo.png) center/cover;
+  filter: invert(1);
+  margin: 0 0 -8px 10px;
+}
+
+#rinstaplateprofile:after {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  content: "「R」";
+  font: bold 8px/12px Consolas;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: -.5px;
+  opacity: .4;
+}
+
+#rinstaplateprofile:hover::after {
+  content: "「ROSS @ FÊNIX GRAPHIC」";
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
