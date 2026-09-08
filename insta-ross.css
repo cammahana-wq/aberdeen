@@ -608,7 +608,24 @@
   color: #fff;
 }
 
-
+.rinsta-add-post {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 15px auto 0;
+  border-radius: 100%;
+  background: var(--accc1);
+  color: var(--white);
+  font-size: 24px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+.rinsta-add-post:hover {
+  opacity: 0.85;
+}
 .insta-post {
   max-width: 400px;
   margin: 20px auto;
