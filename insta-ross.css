@@ -571,7 +571,10 @@
 [data-color-scheme="dark"] #rinstaplateprofile .rnotes {
   background: #00000070;
 }
-
+.postbody:has(.insta-follow-notif) {
+    border-left: none;
+    padding-left: 0;
+}
 .insta-follow-notif {
   display: flex;
   align-items: center;
