@@ -2650,10 +2650,6 @@ div.cont_code {
     padding-bottom: 8px;
     border-bottom: 1px solid var(--bordure-claire);
 }
-.bottin-groupe {
-    margin-bottom: 12px;
-    margin-top: 2px;
-}
 
 @media (max-width: 700px) {
     .bottin-deux-colonnes {
