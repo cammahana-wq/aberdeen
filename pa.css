@@ -149,6 +149,9 @@
 [data-color-scheme="dark"] .gensmall {
     color: #99999e !important;
 }
+[data-color-scheme="dark"] .sceditor-container textarea {
+    color: var(--textes) !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
