@@ -2515,12 +2515,13 @@ div.cont_code {
     letter-spacing: 2px;
     color: var(--accc1);
     text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--bordure-claire);
 }
 .bottin-colonne .bottin-groupe {
     margin-bottom: 12px;
+    margin-top: 2px;
 }
 
 @media (max-width: 700px) {
