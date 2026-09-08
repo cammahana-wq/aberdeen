@@ -184,6 +184,16 @@
 [data-color-scheme="dark"] #sceditor_smilies {
   background-color: #201c1a !important;
 }
+[data-color-scheme="dark"] th.thHead,
+[data-color-scheme="dark"] th.thSides,
+[data-color-scheme="dark"] th.thTop,
+[data-color-scheme="dark"] th.thLeft,
+[data-color-scheme="dark"] th.thRight,
+[data-color-scheme="dark"] th.thBottom,
+[data-color-scheme="dark"] th.thCornerL,
+[data-color-scheme="dark"] th.thCornerR {
+  border-color: #4a4442 !important;
+}
 /* bouton de bascule clair/sombre */
 .color-scheme-toggle,
 [data-color-scheme="light"] .color-scheme-toggle .dark,
