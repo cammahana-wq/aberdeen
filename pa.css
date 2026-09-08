@@ -2608,7 +2608,10 @@ div.cont_code {
     font-size: 12px;
     line-height: 1.9;
     padding: 3px 0;
+}
+.bottin-groupe > .bottin-ligne:last-of-type {
     border-bottom: 1px solid var(--bordure-tres-claire);
+    padding-bottom: 8px;
 }
 .bottin-ligne:last-child {
     border-bottom: none;
