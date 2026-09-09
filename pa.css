@@ -537,7 +537,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     display: grid;  
     align-content: center;
     justify-content: center;
-   background-color: var(--structure);
+   background-color: var(--background);
    border-radius: 15px;
    gap: 3px;
    
