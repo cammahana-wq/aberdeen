@@ -1377,7 +1377,7 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-toolbar {
-    color: var(--FAM-titleClr);
+    color: var(--FAM-secondClr);
     position: relative;
     margin: 20px 15px 15px;
     background: var(--FAM-accentClr) !important;
@@ -1397,5 +1397,12 @@ blockquote.FAM-codebox > div {
     height: 100% !important;
 }
 .FAM-tab.FAM-tab-active::after {
-    background: var(--accc1) !important;
+    background: var(--white) !important;
+}
+#FAM-tab-add:hover {
+    color: var(--white) !important;
+    background: var(--FAM-fontClr) !important;
+}
+.FAM-tab.FAM-tab-active::after {
+    background: var(--FAM) !important;
 }
