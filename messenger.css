@@ -441,6 +441,14 @@ input.post[type="password"]:focus {
 input.radio[type="checkbox"] {
     accent-color: var(--accc1);
 }
+table:has(input[name="username"]) td {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+}
+table:has(input[name="username"]) {
+    text-align: center;
+}
 
 /* ============================================================
    TOOLBAR FORUMACTIF (#fa_toolbar) — "Bienvenue" + Notifications
