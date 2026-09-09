@@ -1390,3 +1390,6 @@ blockquote.FAM-codebox > div {
 #FAM-new-topic:hover .fa-circle {
     color: var(--btn-violet-hover-1) !important;
 }
+.FAM-tab.FAM-tab-active .FAM-tab-name {
+    color: var(--textes) !important;
+}
