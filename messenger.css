@@ -1346,6 +1346,7 @@ blockquote.FAM-codebox > div {
     background: var(--FAM-accentClr) !important;
     right: 10px !important;
     bottom: 160px !important;
+    border-radius: 15px;
 }
 #FAM-button:hover {
     background: var(--FAM-secondClr) !important;
