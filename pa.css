@@ -651,8 +651,9 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
-    z-index: 998;
+    z-index: 9999;
      pointer-events: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .bulle-titre {
     display: block;
