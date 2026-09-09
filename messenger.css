@@ -1343,11 +1343,13 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-button {
-    background: var(--FAM-accentClr) !important;
+    background: var(--structure) !important;
+    color: var(--accc1) !important;
     right: 10px !important;
     bottom: 160px !important;
     border-radius: 15px;
 }
 #FAM-button:hover {
-    background: var(--FAM-secondClr) !important;
+    background: var(--btn-violet-hover-1) !important;
+    color: var(--accc1) !important;
 }
