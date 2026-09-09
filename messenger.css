@@ -120,9 +120,11 @@
 
 /* Entête de la fenetre */
 #FAM-toolbar {
-  color: var(--FAM-titleClr);
-  position: relative;
-  margin: 20px 15px 15px;
+    color: var(--FAM-titleClr);
+    position: relative;
+    margin: 20px 15px 15px;
+    background: var(--FAM-accentClr) !important;
+    border-bottom: 1px solid var(--FAM-secondClr) !important;
 }
 
 #FAM-toolbar-inner {
