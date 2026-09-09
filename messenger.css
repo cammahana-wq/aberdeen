@@ -1,3 +1,39 @@
+:root {
+    --FAM-windowSize: 750px;
+
+    --FAM-fontSize: 14px;
+    --FAM-titleFont: 'Open Sans';
+    --FAM-titleSize: 24px;
+
+    --FAM-light: white;
+    --FAM-dark: black;
+
+    --FAM-accentClr: var(--accc1);
+    --FAM-secondClr: var(--liensbefore);
+    --FAM-fontClr: var(--textes);
+    --FAM-fontLightClr: var(--gris-moyen);
+    --FAM-linkClr: var(--accc1);
+    --FAM-titleClr: var(--textes);
+    --FAM-buttonsClr: var(--textes);
+
+    --FAM-pluginBackground: var(--white);
+    --FAM-chatBackground: var(--fond-titre-section);
+    --FAM-textareaBackground: var(--white);
+    --FAM-msgBackground: var(--bordure-tres-claire);
+    --FAM-myMsgBackground: var(--white);
+    --FAM-quoteBackground: color-mix(in srgb, var(--accc1), transparent 85%);
+
+    --FAM-shadowBox: 0 0 20px var(--ombre-carte);
+
+    /* Pas besoin de les modifier, elles sont relatives aux variables au-dessus */
+    --FAM-gradient: linear-gradient(-90deg, var(--FAM-pluginBackground) 20%, color-mix(in srgb, var(--FAM-pluginBackground), transparent 100%) 100%);
+    --FAM-gradientTop: linear-gradient(180deg, var(--FAM-chatBackground) 20%, color-mix(in srgb, var(--FAM-chatBackground), transparent 100%) 100%);
+    --FAM-gradientBot: linear-gradient( 0deg, var(--FAM-chatBackground) 20%, color-mix(in srgb, var(--FAM-chatBackground), transparent 100%) 100%);
+    --FAM-sleepModeBackground: color-mix(in srgb, var(--FAM-chatBackground), transparent 30%);
+    --FAM-newMsgAnimation: color-mix(in srgb, var(--FAM-accentClr), transparent 20%);
+}
+
+
 #FAM,
 #FAM .FAM-inputbox,
 #FAM-msg {
