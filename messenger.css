@@ -1353,3 +1353,40 @@ blockquote.FAM-codebox > div {
     background: var(--btn-violet-hover-1) !important;
     color: var(--accc1) !important;
 }
+#FAM {
+    width: 380px !important;
+    height: 420px !important;
+    min-width: unset !important;
+    min-height: unset !important;
+    left: auto !important;
+    right: 60px !important;
+    bottom: 3px !important;
+    border-radius: 12px 12px 0 0 !important;
+    overflow: hidden !important;
+}
+
+#FAM-button {
+    background: var(--structure) !important;
+    color: var(--accc1) !important;
+    right: 10px !important;
+    bottom: 160px !important;
+}
+#FAM-button:hover {
+    background: var(--btn-violet-hover-1) !important;
+    color: var(--accc1) !important;
+}
+
+#FAM-toolbar {
+    color: var(--FAM-titleClr);
+    position: relative;
+    margin: 20px 15px 15px;
+    background: var(--FAM-accentClr) !important;
+    border-bottom: 1px solid var(--FAM-secondClr) !important;
+}
+
+#FAM-new-topic .fa-circle {
+    color: var(--accc1) !important;
+}
+#FAM-new-topic:hover .fa-circle {
+    color: var(--btn-violet-hover-1) !important;
+}
