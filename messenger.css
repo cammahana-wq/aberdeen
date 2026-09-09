@@ -19,7 +19,7 @@
     --FAM-pluginBackground: var(--white);
     --FAM-chatBackground: var(--background);
     --FAM-textareaBackground: var(--white);
-    --FAM-msgBackground: var(--statut-bg);
+    --FAM-msgBackground: var(--bordure-claire);
     --FAM-myMsgBackground: var(--highlight);
     --FAM-quoteBackground: color-mix(in srgb, var(--degrag), transparent 80%);
 
@@ -52,26 +52,35 @@
   vertical-align: initial;
 }
 
-/* Fenetre du Messenger */
+/* ============================================================
+   FENÊTRE DU MESSENGER
+   ============================================================ */
 #FAM {
   display: grid;
   grid-template-rows: max-content max-content 1fr;
   color: var(--FAM-fontClr);
   font-size: var(--FAM-fontSize);
-  background: var(--FAM-pluginBackground);
+  background: var(--statut-bg) !important;
   position: fixed;
-  height: 100%;
-  width: 90%;
-  max-width: var(--FAM-windowSize);
-  left: 65px;
   z-index: 99;
   visibility: visible;
   opacity: 1;
-  bottom: 0px;
   transition-property: top, right, bottom, left, height, width, margin, opacity, visibility;
   transition-duration: 700ms;
   grid-template-columns: 100%;
   box-shadow: var(--FAM-shadowBox);
+
+  /* taille + position (perso) */
+  width: 400px !important;
+  height: 450px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  max-width: var(--FAM-windowSize);
+  left: auto !important;
+  right: 60px !important;
+  bottom: 3px !important;
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
 }
 
 /* Fenetre fermée */
@@ -91,7 +100,7 @@
   z-index: 1;
 }
 
-/* Bouton pour ouvrir la fenetre */
+/* Bouton pour ouvrir la fenetre (variante native #FAM-button-open, non utilisée sur ce forum) */
 #FAM-button-open {
   color: var(--accentClr);
   font-size: 18px;
@@ -118,13 +127,28 @@
   color: var(--FAM-pluginBackground);
 }
 
-/* Entête de la fenetre */
+/* Bouton flottant réel (#FAM-button, généré par fam.js) */
+#FAM-button {
+  background: var(--statut-bg) !important;
+  color: var(--accc1) !important;
+  right: 10px !important;
+  bottom: 160px !important;
+  border-radius: 15px !important;
+}
+#FAM-button:hover {
+  background: var(--btn-violet-hover-1) !important;
+  color: var(--accc1) !important;
+}
+
+/* ============================================================
+   ENTÊTE DE LA FENÊTRE
+   ============================================================ */
 #FAM-toolbar {
-    color: var(--FAM-titleClr);
-    position: relative;
-    margin: 20px 15px 15px;
-    background: var(--FAM-accentClr) !important;
-    border-bottom: 1px solid var(--FAM-secondClr) !important;
+  color: var(--FAM-titleClr);
+  position: relative;
+  margin: 20px 15px 15px;
+  background: var(--FAM-accentClr) !important;
+  border-bottom: 1px solid var(--FAM-secondClr) !important;
 }
 
 #FAM-toolbar-inner {
@@ -152,7 +176,6 @@
   margin: 0;
 }
 
-
 #FAM-idle,
 .FAM-button {
   color: var(--FAM-buttonsClr);
@@ -176,6 +199,7 @@
   margin: 0 15px;
   padding: 30px 20px;
   position: relative;
+  height: 100% !important; /* corrige le calc() natif qui double-soustrayait avec le layout en grid */
 }
 
 .FAM-viewing-topic {
@@ -248,7 +272,7 @@
 
 /* Boutons */
 .FAM-button {
-  background-color: var(--FAM-accentClr);
+  background: var(--statut-bg) !important;
   color: var(--FAM-pluginBackground);
   border-radius: 8px;
   padding: 5px 12px 6px;
@@ -344,8 +368,6 @@
   height: 30px;
   padding: 0;
 }
-
-
 
 .FAM-section-title {
   color: #39f;
@@ -469,12 +491,12 @@ hr.FAM-hr {
 #FAM-new-topic {
   cursor: pointer;
   font-size: 28px;
-  color: var(--FAM-accentClr);
+  color: var(--accc1) !important;
   margin-bottom: 20px;
 }
 
 #FAM-new-topic:hover {
-  color: var(--FAM-fontClr);
+  color: var(--btn-violet-hover-1) !important;
 }
 
 .FAM-buttons-container {
@@ -699,13 +721,23 @@ hr.FAM-hr {
   justify-content: end;
 }
 
+/* Liens : remplace le bleu par défaut du script par les couleurs du thème */
+#FAM a {
+  color: var(--liensbefore) !important;
+}
+#FAM a:hover {
+  color: var(--accc1) !important;
+}
+#FAM a:active {
+  color: var(--accc2) !important;
+}
+
 #FAM a.FAM-page-link,
 .FAM-page-link {
-  color: #fff;
   font-size: 12px;
   text-decoration: none;
   background: var(--FAM-accentClr);
-  color: var(--FAM-pluginBackground);
+  color: var(--FAM-pluginBackground) !important;
   display: inline-block;
   padding: 1px 6px 2px;
   border-radius: 5px;
@@ -784,10 +816,17 @@ strong.FAM-page-link {
   padding-left: 10px;
 }
 
+/* Conteneur de la bulle : transparent, la vraie couleur vit sur .FAM-msg-text */
 .FAM-msg-content {
   display: flex;
   gap: 7px;
   position: relative;
+  background: transparent !important;
+}
+
+/* Masque le petit triangle natif (mal coloré en dur par le script) */
+.FAM-msg-content::before {
+  display: none !important;
 }
 
 .FAM-msg-editing .FAM-msg-text {
@@ -808,6 +847,19 @@ strong.FAM-page-link {
   background: var(--FAM-msgBackground);
   border-radius: 17px 17px 17px 6px;
   padding: 8px 20px 8px 15px;
+  position: relative;
+}
+
+/* Pointe custom sur les messages reçus (remplace le triangle natif masqué ci-dessus) */
+.FAM-msg:not(.FAM-my-msg) .FAM-msg-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: var(--FAM-msgBackground);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
 .FAM-my-msg .FAM-msg-content {
@@ -1129,7 +1181,7 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-new-msg-notif:after {
-  content: "\\f00d";
+  content: "\f00d";
   font-size: 18px;
   font-weight: 400;
   font-family: FontAwesome;
@@ -1171,6 +1223,9 @@ blockquote.FAM-codebox > div {
   margin-left: 12px;
 }
 
+/* ============================================================
+   ONGLETS DE CONVERSATION
+   ============================================================ */
 #FAM-tab-container {
   height: 30px;
   position: relative;
@@ -1194,8 +1249,8 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-tab-add:hover {
-  background: var(--FAM-accentClr);
-  color: var(--FAM-pluginBackground);
+  color: var(--accc1) !important;
+  background: var(--degrag) !important;
 }
 
 #FAM-tabs {
@@ -1277,6 +1332,14 @@ blockquote.FAM-codebox > div {
   color: var(--FAM-pluginBackground);
 }
 
+.FAM-tab.FAM-tab-active .FAM-tab-name {
+  color: var(--textes) !important;
+}
+
+.FAM-tab.FAM-tab-active::after {
+  background: var(--accc1) !important;
+}
+
 .FAM-tab-name {
   font-size: 12px;
   width: 80%;
@@ -1342,67 +1405,7 @@ blockquote.FAM-codebox > div {
   z-index: 999;
 }
 
-#FAM-button {
-    background: var(--structure) !important;
-    color: var(--accc1) !important;
-    right: 10px !important;
-    bottom: 160px !important;
-    border-radius: 15px;
-}
-#FAM-button:hover {
-    background: var(--btn-violet-hover-1) !important;
-    color: var(--accc1) !important;
-}
-#FAM {
-    width: 400px !important;
-    height: 450px !important;
-    min-width: unset !important;
-    min-height: unset !important;
-    left: auto !important;
-    right: 60px !important;
-    bottom: 3px !important;
-    border-radius: 12px 12px 0 0 !important;
-    overflow: hidden !important;
-}
-
-#FAM-button {
-    background: var(--statut-bg) !important;
-    color: var(--accc1) !important;
-    right: 10px !important;
-    bottom: 160px !important;
-}
-#FAM-button:hover {
-    background: var(--btn-violet-hover-1) !important;
-    color: var(--accc1) !important;
-}
-
-#FAM-toolbar {
-    color: var(--accc1);
-    position: relative;
-    margin: 20px 15px 15px;
-    background: var(--FAM-accentClr) !important;
-    border-bottom: 1px solid var(--FAM-secondClr) !important;
-}
-
-#FAM-new-topic .fa-circle {
-    color: var(--accc1) !important;
-}
-#FAM-new-topic:hover .fa-circle {
-    color: var(--btn-violet-hover-1) !important;
-}
-.FAM-tab.FAM-tab-active .FAM-tab-name {
-    color: var(--textes) !important;
-}
-#FAM-content {
-    height: 100% !important;
-}
-.FAM-tab.FAM-tab-active::after {
-    background: var(--white) !important;
-}
-#FAM-tab-add:hover {
-    color: var(--white) !important;
-    background: var(--FAM-fontClr) !important;
-}
-.FAM-tab.FAM-tab-active::after {
-    background: var(--FAM) !important;
+/* Badge du nombre de pièces jointes (remplace le bleu par défaut) */
+#FAM-attachment-total {
+  background: var(--degrag) !important;
 }
