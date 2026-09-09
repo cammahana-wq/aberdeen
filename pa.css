@@ -456,12 +456,11 @@ a.nav:hover {
     width: 883px;
     max-width: 100%;
     box-sizing: border-box;
-    margin: 0;
-    .pa_1 {
+    margin: 0:
     position: relative;
     z-index: 10;
 }
-}
+
 .pa_1 .contexte {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
