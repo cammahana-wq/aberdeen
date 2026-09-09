@@ -1341,3 +1341,12 @@ blockquote.FAM-codebox > div {
   padding: 10px;
   z-index: 999;
 }
+
+#FAM-button {
+    background: var(--FAM-accentClr) !important;
+    right: 10px !important;
+    bottom: 160px !important;
+}
+#FAM-button:hover {
+    background: var(--FAM-secondClr) !important;
+}
