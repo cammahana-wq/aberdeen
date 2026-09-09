@@ -8,7 +8,7 @@
     --FAM-light: var(--white);
     --FAM-dark: var(--black);
 
-    --FAM-accentClr: var(--highlight);
+    --FAM-accentClr: var(--degrag);
     --FAM-secondClr: var(--degrag);
     --FAM-fontClr: var(--textes);
     --FAM-fontLightClr: var(--gris-moyen);
@@ -68,12 +68,7 @@
   transition-duration: 700ms;
   grid-template-columns: 100%;
   box-shadow: var(--FAM-shadowBox);
-#FAM {
-    background: rgba(255, 255, 255, 0.4) !important;
-}
-[data-color-scheme="dark"] #FAM {
-    background: rgba(20, 17, 15, 0.50) !important;
-}
+
   /* taille + position (perso) */
   width: 400px !important;
   height: 450px !important;
@@ -85,6 +80,14 @@
   bottom: 3px !important;
   border-radius: 12px 12px 0 0 !important;
   overflow: hidden !important;
+}
+
+/* Fond semi-transparent, différent en clair et en sombre */
+#FAM {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+[data-color-scheme="dark"] #FAM {
+  background: rgba(20, 17, 15, 0.50) !important;
 }
 
 /* Fenetre fermée */
@@ -162,54 +165,17 @@
   gap: 15px;
 }
 
-/* Lisibilité du titre et de la flèche retour en mode sombre */
-[data-color-scheme="dark"] .FAM-maintitle,
-[data-color-scheme="dark"] .FAM-toolbar-button {
-    color: var(--textes) !important;
-}
-
-/* Onglet actif en mode sombre : fond marron assorti à la barre du haut */
-[data-color-scheme="dark"] .FAM-tab.FAM-tab-active {
-    background: var(--liensvisibles) !important;
-}
-[data-color-scheme="dark"] .FAM-tab.FAM-tab-active::after {
-    background: var(--accc3) !important;
-}
-
-/* Retire le dégradé de fondu en haut/bas de la conversation */
-.FAM-viewing-topic:before,
-.FAM-viewing-topic:after {
-    display: none !important;
-}
-
-/* Nom du membre affiché sous la bulle plutôt qu'au-dessus */
-.FAM-msg-box {
-    display: flex !important;
-    flex-direction: column !important;
-}
-.FAM-msg-name {
-    order: 2 !important;
-}
-.FAM-msg-content {
-    order: 1 !important;
-}
-.FAM-msg-date {
-    order: 3 !important;
-}
-
-/* Avatar des messages, plus grand et remonté */
-.FAM-msg-avatar {
-    width: 60px !important;
-    height: 60px !important;
-    min-width: 60px !important;
-    flex-shrink: 0 !important;
-    top: 0 !important;
-}
 /* Bouton flèche de retour */
 .FAM-toolbar-button {
-  color: var(--FAM-button);
+  color: var(--FAM-titleClr);
   font-size: 24px;
   cursor: pointer;
+}
+
+/* Titre et flèche retour : lisibles en mode sombre (le fond de la barre change, le texte doit suivre) */
+[data-color-scheme="dark"] .FAM-maintitle,
+[data-color-scheme="dark"] .FAM-toolbar-button {
+  color: var(--textes) !important;
 }
 
 /* Titre de la fenetre */
@@ -253,26 +219,10 @@
   padding: 0 20px !important;
 }
 
+/* Dégradés de fondu haut/bas de la conversation : désactivés */
 .FAM-viewing-topic:before,
 .FAM-viewing-topic:after {
-  content: "";
-  display: block;
-  position: sticky;
-  right: 0px;
-  left: 0;
-  height: 80px;
-  z-index: 8;
-  pointer-events: none;
-}
-
-.FAM-viewing-topic:before {
-  top: 0px;
-  background: var(--FAM-gradientTop);
-}
-
-.FAM-viewing-topic:after {
-  bottom: 0;
-  background: var(--FAM-gradientBot);
+  display: none !important;
 }
 
 /* Chargement */
@@ -829,14 +779,17 @@ strong.FAM-page-link {
   gap: 10px;
 }
 
+/* Avatar des messages : agrandi et remonté */
 .FAM-msg-avatar {
-  width: 35px;
-  height: 35px;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
   padding: 2px;
   border-radius: 100%;
   overflow: hidden;
   position: relative;
-  top: 50%;
+  top: 0 !important;
+  flex-shrink: 0 !important;
   align-self: flex-end;
 }
 
@@ -856,11 +809,26 @@ strong.FAM-page-link {
   flex-direction: row-reverse;
 }
 
+/* Nom du membre affiché sous la bulle plutôt qu'au-dessus */
 .FAM-msg-box {
   float: right;
   width: 80%;
   width: calc(100% - 48px);
   padding-left: 10px;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.FAM-msg-name {
+  order: 2 !important;
+}
+
+.FAM-msg-content {
+  order: 1 !important;
+}
+
+.FAM-msg-date {
+  order: 3 !important;
 }
 
 /* Conteneur de la bulle : transparent, la vraie couleur vit sur .FAM-msg-text */
@@ -1385,6 +1353,14 @@ blockquote.FAM-codebox > div {
 
 .FAM-tab.FAM-tab-active::after {
   background: var(--accc1) !important;
+}
+
+/* Onglet actif en mode sombre : fond marron assorti à la barre du haut */
+[data-color-scheme="dark"] .FAM-tab.FAM-tab-active {
+  background: var(--liensvisibles) !important;
+}
+[data-color-scheme="dark"] .FAM-tab.FAM-tab-active::after {
+  background: var(--accc3) !important;
 }
 
 .FAM-tab-name {
