@@ -8,7 +8,7 @@
     --FAM-light: var(--white);
     --FAM-dark: var(--black);
 
-    --FAM-accentClr: var(--accc1);
+    --FAM-accentClr: var(--highlight);
     --FAM-secondClr: var(--degrag);
     --FAM-fontClr: var(--textes);
     --FAM-fontLightClr: var(--gris-moyen);
@@ -1366,7 +1366,7 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-button {
-    background: var(--structure) !important;
+    background: var(--statut-bg) !important;
     color: var(--accc1) !important;
     right: 10px !important;
     bottom: 160px !important;
@@ -1377,7 +1377,7 @@ blockquote.FAM-codebox > div {
 }
 
 #FAM-toolbar {
-    color: var(--FAM-secondClr);
+    color: var(--accc1);
     position: relative;
     margin: 20px 15px 15px;
     background: var(--FAM-accentClr) !important;
