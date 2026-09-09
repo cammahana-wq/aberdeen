@@ -1393,3 +1393,6 @@ blockquote.FAM-codebox > div {
 .FAM-tab.FAM-tab-active .FAM-tab-name {
     color: var(--textes) !important;
 }
+#FAM-content {
+    height: 100% !important;
+}
