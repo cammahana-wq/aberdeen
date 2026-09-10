@@ -1830,6 +1830,12 @@ a[href*="ShowHideLayernew"] img {
   border: 1px solid var(--groupe-color, var(--bordure-carte));
   font-size: 11px;
   font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.groupe-badge:hover {
+  opacity: 0.8;
 }
 
 /* ============================================================
