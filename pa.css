@@ -3404,14 +3404,20 @@ span.gensmall.bold:has(#addthis-toolbar) {
 .monomer-modal.monomer-open, .monomer-overlay.monomer-open {
     opacity: 1;
 }
-.fa-mention-at {
-  background: none !important;
-  border: none !important;
+.post-options a.fa-mention-at {
+  display: inline-flex !important;
+  align-items: center !important;
   padding: 0 6px !important;
+  border-radius: 0 !important;
+  font-family: inherit !important;
   font-size: 18px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  text-decoration: none !important;
+  background: none !important;
+  color: inherit !important;
   font-weight: bold;
-  color: var(--accc1) !important;
 }
-.fa-mention-at:hover {
+.post-options a.fa-mention-at:hover {
   color: var(--liensbefore) !important;
 }
