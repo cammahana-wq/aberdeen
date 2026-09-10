@@ -5,7 +5,6 @@
 .mes-onglets {
   display: flex;
   align-items: stretch;
-  gap: 20px;
 }
 
 .tab-labels {
