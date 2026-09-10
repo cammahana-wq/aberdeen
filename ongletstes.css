@@ -43,6 +43,7 @@
   padding: 15px;
   padding-top: 0;
   padding-bottom: 0;
+  padding-right: 0;
 }
 
 .mes-onglets:has(#tab1:checked) #contenu1,
