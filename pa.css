@@ -3407,11 +3407,11 @@ span.gensmall.bold:has(#addthis-toolbar) {
 .fa-mention-at {
   background: none !important;
   border: none !important;
-  font-size: 18px;
-  font-weight: bold;
   padding: 0 6px !important;
-  color: var(--accc1);
+  font-size: 18px !important;
+  font-weight: bold;
+  color: var(--accc1) !important;
 }
 .fa-mention-at:hover {
-  color: var(--liensbefore);
+  color: var(--liensbefore) !important;
 }
