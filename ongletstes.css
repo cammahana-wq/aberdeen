@@ -22,7 +22,7 @@ ficheadmin:has(.mes-onglets) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100px;
+  width: 150px;
   border: 1px solid var(--accc1);
   border-radius: 12px;
   padding: 12px 0;
