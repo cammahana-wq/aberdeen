@@ -5,7 +5,7 @@
 /* ---- Structure générale : grille 2 colonnes / 2 lignes ---- */
 ficheadmin .mes-onglets {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px minmax(0, 1fr);
   column-gap: 20px;
   row-gap: 15px;
 }
@@ -15,7 +15,11 @@ ficheadmin:has(.mes-onglets) {
   max-width: 100%;
   margin: 10px 0;
 }
-
+ficheadmin .mes-onglets tdf1,
+ficheadmin .mes-onglets qut1 {
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
 .tab-labels {
   grid-column: 1;
   grid-row: 1;
