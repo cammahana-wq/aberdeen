@@ -26,7 +26,7 @@ ficheadmin .mes-onglets qut1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 150px;
+  width: 100px;
   border: 1px solid var(--accc1);
   border-radius: 12px;
   padding: 12px 0;
