@@ -9,15 +9,15 @@
 }
 
 .tab-labels {
-      display: flex;
-    width: 160px;
-    flex-shrink: 0;
-    border: 1px solid var(--accc1);
-    border-radius: 12px;
-    padding: 12px 0;
-    gap: 4px;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  width: 100px;
+  flex-shrink: 0;
+  border: 1px solid var(--accc1);
+  border-radius: 12px;
+  padding: 12px 0;
+  gap: 4px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .tab-labels label {
@@ -52,6 +52,7 @@
   display: block;
 }
 
+/* ---- En-tête (photos, prénom, citation) ---- */
 ficheadmin .mes-onglets .rpgprofile-top-row {
   display: flex;
   flex-direction: column;
@@ -61,6 +62,7 @@ ficheadmin .mes-onglets .rpgprofile-top-row {
   grid-template-rows: none;
   max-width: none;
   width: auto;
+  min-width: 0;
   margin: 0 auto;
 }
 
@@ -91,38 +93,45 @@ ficheadmin .mes-onglets .rpgprofile-header-info {
 }
 
 ficheadmin .mes-onglets qut1 {
-      display: block;
-    font-family: var(--qut1-font);
-    font-size: var(--qut1-size);
-    font-style: italic;
-    line-height: 1.6;
-    color: var(--qut1-color);
-    margin: 0;
-    padding-top: 2px;
+  display: block;
+  font-family: var(--qut1-font);
+  font-size: var(--qut1-size);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--qut1-color);
+  margin: 0;
+  padding-top: 2px;
 }
 
 ficheadmin .mes-onglets tdf1 {
   display: block;
-    font-family: var(--tdf1-font);
-    font-size: 20px;
-    font-weight: var(--tdf1-weight);
-    line-height: 0.9;
-    text-transform: uppercase;
-    letter-spacing: var(--tdf1-spacing);
-    color: var(--tdf1-color);
-    margin: 10px 2px;
+  font-family: var(--tdf1-font);
+  font-size: 20px;
+  font-weight: var(--tdf1-weight);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: var(--tdf1-spacing);
+  color: var(--tdf1-color);
+  margin: 10px 2px;
 }
 
+/* ---- Sections générales (cartes blanches) ---- */
 ficheadmin .mes-onglets .rpgprofile-section {
-      background: var(--white);
-    border: 1px solid var(--bordure-carte);
-    border-radius: 10px;
-    margin-bottom: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px var(--ombre-carte);
+  background: var(--white);
+  border: 1px solid var(--bordure-carte);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--ombre-carte);
 }
 
-/* Frise chronologique */
+/* texte des sections (carte d'identité, etc.), resserré pour tenir dans l'espace réduit à côté des onglets */
+ficheadmin .mes-onglets info {
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+/* ---- Frise chronologique ---- */
 ficheadmin .mes-onglets .frise-chronologique {
   position: relative;
   margin-left: 10px;
@@ -176,12 +185,12 @@ ficheadmin .mes-onglets .frise-texte {
   color: var(--gris-champ);
 }
 
-/* RP en cours : un lien par ligne */
+/* ---- RP en cours / terminés / à venir ---- */
 ficheadmin .mes-onglets .rp-liste {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 15px 25px;
+  padding: 10px 12px;
 }
 
 ficheadmin .mes-onglets .rp-item {
@@ -217,11 +226,13 @@ ficheadmin .mes-onglets .rp-col-stack {
   display: flex;
   flex-direction: column;
 }
+
+/* ---- Catégories de liens (famille, amis...) ---- */
 ficheadmin .mes-onglets .lien-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 15px 25px;
+  padding: 10px 12px;
   border-bottom: 1px solid var(--bordure-tres-claire);
 }
 
