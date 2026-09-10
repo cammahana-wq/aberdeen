@@ -236,7 +236,7 @@ ficheadmin .mes-onglets .lien-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 10px 12px;
+  padding: 5px 12px;
   border-bottom: 1px solid var(--bordure-tres-claire);
 }
 
@@ -274,4 +274,15 @@ ficheadmin .mes-onglets .lien-pseudo:hover {
 ficheadmin .mes-onglets .lien-texte {
   font-size: 12px;
   color: var(--gris-champ);
+}
+
+ficheadmin .mes-onglets .rpgprofile-section-title {
+      background: var(--fond-titre-section);
+    padding: 5px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--gris-lien);
+    border-bottom: 1px solid var(--bordure-carte);
 }
