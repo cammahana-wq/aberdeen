@@ -369,9 +369,6 @@ ficheadmin .liens-onglets .lien-texte {
   color: var(--gris-champ);
 }
 
-ficheadmin br {
-  display: none;
-}
 
 ficheadmin .mes-onglets .mentiontag,
 ficheadmin .liens-onglets .mentiontag {
