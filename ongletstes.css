@@ -73,6 +73,7 @@ ficheadmin .mes-onglets .rpgprofile-left {
 ficheadmin .mes-onglets {
   width:100%;
   max-width: 100%;
+  margin: 10px 0;
 }
 ficheadmin .mes-onglets .fiche-icons {
   display: flex;
