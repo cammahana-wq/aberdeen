@@ -98,10 +98,13 @@ ficheadmin .mes-onglets .fiche-icons img:last-child {
 }
 
 ficheadmin .mes-onglets .rpgprofile-header-info {
-  grid-column: unset;
-  grid-row: unset;
-  text-align: center;
-  padding-left: 0;
+      grid-column: unset;
+    grid-row: unset;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 ficheadmin .mes-onglets qut1 {
