@@ -401,6 +401,47 @@ a.nav:hover {
     background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
     color: var(--btn-violet-hover-texte);
 }
+
+/* ============================================================
+        CONNEXION RAPIDE
+        ======================================================== */
+        .password-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.password-container input.post {
+    flex: 1;
+}
+.password-container .show_hide_pwd {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+.password-container .show_hide_pwd:hover {
+    opacity: 1;
+}
+
+input.post[type="text"],
+input.post[type="password"] {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    color: var(--textes);
+    font-family: inherit;
+    font-size: 12px;
+}
+input.post[type="text"]:focus,
+input.post[type="password"]:focus {
+    outline: none;
+    border-color: var(--accc1);
+}
+
+input.radio[type="checkbox"] {
+    accent-color: var(--accc1);
+}
+
 /* ============================================================
    TOOLBAR FORUMACTIF (#fa_toolbar) — "Bienvenue" + Notifications
    ============================================================ */
@@ -1770,6 +1811,25 @@ a[href*="ShowHideLayernew"] img {
 }
 .qui-en-ligne-col-droite table td.row1 {
     background: transparent !important;
+}
+.groupes-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.groupe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--statut-bg);
+  color: var(--groupe-color, var(--textes));
+  border: 1px solid var(--groupe-color, var(--bordure-carte));
+  font-size: 11px;
+  font-weight: 600;
 }
 
 /* ============================================================
