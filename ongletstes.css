@@ -85,6 +85,8 @@ ficheadmin .mes-onglets .rpgprofile-top-row {
 ficheadmin .mes-onglets .rpgprofile-left {
   display: flex;
   flex-direction: row;
+  min-width: 0;
+  max-width: 100%;
 }
 
 ficheadmin .mes-onglets .fiche-icons {
@@ -108,6 +110,8 @@ ficheadmin .mes-onglets .rpgprofile-header-info {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+ min-width: 0;
+  max-width: 100%;
 }
 
 ficheadmin .mes-onglets qut1 {
