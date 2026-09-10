@@ -51,7 +51,6 @@ ficheadmin:has(.mes-onglets) {
 
 .tab-content {
   display: none;
-  padding: 15px;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 0;
