@@ -3404,3 +3404,14 @@ span.gensmall.bold:has(#addthis-toolbar) {
 .monomer-modal.monomer-open, .monomer-overlay.monomer-open {
     opacity: 1;
 }
+.fa-mention-at {
+  background: none !important;
+  border: none !important;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 6px !important;
+  color: var(--accc1);
+}
+.fa-mention-at:hover {
+  color: var(--liensbefore);
+}
