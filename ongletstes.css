@@ -373,3 +373,18 @@ ficheadmin .liens-onglets .lien-texte {
 ficheadmin br {
   display: none;
 }
+
+ficheadmin .mes-onglets .mentiontag,
+ficheadmin .liens-onglets .mentiontag {
+  color: var(--accc1);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+ficheadmin .mes-onglets .mentiontag:hover,
+ficheadmin .liens-onglets .mentiontag:hover {
+  text-decoration: underline;
+}
