@@ -401,14 +401,3 @@ ficheadmin .liens-onglets .mentiontag:hover {
   text-decoration: underline;
 }
 
-.fa-mention-at {
-  background: none !important;
-  border: none !important;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 0 6px !important;
-  color: var(--statut-texte);
-}
-.fa-mention-at:hover {
-  color: var(--liensbefore);
-}
