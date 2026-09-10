@@ -2,21 +2,31 @@
   display: none;
 }
 
-.mes-onglets {
-  display: flex;
-  align-items: stretch;
+/* ---- Structure générale : grille 2 colonnes / 2 lignes ---- */
+ficheadmin .mes-onglets {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 20px;
+  row-gap: 15px;
+}
+
+ficheadmin:has(.mes-onglets) {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
 }
 
 .tab-labels {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100px;
-  flex-shrink: 0;
   border: 1px solid var(--accc1);
   border-radius: 12px;
   padding: 12px 0;
   gap: 4px;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .tab-labels label {
@@ -34,7 +44,8 @@
 }
 
 .fiche-onglets-body {
-  flex: 1;
+  grid-column: 1 / -1;
+  grid-row: 2;
   min-width: 0;
 }
 
@@ -54,6 +65,8 @@
 
 /* ---- En-tête (photos, prénom, citation) ---- */
 ficheadmin .mes-onglets .rpgprofile-top-row {
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,11 +84,7 @@ ficheadmin .mes-onglets .rpgprofile-left {
   flex-direction: column;
   align-items: center;
 }
-ficheadmin:has(.mes-onglets) {
-  width:100%;
-  max-width: 100%;
-  margin: 10px 0;
-}
+
 ficheadmin .mes-onglets .fiche-icons {
   display: flex;
   gap: 7px;
@@ -129,7 +138,18 @@ ficheadmin .mes-onglets .rpgprofile-section {
   box-shadow: 0 2px 8px var(--ombre-carte);
 }
 
-/* texte des sections (carte d'identité, etc.), resserré pour tenir dans l'espace réduit à côté des onglets */
+ficheadmin .mes-onglets .rpgprofile-section-title {
+  background: var(--fond-titre-section);
+  padding: 5px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--gris-lien);
+  border-bottom: 1px solid var(--bordure-carte);
+}
+
+/* texte des sections (carte d'identité, etc.) */
 ficheadmin .mes-onglets info {
   padding: 10px 12px;
   font-size: 12px;
@@ -274,15 +294,4 @@ ficheadmin .mes-onglets .lien-pseudo:hover {
 ficheadmin .mes-onglets .lien-texte {
   font-size: 12px;
   color: var(--gris-champ);
-}
-
-ficheadmin .mes-onglets .rpgprofile-section-title {
-      background: var(--fond-titre-section);
-    padding: 5px 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: var(--gris-lien);
-    border-bottom: 1px solid var(--bordure-carte);
 }
