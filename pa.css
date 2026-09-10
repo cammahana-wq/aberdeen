@@ -1826,7 +1826,7 @@ a[href*="ShowHideLayernew"] img {
   padding: 3px 10px;
   border-radius: 20px;
   background: var(--statut-bg);
-  color: var(--groupe-color, var(--textes));
+  color: var(--groupe-color, var(--textes)) !important;
   border: 1px solid var(--groupe-color, var(--bordure-carte));
   font-size: 11px;
   font-weight: 600;
