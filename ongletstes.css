@@ -1,8 +1,10 @@
+/* ============================================================
+   POST 1 — FICHE PERSO (grille onglets latéraux + en-tête)
+   ============================================================ */
 .mes-onglets input[type="radio"] {
   display: none;
 }
 
-/* ---- Structure générale : grille 2 colonnes / 2 lignes ---- */
 ficheadmin .mes-onglets {
   display: grid;
   grid-template-columns: 100px minmax(0, 1fr);
@@ -10,16 +12,6 @@ ficheadmin .mes-onglets {
   row-gap: 15px;
 }
 
-ficheadmin:has(.mes-onglets) {
-  width: 100%;
-  max-width: 100%;
-  margin: 10px 0;
-}
-ficheadmin .mes-onglets tdf1,
-ficheadmin .mes-onglets qut1 {
-  overflow-wrap: break-word;
-  max-width: 100%;
-}
 .tab-labels {
   grid-column: 1;
   grid-row: 1;
@@ -40,8 +32,7 @@ ficheadmin .mes-onglets qut1 {
 }
 
 .mes-onglets:has(#tab1:checked) label[for="tab1"],
-.mes-onglets:has(#tab2:checked) label[for="tab2"],
-.mes-onglets:has(#tab3:checked) label[for="tab3"] {
+.mes-onglets:has(#tab2:checked) label[for="tab2"] {
   color: var(--accc1);
   font-weight: bold;
   border-bottom: 2px solid var(--accc1);
@@ -61,12 +52,10 @@ ficheadmin .mes-onglets qut1 {
 }
 
 .mes-onglets:has(#tab1:checked) #contenu1,
-.mes-onglets:has(#tab2:checked) #contenu2,
-.mes-onglets:has(#tab3:checked) #contenu3 {
+.mes-onglets:has(#tab2:checked) #contenu2 {
   display: block;
 }
 
-/* ---- En-tête (photos, prénom, citation) ---- */
 ficheadmin .mes-onglets .rpgprofile-top-row {
   grid-column: 2;
   grid-row: 1;
@@ -103,14 +92,20 @@ ficheadmin .mes-onglets .fiche-icons img:last-child {
 }
 
 ficheadmin .mes-onglets .rpgprofile-header-info {
-      grid-column: unset;
-    grid-row: unset;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
- min-width: 0;
+  grid-column: unset;
+  grid-row: unset;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 0;
+  max-width: 100%;
+}
+
+ficheadmin .mes-onglets qut1,
+ficheadmin .mes-onglets tdf1 {
+  overflow-wrap: break-word;
   max-width: 100%;
 }
 
@@ -137,7 +132,6 @@ ficheadmin .mes-onglets tdf1 {
   margin: 10px 2px;
 }
 
-/* ---- Sections générales (cartes blanches) ---- */
 ficheadmin .mes-onglets .rpgprofile-section {
   background: var(--white);
   border: 1px solid var(--bordure-carte);
@@ -158,13 +152,11 @@ ficheadmin .mes-onglets .rpgprofile-section-title {
   border-bottom: 1px solid var(--bordure-carte);
 }
 
-/* texte des sections (carte d'identité, etc.) */
 ficheadmin .mes-onglets info {
   padding: 10px 12px;
   font-size: 12px;
 }
 
-/* ---- Frise chronologique ---- */
 ficheadmin .mes-onglets .frise-chronologique {
   position: relative;
   margin-left: 10px;
@@ -218,7 +210,6 @@ ficheadmin .mes-onglets .frise-texte {
   color: var(--gris-champ);
 }
 
-/* ---- RP en cours / terminés / à venir ---- */
 ficheadmin .mes-onglets .rp-liste {
   display: flex;
   flex-direction: column;
@@ -260,20 +251,93 @@ ficheadmin .mes-onglets .rp-col-stack {
   flex-direction: column;
 }
 
-/* ---- Catégories de liens (famille, amis...) ---- */
-ficheadmin .mes-onglets .lien-item {
+/* Cadre extérieur qui prend toute la largeur, pour cette fiche uniquement */
+ficheadmin:has(.mes-onglets) {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+/* ============================================================
+   POST 2 — LIENS (onglets horizontaux façon navigateur)
+   ============================================================ */
+.liens-onglets input[type="radio"] {
+  display: none;
+}
+
+ficheadmin:has(.liens-onglets) {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+ficheadmin .liens-tab-labels {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid var(--accc1);
+  flex-wrap: wrap;
+}
+
+ficheadmin .liens-tab-labels label {
+  padding: 8px 18px;
+  cursor: pointer;
+  color: var(--textes);
+  border: 1px solid var(--accc1);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: var(--white);
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.liens-onglets:has(#ltab1:checked) label[for="ltab1"],
+.liens-onglets:has(#ltab2:checked) label[for="ltab2"],
+.liens-onglets:has(#ltab3:checked) label[for="ltab3"],
+.liens-onglets:has(#ltab4:checked) label[for="ltab4"],
+.liens-onglets:has(#ltab5:checked) label[for="ltab5"] {
+  background: var(--accc1);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.liens-tab-content {
+  display: none;
+  padding-top: 10px;
+}
+
+.liens-onglets:has(#ltab1:checked) #lcontenu1,
+.liens-onglets:has(#ltab2:checked) #lcontenu2,
+.liens-onglets:has(#ltab3:checked) #lcontenu3,
+.liens-onglets:has(#ltab4:checked) #lcontenu4,
+.liens-onglets:has(#ltab5:checked) #lcontenu5 {
+  display: block;
+}
+
+ficheadmin .liens-onglets .rpgprofile-section {
+  background: var(--white);
+  border: 1px solid var(--bordure-carte);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--ombre-carte);
+}
+
+ficheadmin .liens-onglets .lien-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 5px 12px;
+  padding: 10px 15px;
   border-bottom: 1px solid var(--bordure-tres-claire);
 }
 
-ficheadmin .mes-onglets .lien-item:last-child {
+ficheadmin .liens-onglets .lien-item:last-child {
   border-bottom: none;
 }
 
-ficheadmin .mes-onglets .lien-icone {
+ficheadmin .liens-onglets .lien-icone {
   width: 90px;
   height: 90px;
   object-fit: cover;
@@ -281,11 +345,12 @@ ficheadmin .mes-onglets .lien-icone {
   flex-shrink: 0;
 }
 
-ficheadmin .mes-onglets .lien-contenu {
+ficheadmin .liens-onglets .lien-contenu {
   text-align: left;
+  min-width: 0;
 }
 
-ficheadmin .mes-onglets .lien-pseudo {
+ficheadmin .liens-onglets .lien-pseudo {
   display: block;
   color: var(--accc1);
   font-weight: bold;
@@ -296,11 +361,11 @@ ficheadmin .mes-onglets .lien-pseudo {
   margin-bottom: 4px;
 }
 
-ficheadmin .mes-onglets .lien-pseudo:hover {
+ficheadmin .liens-onglets .lien-pseudo:hover {
   text-decoration: underline;
 }
 
-ficheadmin .mes-onglets .lien-texte {
+ficheadmin .liens-onglets .lien-texte {
   font-size: 12px;
   color: var(--gris-champ);
 }
