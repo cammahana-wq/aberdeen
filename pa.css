@@ -3499,3 +3499,13 @@ span.gensmall.bold:has(#addthis-toolbar) {
   height: auto !important;
   vertical-align: middle;
 }
+img[id^="smiley_"] {
+  max-width: 30px !important;
+  max-height: 30px !important;
+  width: auto !important;
+  height: auto !important;
+  vertical-align: middle;
+}
+td.row1:has(img[id^="smiley_"]) {
+  background-color: var(--statut-bg) !important;
+}
