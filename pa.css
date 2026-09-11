@@ -528,15 +528,13 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     flex-direction: column;
     align-content: space-around;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 .link_pa a {
     color: var(--textes);
     text-decoration: none;
-     border-bottom: 1px solid var(--backtotop-clair);
-    padding-bottom: 2px;
-    padding-top: 5px;
+    padding-bottom: 8px;
 }
 .link_pa a:first-child {
     padding-top: 15px;
