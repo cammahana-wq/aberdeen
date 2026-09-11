@@ -1837,7 +1837,9 @@ a[href*="ShowHideLayernew"] img {
 .groupe-badge:hover {
   opacity: 0.8;
 }
-
+[data-color-scheme="dark"] .groupe-badge {
+  color: var(--groupe-color, var(--textes)) !important;
+}
 /* ============================================================
    PROFIL / FICHE MEMBRE (colonne auteur d'un message)
    ============================================================ */
