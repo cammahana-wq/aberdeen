@@ -171,7 +171,7 @@ th.thHead:has(a[href*="optionsitems"]) .gen {
 }
 [data-color-scheme="dark"] .thHead {
     background: var(--degrag) !important;
-    color: var(--liensvisibles); !important;
+    color: var(--liensvisibles) !important;
 }
 [data-color-scheme="dark"] td.row1 {
     background: var(--white) !important;
@@ -497,7 +497,7 @@ input.radio[type="checkbox"] {
     width: 883px;
     max-width: 100%;
     box-sizing: border-box;
-    margin: 0:
+    margin: 0;
     position: relative;
     z-index: 10;
 }
