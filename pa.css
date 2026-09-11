@@ -835,7 +835,7 @@ a {
     font-family: serif;
     font-size: 16px;
 }
-.partenairesliste ul {
+.partenairesliste > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
