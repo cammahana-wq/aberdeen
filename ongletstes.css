@@ -400,3 +400,11 @@ ficheadmin .mes-onglets .mentiontag:hover,
 ficheadmin .liens-onglets .mentiontag:hover {
   text-decoration: underline;
 }
+
+.bottin-colonne ul{
+list-style: none;
+}
+
+.bottin-colonne ul ptt1{
+  margin: 0;
+}
