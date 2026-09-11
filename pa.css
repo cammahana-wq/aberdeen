@@ -3493,8 +3493,8 @@ span.gensmall.bold:has(#addthis-toolbar) {
 }
 
    .postbody img[src*="/smiles/"] {
-  max-width: 30px !important;
-  max-height: 30px !important;
+  max-width: 35px !important;
+  max-height: 35px !important;
   width: auto !important;
   height: auto !important;
   vertical-align: middle;
