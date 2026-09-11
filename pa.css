@@ -3510,4 +3510,5 @@ td.row1:has(img[id^="smiley_"]) {
 }
 a:hover {
   text-decoration: none !important;
+  color: var(--accc1) !important;
 }
