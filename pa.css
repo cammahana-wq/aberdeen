@@ -828,7 +828,7 @@ a {
     padding-top: 2px;
 }
 
-nav {
+.partenairesliste {
     background-color: var(--background);
     position: sticky;
     border-radius: 15px;
