@@ -735,6 +735,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 /* règle globale : tous les liens héritent la couleur du texte parent */
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 /* membres du mois */
