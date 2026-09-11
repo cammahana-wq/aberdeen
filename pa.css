@@ -891,10 +891,7 @@ nav > ul li:hover .top-partenaires{
 .top-partenaires a:hover {
     border-bottom: none;
 }
-.partenaires > a::after {
-    content:  "\2B9F";
-    font-size: 12px;
-}
+
 /* nouveautés*/
 .cadre6 {
     grid-area: 5 / 1 / 6 / 5;
