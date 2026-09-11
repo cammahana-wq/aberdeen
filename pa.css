@@ -844,7 +844,6 @@ a {
     align-items: center;
 }
 .partenairesliste ul li {
-    float: left;
     text-align: center;
     position: relative;
 }
@@ -874,6 +873,7 @@ a {
     z-index: 10;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 .partenairesliste > ul li:hover .top-partenaires {
     display: block;
