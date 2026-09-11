@@ -2597,6 +2597,7 @@ tdf1 {
     letter-spacing: var(--tdf1-spacing);
     color: var(--tdf1-color);
     margin: 15px 0;
+    padding-bottom: 10px;
 }
 st1 {
     display: block;
