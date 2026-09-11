@@ -3512,3 +3512,6 @@ a:hover {
   text-decoration: none !important;
   color: var(--accc1) !important;
 }
+.mentiontag {
+  font-weight: bold;
+}
