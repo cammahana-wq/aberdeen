@@ -3509,3 +3509,6 @@ img[id^="smiley_"] {
 td.row1:has(img[id^="smiley_"]) {
   background-color: var(--statut-bg) !important;
 }
+a:hover {
+  text-decoration: none !important;
+}
