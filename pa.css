@@ -854,7 +854,7 @@ nav a {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: var(--liensactif);
+    color: var(--liensactif) !important;
     padding: 6px 16px;
 }
 nav a:hover {
