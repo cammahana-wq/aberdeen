@@ -2572,6 +2572,26 @@ input[name="preview"]:hover {
     background: var(--statut-bg);
     border-color: var(--degrag);
 }
+/* bouton "Prévisualisation" (action secondaire) */
+input.button2[type="submit"],
+input[name="draft"] {
+    background: var(--white);
+    color: var(--gris-lien) !important;
+    border: 1px solid var(--bordure-legere);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+input.button2[type="submit"]:hover,
+input[name="draft"]:hover {
+    background: var(--statut-bg);
+    border-color: var(--degrag);
+}
 
 /* ============================================================
    BALISES PERSO (tdf1, st1, ptt1, qut1, nte1, impt1, info/infos)
