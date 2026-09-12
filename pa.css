@@ -2275,6 +2275,19 @@ td.row2.colonne-auteur {
   max-height: 300px;
   overflow-y: auto;
 }
+.scroll-carte-identite info::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-carte-identite info::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.scroll-carte-identite info::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.scroll-carte-identite info::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .rpgprofile-section-title {
     background: var(--fond-titre-section);
     padding: 10px 20px;
