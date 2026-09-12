@@ -2270,10 +2270,10 @@ td.row2.colonne-auteur {
     box-shadow: 0 2px 8px var(--ombre-carte);
 }
 
-.rpgprofile-section:first-of-type info {
+.scroll-carte-identite info {
+  display: block;
   max-height: 300px;
   overflow-y: auto;
-  display: block;
 }
 .rpgprofile-section-title {
     background: var(--fond-titre-section);
