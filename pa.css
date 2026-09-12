@@ -2269,6 +2269,12 @@ td.row2.colonne-auteur {
     overflow: hidden;
     box-shadow: 0 2px 8px var(--ombre-carte);
 }
+
+.rpgprofile-section:first-of-type info {
+  max-height: 300px;
+  overflow-y: auto;
+  display: block;
+}
 .rpgprofile-section-title {
     background: var(--fond-titre-section);
     padding: 10px 20px;
