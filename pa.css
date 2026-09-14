@@ -2158,6 +2158,28 @@ td.row2.colonne-auteur {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: var(--gris-fonce);
 }
+
+.rpgprofile:has(.rpgprofile-actions) {
+     max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--gris-fonce);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-around;
+}
+.rpgprofile-section:has(.rpgprofile-actions) {
+    background: var(--white);
+    border: 1px solid var(--bordure-carte);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--ombre-carte);
+    align-items: stretch;
+    flex-direction: column;
+}
 .rpgprofile-header {
     background: var(--white);
     border: 1px solid var(--bordure-carte);
@@ -2304,7 +2326,6 @@ td.row2.colonne-auteur {
     display: flex;
     flex-wrap: wrap;
     padding: 10px 20px;
-    border-bottom: 1px solid var(--bordure-tres-claire);
 }
 .rpgprofile-field:last-child {
     border-bottom: none;
