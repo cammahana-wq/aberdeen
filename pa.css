@@ -3002,6 +3002,10 @@ div.cont_code {
     font-size: 12px;
     line-height: 1.9;
     padding: 3px 0 0px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
 }
 .bottin-groupe > .bottin-ligne:last-of-type {
     border-bottom: 1px solid var(--bordure-tres-claire);
