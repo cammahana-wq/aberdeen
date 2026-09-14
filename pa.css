@@ -3619,13 +3619,16 @@ ficheadmin .prelien-info {
 }
 
 .prelien-section info {
-        display: flex;
-    padding: 15px 25px;
-    font-size: 13px;
-    color: var(--gris-champ);
-    line-height: 2;
-    text-align: left;
-    flex-direction: column;
+  padding: 15px 25px;
+  font-size: 13px;
+  color: var(--gris-champ);
+  line-height: 2;
+  text-align: left;
+}
+
+.prelien-section info infos {
+  display: block;
+  margin-top: 8px;
 }
 
 .prelien-section {
