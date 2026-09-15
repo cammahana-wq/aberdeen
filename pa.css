@@ -2376,6 +2376,9 @@ td.row2.colonne-auteur {
     background: var(--statut-bg);
     text-decoration: none !important;
 }
+.award {
+    border:none !important;
+}
 /* ---- Icônes de contact sur la page de profil complète ---- */
 .rpgprofile-field-content a:has(#i_icon_pm),
 .rpgprofile-field-content a:has(img[src*="icon_contact_email"]),
