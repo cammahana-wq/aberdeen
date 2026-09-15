@@ -1306,6 +1306,7 @@ body.page-sujets .row3.over {
 }
 body.page-sujets .genmed {
     max-height: 30px;
+    display :contents !important;
 }
 
 /* lignes : fond blanc uni, séparées par un simple filet */
