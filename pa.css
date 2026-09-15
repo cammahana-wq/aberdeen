@@ -2382,10 +2382,10 @@ td.row2.colonne-auteur {
 .award_tooltiptext {
 color: var(--accc1) !important;
 border: 1px solid var(--accc1) !important;
-top: 1728px !important; 
-left: 707.391px !important; 
  display: block !important; 
  z-index: 1000 !important;
+ font-size: 13px !important;
+ padding: 5px !important;
 }
 .award_tooltiptext::after {
     content: none;
