@@ -388,9 +388,8 @@ ficheadmin .liens-onglets .mentiontag {
   display: block;
   color: var(--accc1);
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 13px;
+  font-size: 10px;
   text-decoration: none;
   margin-bottom: 4px;
 }
