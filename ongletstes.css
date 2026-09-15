@@ -374,9 +374,8 @@ ficheadmin .mes-onglets .mentiontag,
 ficheadmin .liens-onglets .mentiontag {
   color: var(--accc1);
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 13px;
+  font-size: 10px;
   text-decoration: none;
 }
 
