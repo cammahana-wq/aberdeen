@@ -2387,6 +2387,9 @@ left: 707.391px !important;
  display: block !important; 
  z-index: 1000 !important;
 }
+.award_tooltiptext::after {
+    content: none;
+}
 				
 /* ---- Icônes de contact sur la page de profil complète ---- */
 .rpgprofile-field-content a:has(#i_icon_pm),
