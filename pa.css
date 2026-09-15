@@ -2379,6 +2379,14 @@ td.row2.colonne-auteur {
 .award {
     border:none !important;
 }
+.award_tooltiptext {
+color: var(--accc1) !important;
+border: 1px solid var(--accc1) !important;
+top: 1728px !important; 
+left: 707.391px !important; 
+ display: block !important; 
+ z-index: 1000 !important;
+				
 /* ---- Icônes de contact sur la page de profil complète ---- */
 .rpgprofile-field-content a:has(#i_icon_pm),
 .rpgprofile-field-content a:has(img[src*="icon_contact_email"]),
