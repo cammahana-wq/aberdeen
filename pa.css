@@ -451,7 +451,7 @@ table:has(> tbody > tr > td > #i_msg_inbox) {
   --mp-couleur-2: #a6b8c9;   /* paires 2 et 4 */
   --mp-texte: #ffffff;
   --mp-rayon: 12px;
-
+height: auto;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0 auto;
@@ -459,7 +459,7 @@ table:has(> tbody > tr > td > #i_msg_inbox) {
 
 /* Toutes les cellules de cette ligne */
 table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td {
-  padding: 8px 0;
+  padding: 4px 0;
   vertical-align: middle;
 }
 
