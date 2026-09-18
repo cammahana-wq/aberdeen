@@ -1119,6 +1119,9 @@ img[height="5"] {
 .forumlink a:hover {
     color: var(--accc1) !important;
 }
+.genmed:has(.id="frmAgreeChkAgree") {
+    display: contents !important;
+}
 .genmed {
     display: block;
     max-height: 60px;
