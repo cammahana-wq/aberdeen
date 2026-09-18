@@ -456,12 +456,7 @@ height: auto;
   border-spacing: 0;
   margin: 0 auto;
 }
-/* Barre des dossiers : mode sombre */
-[data-color-scheme="dark"] table:has(> tbody > tr > td > #i_msg_inbox) {
---mp-couleur-1: var(--white);   /* paires 1 et 3, à ajuster */
-  --mp-couleur-2: var(--accc2);   /* paires 2 et 4, à ajuster */
-  --mp-texte: var(--textes); /* #e8ded6, clair sur fond sombre */
-}
+
 
 /* Toutes les cellules de cette ligne */
 table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td {
