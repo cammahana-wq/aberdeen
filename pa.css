@@ -453,7 +453,7 @@ table:has(> tbody > tr > td > #i_msg_inbox) {
   --mp-rayon: 12px;
 
   border-collapse: separate;
-  border-spacing: 8px 0;
+  border-spacing: 0;
   margin: 0 auto;
 }
 
@@ -483,6 +483,8 @@ table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td:nth-child(odd) {
 table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td:nth-child(even) {
   border-radius: 0 var(--mp-rayon) var(--mp-rayon) 0;
   padding-right: 12px;
+  border-right: 10px solid transparent;  /* l'écart entre deux pilules */
+  background-clip: padding-box;          /* la couleur ne passe pas sous la bordure */
 }
 
 /* Texte et liens */
