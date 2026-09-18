@@ -447,7 +447,7 @@ input.liteoption:hover {
 
 /* Le tableau qui contient directement les dossiers (et lui seul) */
 table:has(> tbody > tr > td > #i_msg_inbox) {
-  --mp-couleur-1: var(--accc1);   /* paires 1 et 3 : à remplacer par tes couleurs */
+  --mp-couleur-1: var(--cadrestables);   /* paires 1 et 3 : à remplacer par tes couleurs */
   --mp-couleur-2: var(--degrag);   /* paires 2 et 4 */
   --mp-texte: var(--white);
   --mp-rayon: 12px;
@@ -456,7 +456,11 @@ height: auto;
   border-spacing: 0;
   margin: 0 auto;
 }
-
+/* Barre des dossiers : mode sombre */
+[data-color-scheme="dark"] table:has(> tbody > tr > td > #i_msg_inbox) {
+  --mp-couleur-2: var(--white);   /* paires 2 et 4, à ajuster */
+  --mp-texte: var(--textes); /* #e8ded6, clair sur fond sombre */
+}
 
 /* Toutes les cellules de cette ligne */
 table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td {
