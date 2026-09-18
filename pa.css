@@ -421,7 +421,28 @@ a.nav:hover {
     color: var(--btn-violet-hover-texte);
 }
 
+input.mainoption,
+input.liteoption {
+  display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    background: var(--statut-bg);
+    color: var(--statut-texte);
+    transition: all 0.2s ease;
+    margin-right: 6px;
+}
 
+input.mainoption:hover,
+input.liteoption:hover {
+   background: linear-gradient(135deg, var(--btn-violet-hover-1), var(--btn-violet-hover-2));
+    color: var(--btn-violet-hover-texte);
+}
 /* ============================================================
         CONNEXION RAPIDE
         ======================================================== */
