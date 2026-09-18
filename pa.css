@@ -481,10 +481,11 @@ table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td:nth-child(odd) {
   padding-left: 12px;
 }
 table:has(> tbody > tr > td > #i_msg_inbox) > tbody > tr > td:nth-child(even) {
-  border-radius: 0 var(--mp-rayon) var(--mp-rayon) 0;
+  border-radius: 0 calc(var(--mp-rayon) + 10px) calc(var(--mp-rayon) + 10px) 0
+               / 0 var(--mp-rayon) var(--mp-rayon) 0;
   padding-right: 12px;
-  border-right: 10px solid transparent;  /* l'écart entre deux pilules */
-  background-clip: padding-box;          /* la couleur ne passe pas sous la bordure */
+  border-right: 10px solid transparent;
+  background-clip: padding-box;
 }
 
 /* Texte et liens */
