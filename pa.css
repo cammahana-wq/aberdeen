@@ -425,7 +425,6 @@ input.mainoption,
 input.liteoption {
   display: inline-flex;
     align-items: center;
-    padding: 5px 14px;
     border-radius: 20px;
     font-family: 'Segoe UI', Arial, sans-serif;
     font-size: 10px;
