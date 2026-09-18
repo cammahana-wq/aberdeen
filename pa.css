@@ -443,21 +443,7 @@ input.liteoption:hover {
     color: var(--btn-violet-hover-texte);
 }
 
-table:has(#i_msg_inbox) {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 20px;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none !important;
-    background: var(--statut-bg);
-    color: var(--statut-texte);
-    transition: all 0.2s ease;
-    margin-right: 6px;
-}
-table:has(#i_msg_inbox) td { }
+
 /* ============================================================
         CONNEXION RAPIDE
         ======================================================== */
