@@ -449,7 +449,7 @@ input.liteoption:hover {
 table:has(> tbody > tr > td > #i_msg_inbox) {
   --mp-couleur-1: var(--accc1);   /* paires 1 et 3 : à remplacer par tes couleurs */
   --mp-couleur-2: var(--degrag);   /* paires 2 et 4 */
-  --mp-texte: var(--profil);
+  --mp-texte: var(--gris-fonce);
   --mp-rayon: 12px;
 height: auto;
   border-collapse: separate;
