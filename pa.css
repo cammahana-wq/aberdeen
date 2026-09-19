@@ -2861,6 +2861,22 @@ qut1::after {
     vertical-align: -18px;
     margin-left: 4px;
 }
+qut1rp::before {
+    position: relative;
+    content: "\201C";
+    font-size: 25px;
+    color: var(--qut1-quote);
+    vertical-align: -3px;
+    margin-right: 4px;
+}
+qut1rp::after {
+    position: relative;
+    content: "\201D";
+    font-size: 25px;
+    color: var(--qut1-quote);
+    vertical-align: -18px;
+    margin-left: 4px;
+}
 nte1 {
     display: block;
     font-size: var(--nte1-size);
