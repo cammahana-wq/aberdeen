@@ -2837,6 +2837,14 @@ qut1 {
     color: var(--qut1-color);
     margin: 10px 15px;
 }
+qut1rp {
+    display: block;
+    font-family: var(--qut1-font);
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--qut1-color);
+}
 qut1::before {
     position: relative;
     content: "\201C";
