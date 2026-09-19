@@ -2883,6 +2883,10 @@ featrp {
     display: block;
     margin-top: -30px;
 }
+creditsrp {
+        font-size: 11px;
+    font-style: oblique;
+}
 nte1 {
     display: block;
     font-size: var(--nte1-size);
