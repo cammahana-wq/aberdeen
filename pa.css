@@ -3806,3 +3806,9 @@ ficheadmin .prelien-info {
     line-height: 2;
     text-align: justify;
 }
+
+.imgrp1 {
+    width:230px; 
+    border-radius:12px; 
+    padding:3px;
+}
