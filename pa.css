@@ -3277,7 +3277,8 @@ img.sprite-tabs_more {
     display: none;
 }
 
-.catHead {
+.catHead, 
+.catSides {
     background: var(--structure) !important;
     height: 15px !important;
     border: 1px solid var(--btn-violet-hover-texte);
@@ -3289,10 +3290,12 @@ img.sprite-tabs_more {
     box-sizing: border-box;
     opacity: 90%;
 }
-td.catHead[height] {
+td.catHead[height], 
+td.catSides[height] {
     height: 15px !important;
 }
-table:has(.catHead) {
+table:has(.catHead),
+table:has(.catSides) {
     border-collapse: separate !important;
     border-spacing: 0;
 }
