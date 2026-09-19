@@ -2784,6 +2784,15 @@ tdf1 {
     margin: 15px 0;
     padding-bottom: 10px;
 }
+tdf1rp {
+        display: block;
+    font-family: var(--tdf1-font);
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: var(--tdf1-spacing);
+    color: var(--tdf1-color);
+    margin: 13px 0;
+}
 st1 {
     display: block;
     font-family: var(--st1-font);
