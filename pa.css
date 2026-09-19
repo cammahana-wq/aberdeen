@@ -2842,8 +2842,8 @@ qut1rp {
     font-family: var(--qut1-font);
     font-size: 12px;
     font-style: italic;
-    line-height: 1.6;
     color: var(--qut1-color);
+    margin-top: -15px;
 }
 qut1::before {
     position: relative;
@@ -2876,6 +2876,12 @@ qut1rp::after {
     color: var(--qut1-quote);
     vertical-align: -18px;
     margin-left: 4px;
+}
+featrp {
+        font-style: italic;
+    font-size: 12px;
+    display: block;
+    margin-top: -30px;
 }
 nte1 {
     display: block;
