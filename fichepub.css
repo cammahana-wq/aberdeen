@@ -13,7 +13,7 @@ fichepub {
 
     display: flex !important;
     flex-direction: column !important;
-    flex-wrap: wrap !important;
+     flex-wrap: nowrap !important;
     width: 440px !important;
     max-width: 100% !important;
     margin: 20px auto !important;
