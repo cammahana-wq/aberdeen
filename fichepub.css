@@ -1,3 +1,8 @@
+fichepub,
+fichepub * {
+    box-sizing: border-box !important;
+}
+
 fichepub {
     --fp-border: #ededed;
     --fp-white: #fff;
@@ -9,7 +14,6 @@ fichepub {
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: wrap !important;
-    box-sizing: border-box !important;
     width: 440px !important;
     max-width: 100% !important;
     margin: 20px auto !important;
@@ -30,18 +34,19 @@ fichepub .header {
 }
 
 fichepub .titrepub {
-    display: flex !important;
+        display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
     font-family: var(--fp-titre-font) !important;
     font-size: 30px !important;
     font-weight: normal !important;
     line-height: 0.6 !important;
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
+    white-space: nowrap !important;
     color: var(--fp-accent) !important;
-     white-space: nowrap !important;
 }
 
 fichepub .contexte {
@@ -89,7 +94,9 @@ fichepub .morepub {
 }
 
 fichepub .infos {
-    width: 50% !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
     padding: 10px !important;
     border: double 5px #8e3e4980 !important;
     border-radius: 12px 0 !important;
@@ -99,9 +106,11 @@ fichepub .infos {
 
 fichepub .eventpub {
     display: flex !important;
+    flex: 1 1 0 !important;
     flex-direction: column !important;
-    width: 50% !important;
-    padding: 5px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 5px 5px 5px 10px !important;
 }
 
 fichepub .ptitrepub {
