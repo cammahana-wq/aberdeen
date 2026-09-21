@@ -400,7 +400,7 @@ ficheadmin .liens-onglets .mentiontag:hover {
 
 .bottin-colonne ul{
 list-style: none;
-padding-inline-start: 0;
+padding-inline-start: 0px;
 white-space: nowrap;
 }
 
