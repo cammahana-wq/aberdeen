@@ -2025,6 +2025,9 @@ td.row2.colonne-auteur {
     background: var(--profil);
     border-radius: 8px;
     padding: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 35px;
 }
 .profil-scroll-wrap {
     border: 1px solid var(--border);
@@ -2133,6 +2136,16 @@ td.row2.colonne-auteur {
     height: 14px;
     object-fit: contain;
 }
+
+table.forumline:has(.colonne-auteur-inner) {
+    overflow: visible !important;
+}
+
+td.bodyline:has(.colonne-auteur-inner) {
+    overflow: visible !important;
+}
+
+
 /* Fiche de présentation et fiche de liens : icônes CSS,
    ciblées par l'image réelle plutôt que par position (fiable même si
    un membre n'a rempli qu'un des deux champs) */
@@ -3193,6 +3206,7 @@ div.cont_code {
     flex-direction: row;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
 }
 .bottin-groupe > .bottin-ligne:last-of-type {
     border-bottom: 1px solid var(--bordure-tres-claire);
