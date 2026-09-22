@@ -400,10 +400,20 @@ ficheadmin .liens-onglets .mentiontag:hover {
 
 .bottin-colonne ul{
 list-style: none;
-padding-inline-start: 0px;
+padding-inline-start: 0;
 white-space: nowrap;
 }
 
 .bottin-colonne ul ptt1{
   margin: 0;
+}
+
+.desc-ligne {
+      text-align: justify;
+    font-size: smaller;
+    white-space: break-spaces;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    font-style: italic;
+    line-height: 15px;
 }
