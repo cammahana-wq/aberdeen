@@ -567,6 +567,19 @@ input.radio[type="checkbox"] {
     padding-right: 8px !important;
 }
 
+.barre-liens {
+        padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
 /* ============================================================
    PAGE D'ACCUEIL
    ============================================================ */
