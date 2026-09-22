@@ -569,6 +569,7 @@ input.radio[type="checkbox"] {
 
 .barre-liens {
         padding-bottom: 20px;
+        padding-top: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
