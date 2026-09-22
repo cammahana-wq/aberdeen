@@ -589,7 +589,7 @@ input.radio[type="checkbox"] {
 }
 .barre-liens a:hover {
     background: var(--degrag);
-    color: var(--white);
+    color: var(--accc1);
 }
 /* ============================================================
    PAGE D'ACCUEIL
