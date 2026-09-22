@@ -576,7 +576,6 @@ input.radio[type="checkbox"] {
     align-items: center;
     font-size: 11px;
     text-transform: uppercase;
-    gap: 20px;
     letter-spacing: 1px;
 }
 .barre-liens a {
