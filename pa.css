@@ -571,7 +571,7 @@ input.radio[type="checkbox"] {
         padding-bottom: 20px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
     font-size: 11px;
