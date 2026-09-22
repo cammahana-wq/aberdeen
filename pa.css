@@ -579,7 +579,18 @@ input.radio[type="checkbox"] {
     gap: 20px;
     letter-spacing: 1px;
 }
-
+.barre-liens a {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: var(--background);
+    color: var(--textes);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.barre-liens a:hover {
+    background: var(--degrag);
+    color: var(--white);
+}
 /* ============================================================
    PAGE D'ACCUEIL
    ============================================================ */
