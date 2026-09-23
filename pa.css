@@ -1349,6 +1349,9 @@ img[height="5"] {
     width: 36px;
     height: 60px;
     object-fit: cover;
+    border-radius: 10px;
+    padding: 2px;
+    border: 1px solid var(--border);
 }
 .lastpost-avatar {
     display: inline-block;
