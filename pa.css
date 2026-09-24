@@ -589,7 +589,7 @@ input.radio[type="checkbox"] {
 
 #fa_notifications {
     position: relative;
-    height: 32px !important;
+    height: 20px !important;
     font-size: 0;
     padding: 3px 15px !important;
     display: inline-flex !important;
