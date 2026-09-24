@@ -29,6 +29,7 @@
     --gris-champ: #444;
     --structure: #e8e8e8;
     --accc3: #660000;
+    --link-brown: #8c5349;
 
     /* Gris et bordures utilisés dans la liste des forums / textes divers */
     --gris-fonce: #4a4a4a;
@@ -655,7 +656,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     align-content: center;
 }
 .link_pa a {
-        background-color: #8c5349;
+        background-color: var(--link-brown);
         opacity: 80%;
     color: var(--white);
     text-decoration: none;
@@ -1021,7 +1022,7 @@ a {
 }
 
 .partenaires-toggle {
-    background-color: #8c5349;
+    background-color: var(--link-brown);
     opacity: 80%;
     color: var(--white);
     border: none;
@@ -1058,7 +1059,7 @@ a {
 .top-partenaires {
     max-height: 0;
     overflow: hidden;
-    background-color: #8c5349;
+    background-color: var(--link-brown);
     opacity: 80%;
     margin: 0;
     padding: 0;
