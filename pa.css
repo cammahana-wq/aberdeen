@@ -731,7 +731,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     padding: 05px 28px;
     border-radius: 999px;
     background: #cca195;
-    color: #fff;
+    color: var(--white);
     width: fit-content;
     height: fit-content;
     align-self: center;
