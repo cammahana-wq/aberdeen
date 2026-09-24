@@ -672,21 +672,18 @@ input.radio[type="checkbox"] {
     width: var(--menuSize);
     position: fixed !important;
     z-index: 9999;
-    top: 0 !important;
+    top: 32px !important;
     left: auto !important;
-    height: 100%;
+    height: calc(100% - 32px) !important;
     right: calc(var(--menuSize) * -1) !important;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    align-items: stretch;
     background: var(--white);
     border: none;
     border-left: 1px solid var(--bordure-carte);
     border-radius: 0;
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.18);
     padding: 0;
-    padding-top: 32px;
     margin: 0;
     list-style: none;
     box-sizing: border-box;
@@ -694,7 +691,7 @@ input.radio[type="checkbox"] {
     visibility: hidden;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: all ease 0.4s;
+    transition: right 0.4s ease, opacity 0.4s ease;
 }
 
 #notif_list.notif-open {
@@ -707,11 +704,12 @@ input.radio[type="checkbox"] {
     list-style: none;
     width: 100%;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 #notif_list .content {
     position: relative;
-    padding: 12px 36px 12px 48px;
+    padding: 14px 36px 14px 52px;
     border-bottom: 1px solid var(--bordure-tres-claire);
     box-sizing: border-box;
     width: 100%;
@@ -724,16 +722,16 @@ input.radio[type="checkbox"] {
 #notif_list .content::before {
     content: "\1F4AC";
     position: absolute;
-    left: 12px;
-    top: 12px;
-    width: 26px;
-    height: 26px;
+    left: 14px;
+    top: 14px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: var(--statut-bg);
+    background: var(--degrag);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #notif_list .contentText.ellipsis,
@@ -753,13 +751,13 @@ input.radio[type="checkbox"] {
     font-family: var(--font1);
     font-size: 10px;
     color: var(--gris-moyen);
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
 #notif_list a.delete {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -784,18 +782,19 @@ input.radio[type="checkbox"] {
 }
 
 #notif_list li.see_all {
-    padding: 0;
+    margin-top: auto;
+    padding: 14px;
     text-align: center;
     background: var(--fond-titre-section);
+    border-top: 1px solid var(--bordure-carte);
     box-sizing: border-box;
     width: 100%;
+    flex-shrink: 0;
 }
 
 #notif_list li.see_all a {
     display: block;
     width: 100%;
-    padding: 10px 14px;
-    box-sizing: border-box;
     font-family: var(--font1);
     font-size: 10px;
     text-transform: uppercase;
