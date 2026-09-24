@@ -668,6 +668,11 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     padding: 10px 8px;
     white-space: nowrap;
 }
+.link_pa a,
+.link_pa a:link,
+.link_pa a:visited {
+    color: var(--white) !important;
+}
 .link_pa a:hover {
   color: var(--white) !important;
 }
