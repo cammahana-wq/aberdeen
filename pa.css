@@ -626,7 +626,7 @@ input.radio[type="checkbox"] {
    infos"), ils sont regroupés dans un vrai conteneur flex plutôt que
    superposés dans la même case de grille — ça évite tout chevauchement. */
 .pa_1 {
-        font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-family: var(--font3);
     border: 1px solid var(--border);
     background-color: var(--white);
     border-radius: 10px;
@@ -645,7 +645,7 @@ input.radio[type="checkbox"] {
 }
 
 .pa_1 .sous_titre {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--font1);
 }
 table.forumline > tbody > tr > td.row1:has(.pa_1) {
     background: var(--white) !important;
@@ -661,6 +661,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     align-content: center;
 }
 .link_pa a {
+        font-family: var(--font1);
         background-color: var(--link-brown);
         opacity: 80%;
     color: var(--white);
@@ -757,6 +758,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 }
 
 .meteo-ville {
+  font-family: var(--font2);
   font-size: 0.8rem;
   letter-spacing: 3px; /* l'espacement des lettres du "ABERDEEN" */
   font-weight: 500;
@@ -765,6 +767,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 
 .meteo-temp,
 .meteo-mois {
+  font-family: var(--font1);
   font-size: 0.85rem;
   margin: 0;
   opacity: 0.95;
@@ -791,7 +794,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     padding: 10px;
     width: auto;
     min-width: 0;
-    font-family: verdana;
+    font-family: var(--font3);
     font-size: 11px;
     line-height: 12px;
     text-align: justify;
@@ -827,7 +830,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     padding: 10px;
     width: auto;
     min-width: 0;
-    font-family: verdana;
+    font-family: var(--font3);
     font-size: 11px;
     line-height: 12px;
     text-align: justify;
@@ -914,6 +917,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     visibility: visible;
 }
 .nom {
+    font-family: var(--font2);
     color: var(--accc1);
     font-weight: 600;
     letter-spacing: 1px;
@@ -949,6 +953,7 @@ a {
     gap: 5px;
 }
 .titremdm {
+    font-family: var(--font1);
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1011,12 +1016,13 @@ a {
 .topsites {
     padding: 8px;
     min-width: 0;
-    font-family: verdana;
+    font-family: var(--font3);
     font-size: 30px;
     line-height: 12px;
     background-color: var(--white);
 }
 .titrevotes {
+    font-family: var(--font1);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1033,6 +1039,7 @@ a {
 }
 
 .partenaires-toggle {
+    font-family: var(--font1);
     background-color: var(--link-brown);
     opacity: 80%;
     color: var(--white);
@@ -1124,7 +1131,7 @@ a {
     padding-bottom: 15px;
 }
 .nouveautés {
-     font-family: Georgia, serif;
+     font-family: var(--font2);
     text-transform: lowercase;
     line-height: 10px;
     opacity: 80%; 
@@ -1147,7 +1154,7 @@ a {
     width: auto;
     min-width: 0;
     max-height: 180px;
-    font-family: verdana;
+    font-family: var(--font3);
     font-size: 11px;
     line-height: 12px;
     text-align: justify;
@@ -1191,6 +1198,7 @@ a {
     z-index: 997;
 }
 .titreenavant {
+    font-family: var(--font1);
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
