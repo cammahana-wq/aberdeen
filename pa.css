@@ -676,11 +676,13 @@ input.radio[type="checkbox"] {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     width: 340px;
     max-width: 90vw;
+    max-height: 400px;
+    overflow-y: auto;
     padding: 0;
     margin: 0;
     list-style: none;
     z-index: 9999;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 #notif_list.notif-open {
@@ -688,24 +690,33 @@ input.radio[type="checkbox"] {
 }
 
 #notif_list li {
-    position: relative;
-    padding: 12px 40px 12px 52px;
-    border-bottom: 1px solid var(--bordure-tres-claire);
+    list-style: none;
 }
 
-#notif_list li::before {
+#notif_list .content {
+    position: relative;
+    padding: 12px 36px 12px 48px;
+    border-bottom: 1px solid var(--bordure-tres-claire);
+    box-sizing: border-box;
+}
+
+#notif_list .content hr {
+    display: none !important;
+}
+
+#notif_list .content::before {
     content: "\1F4AC";
     position: absolute;
     left: 12px;
     top: 12px;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     background: var(--statut-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #notif_list .contentText {
@@ -714,6 +725,8 @@ input.radio[type="checkbox"] {
     line-height: 1.5;
     color: var(--textes);
     white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
 }
 
 #notif_list .contentTime {
@@ -735,6 +748,8 @@ input.radio[type="checkbox"] {
     justify-content: center;
     color: var(--gris-moyen);
     text-decoration: none;
+    background: none !important;
+    background-image: none !important;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -744,18 +759,23 @@ input.radio[type="checkbox"] {
 }
 
 #notif_list a.delete:hover {
-    background: var(--statut-bg);
+    background: var(--statut-bg) !important;
     color: var(--accc1) !important;
 }
 
 #notif_list li.see_all {
-    padding: 10px 14px;
+    padding: 0;
     text-align: center;
-    border-bottom: none;
     background: var(--fond-titre-section);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #notif_list li.see_all a {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    box-sizing: border-box;
     font-family: var(--font1);
     font-size: 10px;
     text-transform: uppercase;
