@@ -1,7 +1,12 @@
 /* ============================================================
    VARIABLES
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500&display=swap');
+
 :root {
+  --font1: 'Poppins', sans-serif;
+  --font2: 'Playfair Display', serif;
+  --font3: 'Inter', sans-serif;
     --accc1: #8e3e49;
     --accc2: #1a070a;
     --white: #fff;
