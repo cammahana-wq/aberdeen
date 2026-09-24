@@ -562,7 +562,7 @@ input.radio[type="checkbox"] {
 #fa_left,
 #fa_search,
 #fa_share,
-#fa_hide
+#fa_hide,
 #fa_welcome {
     display: none !important;
 }
