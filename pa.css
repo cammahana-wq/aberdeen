@@ -570,7 +570,15 @@ input.radio[type="checkbox"] {
     background: transparent !important;
     box-shadow: none !important;
     border: none !important;
+    height: 32px !important;
+    min-height: 32px !important;
     pointer-events: none; /* laisse les clics traverser jusqu'à la navtop en dessous */
+}
+#fa_right,
+#fa_menu {
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
 }
 #fa_menu,
 #fa_notifications,
@@ -578,8 +586,10 @@ input.radio[type="checkbox"] {
 #notif_list {
     pointer-events: auto; /* reste cliquable malgré le pointer-events:none du parent */
 }
+
 #fa_notifications {
     position: relative;
+    height: 32px !important;
     font-size: 0;
     padding: 6px 10px !important;
     display: inline-flex !important;
