@@ -1056,25 +1056,28 @@ a {
 }
 
 .top-partenaires {
-    position: absolute;
-    top: 100%;
-    left: 0;
     max-height: 0;
     overflow: hidden;
-    background-color:  #8c5349;
-    opacity: 80%;
-    width: 100%;
+    background-color: var(--accc1);
     margin: 0;
     padding: 0;
     list-style-type: none;
     border-radius: 0 0 6px 6px;
     transition: max-height 0.25s ease;
-    z-index: 20;
+    z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.partenairesliste.open .top-partenaires {
+.top-partenaires.open {
     max-height: 200px;
+}
+
+.partenaires-toggle.active {
+    border-radius: 6px 6px 0 0;
+}
+
+.partenaires-toggle.active .chevron {
+    transform: rotate(180deg);
 }
 
 .top-partenaires li {
