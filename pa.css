@@ -559,7 +559,8 @@ input.radio[type="checkbox"] {
 #fa_left,
 #fa_search,
 #fa_share,
-#fa_hide {
+#fa_hide
+#fa_welcome {
     display: none !important;
 }
 #fa_toolbar {
@@ -575,7 +576,41 @@ input.radio[type="checkbox"] {
     pointer-events: auto; /* reste cliquable malgré le pointer-events:none du parent */
 }
 #fa_notifications {
-    padding-right: 8px !important;
+    position: relative;
+    font-size: 0; /* masque le texte "Notifications" sans toucher au span enfant */
+    padding: 6px 10px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+#fa_notifications::before {
+    content: "\1F514"; /* 🔔 */
+    font-size: 18px;
+    line-height: 1;
+}
+
+#notif_unread {
+    font-size: 10px; /* remet une taille, annulée par le font-size:0 du parent */
+    font-family: var(--font1);
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--accc1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0 3px;
+    box-sizing: border-box;
+}
+
+#notif_unread:empty {
+    display: none; /* pas de badge visible s'il n'y a aucune notif */
+
 }
 
 .barre-liens {
