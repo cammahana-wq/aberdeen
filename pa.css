@@ -112,6 +112,9 @@ table.forumline {
   border-radius: 15px;
   overflow: hidden;
 }
+body {
+    font-family: var(--font3);
+}
 
 hr {
     border: unset !important;
@@ -361,7 +364,7 @@ div.nav:not(:has(a.nav ~ a.nav)) {
     display: none;
 }
 a.nav {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font1);
     font-size: 10px;
     font-style: italic;
     text-transform: lowercase;
@@ -393,7 +396,7 @@ a.nav:hover {
     align-items: center;
     padding: 5px 14px;
     border-radius: 20px;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font1);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -412,7 +415,7 @@ a.nav:hover {
     align-items: center;
     padding: 5px 14px;
     border-radius: 20px;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font1);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -432,7 +435,7 @@ input.liteoption {
   display: inline-flex;
     align-items: center;
     border-radius: 20px;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font1);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -584,7 +587,7 @@ input.radio[type="checkbox"] {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: serif;
+    font-family: var(--font1);
     font-weight: bold;
 }
 .barre-liens a {
@@ -1258,7 +1261,7 @@ img[height="5"] {
 .secondarytitle {
     background: var(--white);
     padding: 0px 0 4px 30px;
-    font-family: Georgia, serif;
+    font-family: var(--font2);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: left;
@@ -2030,7 +2033,7 @@ a[href*="ShowHideLayernew"] img {
 .qui-en-ligne-titre,
 .qui-en-ligne-souscol,
 .qui-en-ligne-fiche .gensmall {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font3);
     font-size: 10px;
     letter-spacing: 0.2px;
 }
@@ -2141,7 +2144,7 @@ a.groupe-badge:hover {
     padding: 10px;
     text-align: center;
     vertical-align: top;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font3);
 }
 td.row1.colonne-auteur,
 td.row2.colonne-auteur {
@@ -2398,14 +2401,14 @@ td.bodyline:has(.colonne-auteur-inner) {
 .rpgprofile {
     max-width: 900px;
     margin: 20px auto;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font3);
     color: var(--gris-fonce);
 }
 
 .rpgprofile:has(.rpgprofile-actions) {
      max-width: 900px;
     margin: 20px auto;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font3);
     color: var(--gris-fonce);
     display: flex;
     flex-direction: column;
@@ -2781,7 +2784,7 @@ tw.revele {
    MESSAGES (posts)
    ============================================================ */
 .postdetails:not(.poster-profile) {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font1);
     font-style: italic;
     font-size: 12px;
     color: var(--postdetails-couleur);
@@ -2817,7 +2820,7 @@ tw.revele {
     gap: 4px;
     padding: 5px 13px !important;
     border-radius: 20px !important;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font1);
     font-size: 10px !important;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3075,7 +3078,7 @@ info b {
 .forum-tags-title {
     background: var(--background);
     color: var(--accc2);
-    font-family: Arial, sans-serif;
+    font-family: var(--font1);
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -3269,7 +3272,7 @@ div.cont_code {
     border: 1px solid var(--bordure-carte);
     border-radius: 10px;
     box-shadow: 0 2px 8px var(--ombre-carte);
-    font-family: verdana, Arial, sans-serif;
+    font-family: var(--font3);
     color: var(--textes);
     text-align: center;
     box-sizing: border-box;
@@ -3307,7 +3310,7 @@ div.cont_code {
     border-bottom: 1px solid var(--bordure-claire);
 }
 .bottin-nav-lettres a {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font1);
     font-style: italic;
     font-size: 13px;
     color: var(--gris-moyen);
@@ -3613,7 +3616,7 @@ span.gensmall.bold:has(#addthis-toolbar) {
     background-color: var(--light);
     border: var(--border);
     font-size: 16px;
-    font: 'Open Sans';
+    font-family: var(--font3);
 }
 .switcheroo[position="static"] {
     position: relative;
@@ -3727,7 +3730,7 @@ span.gensmall.bold:has(#addthis-toolbar) {
     transition: opacity 64ms cubic-bezier(0.4, 0.0, 0.2, 1), transform 128ms cubic-bezier(0.4, 0.0, 0.2, 1);
     pointer-events: none;
     color: var(--background);
-    font: 'Open Sans';
+    font-family: var(--font3);
 }
 .switcheroo[direction="vertical"] .switcheroo__popper {
     left: 155%;
