@@ -1024,6 +1024,7 @@ a {
     position: relative;
     font-family: inherit;
     font-size: inherit;
+    width: 160px;
 }
 
 .partenaires-toggle {
