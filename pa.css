@@ -612,16 +612,17 @@ input.radio[type="checkbox"] {
     background-color: var(--accc1);
     position: absolute;
     top: 0px;
-    right: -6px; /* décalé davantage vers la droite */
+    right: 0px;
     min-width: 16px;
     height: 16px;
-    line-height: 16px;
+    line-height: 14px;
     border-radius: 50%;
     text-align: center;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
     display: inline-block;
+    border: 1px solid var(--white);
 }
 
 #notif_unread:empty {
