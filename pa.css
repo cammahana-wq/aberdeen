@@ -1058,7 +1058,7 @@ a {
 .top-partenaires {
     max-height: 0;
     overflow: hidden;
-    background-color: var(--accc1);
+    background-color: #8c5349;
     margin: 0;
     padding: 0;
     list-style-type: none;
