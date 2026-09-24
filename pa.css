@@ -2103,7 +2103,6 @@ a[href*="ShowHideLayernew"] img {
   padding: 3px 10px;
   border-radius: 20px;
   background: var(--statut-bg);
-  color: var(--groupe-color, var(--textes)) !important;
   border: 1px solid var(--groupe-color, var(--bordure-carte));
   font-size: 11px;
   font-weight: 600;
@@ -2114,7 +2113,11 @@ a[href*="ShowHideLayernew"] img {
 .groupe-badge:hover {
   opacity: 0.8;
 }
-[data-color-scheme="dark"] .groupe-badge {
+
+a.groupe-badge,
+a.groupe-badge:link,
+a.groupe-badge:visited,
+a.groupe-badge:hover {
   color: var(--groupe-color, var(--textes)) !important;
 }
 /* ============================================================
