@@ -602,24 +602,34 @@ input.radio[type="checkbox"] {
     overflow: hidden;
 }
 
-/* NOTE : les deux variantes (page-accueil / not(page-accueil)) fixaient
-   exactement les mêmes valeurs — fusionnées en une seule règle */
 #page-body {
     margin-top: -10px;
     position: relative;
 }
 
 /* ---- Grille principale (.pa_1) ---- */
+/* 5 rangées x 4 colonnes, display:grid, comme demandé.
+   Rangée 1-2 / col 1-2 : contexte
+   Rangée 1 / col 3 : nom admin        | Rangée 2 / col 3 : avatars admin
+   Rangée 1 / col 4 : nouveautés en ville
+   Rangée 3 / col 1-2 : nos chouchous  | Rangée 3 / col 3 : icônes | Rangée 3 / col 4 : météo
+   Rangée 4 / col 1-2 : les 4 liens    | Rangée 4 / col 3-4 : les infos (règlement + halloween)
+   Rangée 5 / col 1 : on les attend    | Rangée 5 / col 2-3 : avatars scénarios | Rangée 5 / col 4 : votes
+   Les rangées sont en "auto" (hauteur selon le contenu). Quand deux blocs
+   HTML partagent une même cellule (ex: règlement + halloween dans "les
+   infos"), ils sont regroupés dans un vrai conteneur flex plutôt que
+   superposés dans la même case de grille — ça évite tout chevauchement. */
 .pa_1 {
-    font-family: Georgia, 'Times New Roman', Times, serif !important;
+        font-family: Georgia, 'Times New Roman', Times, serif !important;
     border: 1px solid var(--border);
     background-color: var(--white);
     border-radius: 10px;
     display: grid;
     text-align: center;
-    grid-gap: 5px;
-    grid-template: 100px 40px 50px 5px 50px 50px 5px 50px 78px / 182px 4px 178px 72px 182px 7px 15px 2px 178px;
-    padding: 10px 10px 10px 10px;
+    grid-template-columns: 205px 160px 205px 251px;
+    grid-template-rows: 35px 90px 100px 80px 100px;
+    gap: 12px;
+    padding: 10px;
     width: 883px;
     max-width: 100%;
     box-sizing: border-box;
@@ -635,47 +645,55 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     background: var(--white) !important;
 }
 
-/* liens de navigation (haut) */
+/* ===== liens de navigation : rangée 4 / col 1-2, en grille 2x2 ===== */
 .link_pa {
-    grid-area: 1 / 7 / 4 / -1;
-    background-color: var(--background);
-    opacity: 97%;
-    border-radius: 15px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    display: flex;
-    padding: 0px 0;
-    gap: 6px;
-    /* padding-left: 30px; */
-    flex: 1;
-    grid-auto-flow: column;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+    grid-row: 4;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-content: center;
 }
 .link_pa a {
-    color: var(--textes);
+        background-color: #8c5349;
+        opacity: 80%;
+    color: var(--white);
     text-decoration: none;
-    padding-bottom: 8px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 10px 8px;
+    white-space: nowrap;
 }
-.link_pa a:first-child {
-    padding-top: 15px;
+.link_pa a:hover {
+  color: var(--white) !important;
 }
-.link_pa a:last-child {
-    border-bottom: none;
-}
-
-/* contexte / règlement / crédits : même gabarit de bloc texte, réutilisé
-   par .cadre1 (contexte), .cadre3 (règles) et .cadre6 (crédits) */
+/* ===== contexte : rangée 1-2 / col 1-2 ===== */
 .cadre1 {
-    border: 1px var(--border);
+        grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(#fff, #fff) padding-box, 
+    linear-gradient(7deg, #8f3b34, #dba1a193) border-box;
     display: flex;
     gap: 20px;
-    border-radius: 10px;
+    align-items: flex-start;
+    margin: auto;
+}
+
+/* ===== "les infos" : rangée 4 / col 3-4, regroupe règlement + halloween ===== */
+.les-infos {
+    grid-row: 4;
+    grid-column: 3 / 5;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--degrag) transparent;
 }
 .cadre3 {
     border: 1px var(--border);
@@ -683,30 +701,70 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     gap: 20px;
     border-radius: 10px;
 }
-.cadre1 {
-    grid-area: 1 / 4 / 3 / 6;
+.cadre7 {
+        grid-row: 1 / 3;
+    grid-column: 4;
+    border: 1px var(--border);
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-left: 8px;
 }
-.météo {
-    grid-area: 1 / 1 / 2 / 2;
-     font-family: Georgia, serif;
-    text-transform: lowercase;
-    line-height: 10px;
-    opacity: 80%; 
-    text-align: justify;
-    font-size: 15px;
-    font-weight: light;
-    display: grid;  
-    align-content: center;
-    justify-content: center;
-   background-color: var(--background);
-   border-radius: 15px;
-   gap: 3px;
-   
+.imgdivides2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ===== météo : rangée 3 / col 4 ===== */
+.meteo-widget {
+    display: flex;
+    gap: 16px;
+    padding: 05px 28px;
+    border-radius: 999px;
+    background: #cca195;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.meteo-icone svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.meteo-texte {
+  text-align: center;
+  line-height: 1.5;
+  position: relative;
+}
+
+.meteo-ville {
+  font-size: 0.8rem;
+  letter-spacing: 3px; /* l'espacement des lettres du "ABERDEEN" */
+  font-weight: 500;
+  margin: 0;
+}
+
+.meteo-temp,
+.meteo-mois {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.95;
 }
 .pumpkin {
     width: 20px;
     opacity: 0%;
-    justify-self: end;
+   position: absolute; /* sortie du flux, ne pousse plus rien */
+    bottom: 17px; /* ajuste selon où tu veux qu'elle apparaisse */
+    right: -25px;
+    transition: opacity 0.3s ease;
 }
 .pumpkin:hover {
     opacity: 100%;
@@ -718,11 +776,7 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     gap: 1px;
 }
 /*infos*/
-.cadre3 {
-    grid-area: 5 / 5 / 7 / -1;
-}
 .contexte {
-    margin-top: 1%;
     padding: 10px;
     width: auto;
     min-width: 0;
@@ -759,7 +813,6 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 }
 
 .rules {
-    margin-top: 1%;
     padding: 10px;
     width: auto;
     min-width: 0;
@@ -793,12 +846,14 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 .rules::-webkit-scrollbar-thumb:hover {
     background-color: var(--accc1);
 }
-/* staff */
+/* ===== staff : nom rangée 1 / col 3, avatars rangée 2 / col 3 ===== */
 .cadre2 {
-    grid-area: 9 / 6 / 10 / 10;
+    grid-row: 2;
+    grid-column: 3;
     display: flex;
       pointer-events: none;
-      justify-content: flex-end;
+      justify-content: center;
+      padding-top: 2px;
 }
 .cadre2 .lab,
 .cadre2 .lab img {
@@ -813,9 +868,13 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
     object-fit: cover;
 }
 .interne {
-    grid-area: 8 / 6 / 9 / -1;
+    grid-row: 1;
+    grid-column: 3;
+    position: relative;
+    min-height: 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 .lab {
     position: relative;
@@ -826,14 +885,13 @@ table.forumline > tbody > tr > td.row1:has(.pa_1) {
 .contenu {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    box-sizing: border-box;
-    margin-top: 8px;
+    margin-top: 5px;
     opacity: 0;
     position: absolute;
     scrollbar-width: none;
  display: flex;
     visibility: hidden;
-    width: 240px; /* doit avoir la même largeur que onglets_pa */
+    width: 100%; /* tient dans la cellule .interne */
     height: 40px;
     text-transform: uppercase;
     flex-direction: column;
@@ -864,18 +922,20 @@ a {
     text-decoration: none;
 }
 
-/* membres du mois */
+/* ===== nos chouchous : rangée 3 / col 1-2 ===== */
 .blocmdm {
+    grid-row: 3;
+    grid-column: 1 / 3;
     margin-top: 1px;
-    grid-area: 2 / 1 / 5 / 4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
 }
 .cadre4 {
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 .titremdm {
     font-size: 12px;
@@ -921,27 +981,28 @@ a {
 .bulle-nom {
     display: block;
 }
-/* votes */
+/* ===== votes : rangée 5 / col 4 ===== */
 .blocvotes {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-row: 5;
+    grid-column: 4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: flex-start;
 }
 .cadre5 {
     border: 1px var(--border);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 .topsites {
-    padding: 20px;
+    padding: 8px;
     min-width: 0;
     font-family: verdana;
     font-size: 30px;
     line-height: 12px;
-    overflow: auto;
     background-color: var(--white);
 }
 .titrevotes {
@@ -949,82 +1010,102 @@ a {
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
-    margin-bottom: 6px;
     text-transform: lowercase;
-    padding-top: 2px;
 }
 
 .partenairesliste {
-    background-color: var(--background);
-    position: sticky;
-    border-radius: 15px;
-    font-family: serif;
-    font-size: 16px;
-}
-.partenairesliste > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.partenairesliste ul li {
-    text-align: center;
+    background: none;
     position: relative;
+    font-family: inherit;
+    font-size: inherit;
 }
-.partenairesliste a {
+
+.partenaires-toggle {
+    background-color: #8c5349;
+    opacity: 80%;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 6px;
     text-decoration: none;
-    color: var(--liensactif) !important;
-    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    text-align: center;
+    transition: border-radius 0.2s ease;
 }
-.partenairesliste a:hover {
-    color: var(--gris-moyen);
+
+.chevron {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.partenairesliste.open .partenaires-toggle {
+    border-radius: 6px 6px 0 0;
+}
+
+.partenairesliste.open .chevron {
+    transform: rotate(180deg);
 }
 
 .top-partenaires {
-    display: none;
-    box-shadow: 0px 1px 2px;
-    background-color: var(--background);
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color:  #8c5349;
+    opacity: 80%;
     width: 100%;
-    min-width: max-content;
-    border-radius: 15px;
-    z-index: 10;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    border-radius: 0 0 6px 6px;
+    transition: max-height 0.25s ease;
+    z-index: 20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.partenairesliste > ul li:hover .top-partenaires {
-    display: block;
+
+.partenairesliste.open .top-partenaires {
+    max-height: 200px;
 }
+
 .top-partenaires li {
-    float: none;
-    width: 100%;
     text-align: center;
 }
+
 .top-partenaires a {
-    padding: 10px;
-    border-bottom: none;
-    justify-content: space-around;
+    display: block;
+    color: var(--white) !important;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .top-partenaires a:hover {
-    border-bottom: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white) !important;
 }
-/* nouveautés*/
+/* ===== nouveautés en ville : rangée 1 / col 4 ===== */
 .cadre6 {
-    grid-area: 5 / 1 / 6 / 5;
-    border: 1px solid var(--border);
+    grid-row: 1;
+    grid-column: 4;
     display: flex;
     gap: 20px;
     border-radius: 10px;
     justify-content: center;
+    padding-bottom: 15px;
 }
 .nouveautés {
      font-family: Georgia, serif;
@@ -1033,7 +1114,6 @@ a {
     opacity: 80%; 
     text-align: justify;
     font-size: 20px;
-    font-weight: light;
     display: grid;  
     align-content: center;
     justify-content: center;
@@ -1045,24 +1125,17 @@ a {
 
 }
 /*news*/
-.cadre7 {
-    grid-area: 6 / 1 / 9 / 5 ;
-     border: 1px var(--border);
-    display: flex;
-    gap: 20px;
-    border-radius: 10px;
-}
 .newspa {
     margin-top: 1%;
     padding: 10px;
-    padding-top: 0;
     width: auto;
     min-width: 0;
+    max-height: 180px;
     font-family: verdana;
     font-size: 11px;
     line-height: 12px;
     text-align: justify;
-    overflow: auto;
+    overflow-y: auto;
     overflow-wrap: break-word;
     background-color: var(--background);
     justify-content: flex-start;
@@ -1090,10 +1163,11 @@ a {
     background-color: var(--accc1);
 }
 
-/*PL ET SCENARIOS EN AVANT*/
+/* ===== on les attend : rangée 5 / col 1 ===== */
 .enavant {
+    grid-row: 5;
+    grid-column: 1;
     margin-top: 1px;
-    grid-area: 9 / 1 / 10 / 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1108,10 +1182,14 @@ a {
     text-align: center;
     margin-bottom: 4px;
 }
+/* ===== avatars scénarios : rangée 5 / col 2-3 ===== */
 .cadre8 {
-    grid-area: 9 / 3 / 10/ 6;
+    grid-row: 5;
+    grid-column: 2 / 4;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 .plscena {
     border-radius: 10px;
@@ -1127,20 +1205,14 @@ a {
     font-weight: lighter;
 
 }
+/* ===== icônes feuille/cartes/thé : rangée 3 / col 3 ===== */
 .imgdivides1 {
-grid-area: 3 / 4 / 5 / 6 ;
+grid-row: 3;
+grid-column: 3;
      align-items: center;
-    justify-content: space-around;
     display: flex;
-  padding-block-end: 12px;
-}
-.imgdivides2 {
-grid-area: 7 / 5 / 9 / 6 ;
-display: flex;
-justify-content: center;
-align-items: center;
-padding-block-start: 8%;
-padding-right: 30px;
+    gap: 6px;
+    justify-content: flex-end;
 }
 
 .gen:has(script) {
