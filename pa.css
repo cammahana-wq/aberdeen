@@ -1282,7 +1282,7 @@ img[height="5"] {
 .secondarytitle h2 {
     color: var(--accc1) !important;
     font-size: 18px !important;
-    font-weight: normal;
+    font-weight: 600;
 }
 .liste-forums td.row1 img[alt$="messages"] {
     display: none;
@@ -1432,6 +1432,7 @@ img[height="5"] {
     word-break: normal !important;
     overflow-wrap: break-word !important;
     font-size: 11px;
+    font-family: var(--font1);
 }
 .row3.over .gensmall > span > a:first-child {
     display: block;
@@ -2090,8 +2091,10 @@ a[href*="ShowHideLayernew"] img {
 }
 .qui-en-ligne-col a {
     color: var(--liensbefore);
+    font-family: var(--font1);
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 12px;
 }
 .qui-en-ligne-col a:hover {
     color: var(--accc1);
@@ -2120,8 +2123,8 @@ a[href*="ShowHideLayernew"] img {
   border-radius: 20px;
   background: var(--statut-bg);
   border: 1px solid var(--groupe-color, var(--bordure-carte));
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 11px !important;
+  font-weight: 600 !important;
   text-decoration: none;
   cursor: pointer;
 }
