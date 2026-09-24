@@ -678,6 +678,7 @@ input.radio[type="checkbox"] {
     max-width: 90vw;
     max-height: 400px;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -691,6 +692,8 @@ input.radio[type="checkbox"] {
 
 #notif_list li {
     list-style: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #notif_list .content {
@@ -698,6 +701,7 @@ input.radio[type="checkbox"] {
     padding: 12px 36px 12px 48px;
     border-bottom: 1px solid var(--bordure-tres-claire);
     box-sizing: border-box;
+    width: 100%;
 }
 
 #notif_list .content hr {
@@ -719,14 +723,17 @@ input.radio[type="checkbox"] {
     font-size: 13px;
 }
 
+#notif_list .contentText.ellipsis,
 #notif_list .contentText {
-    font-family: var(--font3);
-    font-size: 12px;
-    line-height: 1.5;
-    color: var(--textes);
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
+    font-family: var(--font3) !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    color: var(--textes) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
 }
 
 #notif_list .contentTime {
