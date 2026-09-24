@@ -2202,12 +2202,13 @@ td.row2.colonne-auteur {
     display: inline-block;
     max-width: 150px;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 12px !important;
     font-weight: 700;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     margin-top: 10px;
     white-space: nowrap;
+    font-family: var(--font3);
 }
 .colonne-auteur .champ-perso {
     padding: 3px 0;
