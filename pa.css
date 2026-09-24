@@ -668,7 +668,7 @@ input.radio[type="checkbox"] {
 }
 
 #notif_list {
-    --menuSize: 340px;
+    --menuSize: 470px;
     width: var(--menuSize);
     position: fixed !important;
     z-index: 9999;
