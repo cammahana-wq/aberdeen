@@ -195,6 +195,9 @@ margin: 60px auto 20px;
   margin: 15px 0;
   border-radius: 10px;
 }
+.panel.introduction {
+  background: var(--backcat);
+}
 
 .sidebar {
   position: fixed;
