@@ -1090,7 +1090,7 @@ a.mainmenu img {
 .category {
   background: var(--backcat);
   border-radius: 10px;
-  padding: 2px;
+  padding: 0 2px 0 0;
   margin-bottom: 5px;
 }
 
