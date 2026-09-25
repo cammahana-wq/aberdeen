@@ -816,14 +816,13 @@ strong.FAM-page-link {
   border-color: #39f;
 }
 
-.FAM-msg-avatar img {
+.FAM-msg-avatar a img {
   height: 100%;
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
   object-position: center;
 }
-
 .FAM-msg.FAM-my-msg {
   flex-direction: row-reverse;
 }
