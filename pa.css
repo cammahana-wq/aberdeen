@@ -2699,7 +2699,7 @@ st1 {
 ptt1 {
     position: relative;
     display: inline-block;
-    font-family: var(--ptt1-font);
+    font-family: var(--font2);
     font-size: var(--ptt1-size);
     font-weight: var(--ptt1-weight);
     text-transform: lowercase;
