@@ -1353,8 +1353,17 @@ a.groups:last-child {
   order: 3;
   border-radius: 0 10px 10px 0;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-
+.qeel-right .groupes-badges {
+  margin-top: auto;
+  justify-content: center;
+}
+.last_connected_text {
+  display: block;
+}
 /****** LISTE DES SUJETS ****** */
 
 .navigation_links {
@@ -3128,7 +3137,7 @@ ficheadmin .prelien-info {
     margin-top: 10px;
   justify-content: space-between;
 }
-.groupe-badge[href="/g7-bean-nighe"] {
+.groupe-badge[href^="/g7-bean-nighe"] {
   display: none;
 }
 .groupe-badge {
