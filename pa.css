@@ -1096,9 +1096,8 @@ a.mainmenu img {
 .category {
   background: var(--neutral);
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px var(--ombre-carte);
+  padding: 16px;
+  margin-bottom: 25px;
 }
 
 .category:has(+ .links_bar) {
@@ -1108,10 +1107,11 @@ a.mainmenu img {
 }
 
 .cate_title {
+  position: relative;
   background: var(--accc1);
   border-radius: 8px;
-  padding: 8px 16px;
-  margin: 10px 0 20px;
+  padding: 10px 16px;
+  margin: 10px 0 15px;
 }
 .cate_title h2 {
   display: block;
@@ -1124,6 +1124,16 @@ a.mainmenu img {
   margin: 0;
   color: var(--neutral);
 }
+.cate_title::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent 80%);
+}
 .forum {
   position: relative;
   display: grid;
@@ -1131,16 +1141,19 @@ a.mainmenu img {
   column-gap: 10px;
   row-gap: 2px;
   align-items: baseline;
-  padding: 16px 10px 16px 16px;
-  border-bottom: 1px solid var(--bordure-tres-claire);
+  margin-bottom: 4px;
+  background: var(--neutral);
+  padding: 10px 10px 10px 16px;
+  border-radius: 10px;
   box-shadow: inset 3px 0 0 0 var(--degrag);
-}
-.forum:last-child {
-  border-bottom: none;
 }
 .forum[class*="row"]:not([class*="no_new"]) {
   box-shadow: inset 3px 0 0 0 var(--accc1);
 }
+.forum:last-child {
+  border-bottom: none;
+}
+
 a.forumtitle {
   font-family: var(--font-titre);
   font-size: 13px;
