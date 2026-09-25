@@ -189,9 +189,9 @@ margin: 60px auto 20px;
 }
 
 .panel {
-  background: var(--neutral);
+  background: var(--backcat);
   border: var(--border);
-  padding: 10px;
+  padding: 1px 2px 1px 2px;
   margin: 15px 0;
   border-radius: 10px;
 }
@@ -3160,11 +3160,11 @@ a.groupe-badge:hover {
     border-radius: 10px;
     display: grid;
     text-align: center;
-    grid-template-columns: 205px 160px 205px 251px;
+    grid-template-columns: 205px 160px 205px 270px;
     grid-template-rows: 35px 90px 100px 80px 100px;
     gap: 12px;
     padding: 10px;
-    width: 883px;
+    width: 895px;
     max-width: 100%;
     box-sizing: border-box;
     margin: 0;
