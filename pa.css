@@ -1114,10 +1114,17 @@ a.mainmenu img {
 }
 
 a.forumtitle {
-  font-size: var(--large-size);
   font-family: var(--font-titre);
-    grid-column: 1;
-  grid-row: 1;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--liensbefore) !important;
+}
+a.forumtitle:hover {
+  color: var(--accc1) !important;
 }
 
 .forum_content {
