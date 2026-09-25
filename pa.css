@@ -3506,6 +3506,10 @@ a.groupe-badge:hover {
     line-height: 12px;
     background-color: var(--white);
 }
+
+.topsites a {
+  font-weight: 400;
+}
 .titrevotes {
     font-family: var(--font1);
     font-size: 12px;
