@@ -181,7 +181,7 @@
 /* Titre de la fenetre */
 .FAM-maintitle {
   text-align: left;
-  font-size: smaller;
+  font-size: 12px !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
