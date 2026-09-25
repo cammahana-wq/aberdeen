@@ -2426,11 +2426,35 @@ blockquote cite a {
 
 #preview {
   background: var(--neutral);
-  padding: 10px;
+  padding: 0;
   border: var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
 }
-
+#preview .inner {
+  padding: 15px;
+}
+#preview .h3 {
+  font-family: var(--font-titre);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accc1);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--bordure-tres-claire);
+}
+#preview .content {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--textes);
+}
+#preview .corners-top,
+#preview .corners-bottom {
+  display: none;
+}
 /*** EDITION DE PROFIL ***/
 #tabs ul {
   display: flex;
