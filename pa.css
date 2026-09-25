@@ -3137,7 +3137,7 @@ ficheadmin .prelien-info {
 /*** GROUPES EN PASTILLES (généré en JS) ***/
 .groupes-badges {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 6px;
     margin-top: 10px;
   justify-content: space-between;
