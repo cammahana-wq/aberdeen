@@ -1664,6 +1664,9 @@ button.rep-button .rep-nb {
   text-align: center;
   background: var(--profil);
   border-radius: 8px;
+  position: sticky;
+  top: 70px;
+  align-self: start;
 }
 .post_pseudo {
   display: block;
@@ -1712,9 +1715,7 @@ button.rep-button .rep-nb {
   max-height: 300px;
   overflow-y: auto;
   text-align: left;
-  padding: 8px 6px 8px 8px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 0 4px 0 0;
   scrollbar-width: thin;
   scrollbar-color: var(--degrag) transparent;
 }
@@ -1734,20 +1735,19 @@ button.rep-button .rep-nb {
 
 /* Un champ de profil */
 .user_field {
-  padding: 4px 0;
   font-size: 11px;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 .field_label .label {
-  display: block;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   color: var(--textes);
-  font-size: 10px;
+  text-transform: lowercase;
+}
+.field_label .label::after {
+  content: " : ";
 }
 .field_content {
-  display: block;
   color: var(--gris-champ);
 }
 .field_separator {
