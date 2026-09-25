@@ -459,6 +459,7 @@ body#sce_smilies_body {
   background: var(--neutralDark);
   padding: 10px;
   border-radius: 8px;
+  margin-top: 15px;
 }
 
 .separator {
