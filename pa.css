@@ -2156,6 +2156,9 @@ blockquote cite a {
 }
 
 /****** MEMBRES ****** */
+#cp-main .panel {
+  background: var(--neutral);
+}
 
 .user_profile {
   background: var(--neutral);
