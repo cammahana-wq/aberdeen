@@ -4619,6 +4619,6 @@ white-space: nowrap;
     font-style: italic;
     line-height: 15px;
 }
-ficheadmin br:last-child {
+ficheadmin br {
   display: none;
 }
