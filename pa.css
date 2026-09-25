@@ -1198,6 +1198,14 @@ a.forumtitle:hover {
 
 .forum_lastpost {
   width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.forum_lastpost > span {
+  display: block;
 }
 .forum_lastpost a.lastpost_link {
   font-family: var(--font-titre);
