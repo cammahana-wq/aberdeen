@@ -1659,7 +1659,7 @@ button.rep-button .rep-nb {
 }
 
 .post_profile {
-  width: 200px;
+  width: 220px;
   padding: 15px 10px;
   text-align: center;
   background: var(--profil);
@@ -1667,6 +1667,11 @@ button.rep-button .rep-nb {
   position: sticky;
   top: 70px;
   align-self: start;
+  box-sizing: border-box;
+}
+.post_profile * {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .post_pseudo {
   display: block;
