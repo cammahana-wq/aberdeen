@@ -1086,7 +1086,7 @@ a.mainmenu img {
 .cate_title h2::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 10px;
   right: -50px;
   bottom: -6px;
   height: 4px;
