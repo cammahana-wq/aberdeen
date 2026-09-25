@@ -1357,6 +1357,11 @@ a.groups:last-child {
   flex-direction: column;
   height: 100%;
 }
+.qeel_right_title {
+  display: block;
+  font-family: var(--font);
+  margin-bottom: 8px;
+}
 .qeel-right .groupes-badges {
   margin-top: auto;
   justify-content: center;
