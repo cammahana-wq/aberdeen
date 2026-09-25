@@ -1087,7 +1087,7 @@ a.mainmenu img {
 .forum {
   position: relative;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content max-content 1fr;
   column-gap: 10px;
   row-gap: 2px;
   align-items: baseline;
@@ -1174,7 +1174,7 @@ a.forumtitle {
 .forum_stats {
   grid-column: 2;
   grid-row: 1;
-  justify-self: end;
+  justify-self: start;
   font-weight: normal;
   color: var(--gris-moyen);
   font-size: var(--little-size);
