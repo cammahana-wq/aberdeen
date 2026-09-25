@@ -173,7 +173,7 @@ body {
 
 .main_forum {
   width: 940px;
-  margin: 20px auto;
+margin: 60px auto 20px;
   padding: 20px;
   background: var(--neutral);
   border-radius: 12px;
@@ -1009,9 +1009,14 @@ a.specials_links:empty {
 
 /*** BARRE DE NAVIGATION ***/
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background: var(--neutralDark);
-  border-radius: 10px;
-  margin-top: 10px;
+  border-radius: 0;
+  margin-top: 0;
   padding: 10px;
   display: flex;
   align-items: center;
