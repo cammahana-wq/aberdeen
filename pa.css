@@ -1644,7 +1644,9 @@ div.post_row:last-of-type {
 .post_date a.copied::before {
   background-color: var(--accc1);
 }
-
+ul.profile-icons a {
+  font-weight: normal;
+}
 ul.profile-icons {
   flex-grow: 1;
   display: flex;
