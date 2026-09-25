@@ -1659,7 +1659,7 @@ button.rep-button .rep-nb {
 }
 
 .post_profile {
-  width: 250px;
+  width: 220px;
   padding: 15px 10px;
   text-align: center;
   background: var(--profil);
@@ -1791,7 +1791,7 @@ button.rep-button .rep-nb {
   transition: background 0.2s ease;
 }
 .profil-tabs .profil-tab.active {
-  background: var(--accc1);
+  background: #b5796e;
   color: var(--white);
 }
 .tab-irl {
