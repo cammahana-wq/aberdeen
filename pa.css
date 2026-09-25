@@ -4619,3 +4619,6 @@ white-space: nowrap;
     font-style: italic;
     line-height: 15px;
 }
+.tab-content br:last-child {
+  display: none;
+}
