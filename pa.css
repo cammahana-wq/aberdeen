@@ -194,6 +194,14 @@ margin: 60px auto 20px;
   padding: 10px;
   margin: 25px 0;
 }
+.panel.introduction:has(+ .links_bar) {
+  background: var(--neutralDark);
+  border: none;
+  padding: 20px 0 0;
+  margin: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
 .sidebar {
   position: fixed;
