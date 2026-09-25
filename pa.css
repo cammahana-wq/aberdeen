@@ -1030,10 +1030,10 @@ a.specials_links:empty {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: var(--neutralDark);
+  background: var(--link-brown);
   border-radius: 0;
   margin-top: 0;
-  padding: 10px;
+  padding: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
