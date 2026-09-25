@@ -3250,7 +3250,6 @@ tw.revele {
 .award_tooltiptext {
     color: var(--accc1) !important;
     border: 1px solid var(--accc1) !important;
-    display: block !important;
     z-index: 1000 !important;
     font-size: 13px !important;
     padding: 5px !important;
