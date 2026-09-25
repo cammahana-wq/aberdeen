@@ -1963,6 +1963,7 @@ a.fa-mention {
 .quickreply {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 #quickreply_content:empty {
