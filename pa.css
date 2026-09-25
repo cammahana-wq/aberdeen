@@ -197,7 +197,6 @@ margin: 60px auto 20px;
 
 .sidebar {
   position: fixed;
-  background-color: var(--neutral);
   inset: 0;
   width: max-content;
   display: flex;
@@ -1029,6 +1028,7 @@ a.specials_links:empty {
   width: 100%;
   z-index: 999;
   background: var(--link-brown);
+  opacity: 90%;
   border-radius: 0;
   margin-top: 0;
   padding: 9px;
