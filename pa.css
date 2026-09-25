@@ -2718,7 +2718,6 @@ ptt1::before {
     bottom: 2px;
     height: 8px;
     background: var(--ptt1-highlight);
-    transform: rotate(-0.8deg);
     border-radius: 2px;
 }
 qut1 {
