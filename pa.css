@@ -2453,6 +2453,42 @@ blockquote cite a {
 .post.row2 .corners-bottom {
   display: none;
 }
+.mp-preview-wrap {
+  background: var(--neutral);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 15px auto;
+  max-width: 940px;
+}
+.mp-preview-wrap .h3 {
+  font-family: var(--font-titre);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accc1);
+  margin-bottom: 10px;
+}
+.mp-preview-wrap .post.row2 {
+  background: var(--neutralDark);
+  padding: 15px;
+  border-radius: 10px;
+}
+.mp-preview-wrap .postbody h3 {
+  font-family: var(--font-titre);
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+.mp-preview-wrap .postbody .author {
+  font-size: 12px;
+  color: var(--gris-moyen);
+  margin-bottom: 8px;
+}
+.mp-preview-wrap .postbody .content {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--textes);
+}
 /*** EDITION DE PROFIL ***/
 #tabs ul {
   display: flex;
