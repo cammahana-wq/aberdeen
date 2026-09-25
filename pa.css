@@ -1842,16 +1842,13 @@ a.fa-mention {
   display: none;
 }
 .presence.online {
-  display: block;
-  text-align: center;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 11px;
-  color: var(--gris-moyen);
-  background: transparent;
-  padding: 0;
-  margin: 8px 0 4px;
-  border-radius: 0;
+    display: inline-block;
+    position: relative;
+    background-color: var(--neutralDarker);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: 'Inter';
 }
 #list_awards {
   display: flex;
