@@ -439,6 +439,8 @@ body#sce_smilies_body {
 /*** PAGINATIONS ***/
 .pagination span a {
   font-size: var(--little-size);
+  font-weight: 300;
+  font-family: var(--font1);
 }
 
 .pagination span a:hover {
