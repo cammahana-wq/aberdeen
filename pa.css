@@ -2367,7 +2367,16 @@ blockquote cite a {
   transform: translateX(0);
   visibility: visible;
 }
-
+#wombat h1.page-title {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+#wombat #list_awards {
+  display: inline-flex;
+  vertical-align: middle;
+  gap: 5px;
+}
 /*** PROFILS SIMPLIFIÉS DES TAGS ***/
 .tooltipster-arrow {
   display: none;
