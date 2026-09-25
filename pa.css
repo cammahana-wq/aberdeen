@@ -2232,6 +2232,45 @@ blockquote cite a {
   gap: 5px;
   float: right;
 }
+.profile_contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--statut-bg);
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  margin: 0 2px;
+}
+.profile_contact a:hover {
+  background: var(--btn-violet-hover-1);
+}
+.profile_contact a img {
+  display: none;
+}
+.profile_contact a:has(img#i_icon_email) {
+  display: none;
+}
+.profile_contact a:has(img#i_icon_pm)::before {
+  content: '\2709';
+  font-size: 15px;
+  color: var(--gris-lien);
+}
+.profile_contact a:has(img[src*="icon_contact_email"])::before {
+  content: '\270E';
+  font-size: 13px;
+  color: var(--gris-lien);
+}
+.profile_contact a:has(img[src*="envelope-full"])::before {
+  content: '\1F517';
+  font-size: 13px;
+  color: var(--gris-lien);
+}
+.profile_contact a:hover::before {
+  color: var(--btn-violet-hover-texte);
+}
 
 .profile_content {
   height: 265px;
