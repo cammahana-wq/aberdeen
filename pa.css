@@ -193,13 +193,6 @@ margin: 60px auto 20px;
   padding: 10px;
   margin: 25px 0;
 }
-.panel.introduction:has(+ .links_bar) {
-  background: var(--neutralDark);
-  border: none;
-  margin: 0;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
 
 .sidebar {
   position: fixed;
@@ -1097,12 +1090,6 @@ a.mainmenu img {
   background: var(--neutral);
   border-radius: 12px;
   padding: 16px;
-  margin-bottom: 25px;
-}
-
-.category:has(+ .links_bar) {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
   margin-bottom: 25px;
 }
 
