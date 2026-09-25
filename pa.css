@@ -1211,9 +1211,12 @@ a.forumtitle:hover {
   font-style: italic;
   color: var(--gris-moyen);
 }
-.forum_lastpost_meta strong {
+.forum_lastpost_meta a,
+.forum_lastpost_meta strong,
+.forum_lastpost_meta span {
+  font-size: 12px;
   font-style: normal;
-  color: var(--textColor);
+  color: inherit;
 }
 .forum_details {
   display: contents;
