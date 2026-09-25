@@ -1498,8 +1498,9 @@ a.groups:last-child {
 
 .topic-author {
   display: block;
-  margin-top: 2px;
+  margin-top: 5px;
   font-size: 11px;
+  margin-bottom: 2px;
   color: var(--gris-moyen);
 }
 
