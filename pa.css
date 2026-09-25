@@ -1561,7 +1561,7 @@ a.groups:last-child {
 
 .topic_separator {
   height: 1px;
-  background: var(--degrag);
+  background: var(--background);
   margin: 4px 0;
   border-radius: 0;
 }
