@@ -1440,13 +1440,11 @@ a.groups:last-child {
   position: relative;
   background: var(--neutral);
   border-radius: 10px;
-  padding: 10px 200px 10px 16px;
-  margin-bottom: 4px;
-  box-shadow: inset 3px 0 0 0 var(--degrag);
-}
-
-.topicslist_row[class*="row"]:not([class*="no_new"]) {
-  box-shadow: inset 3px 0 0 0 var(--accc1);
+  padding: 10px 16px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .topicslist_row:last-child {
@@ -1458,7 +1456,17 @@ a.groups:last-child {
 }
 
 .topicslist_infos {
+  flex: 1;
+  min-width: 0;
+}
+
+.topic-type strong {
   display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accc1);
+  margin-bottom: 2px;
 }
 
 .topictitle {
@@ -1467,15 +1475,14 @@ a.groups:last-child {
   font-size: 13px;
   font-weight: 700;
   color: var(--liensbefore);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  vertical-align: bottom;
 }
 
 .topictitle:hover {
+  color: var(--accc1);
+}
+
+.topicslist_row[class*="row"]:not([class*="no_new"]) .topictitle::before {
+  content: "☾ ";
   color: var(--accc1);
 }
 
@@ -1491,43 +1498,45 @@ a.groups:last-child {
   display: block;
   margin-top: 2px;
   font-size: 11px;
-  font-style: italic;
   color: var(--gris-moyen);
 }
 
+.topic-author strong {
+  font-weight: 700;
+  color: var(--textes);
+}
+
+.topicslist-pagination {
+  margin-left: 6px;
+  font-size: 10px;
+}
+
 .topicslist-stats {
-  display: block;
-  margin-top: 6px;
+  flex-shrink: 0;
+  width: 90px;
+  text-align: center;
   font-size: 10px;
   color: var(--gris-moyen);
 }
 
 .topicslist-avatar-lastpost {
-  position: absolute;
-  top: 10px;
-  right: 200px;
-  width: 60px;
-  height: 60px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .topicslist-avatar-lastpost img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .topicslist-lastpost {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-shrink: 0;
+  width: 160px;
+  font-size: 10px;
+  text-align: left;
 }
 
 .topicslist-description {
