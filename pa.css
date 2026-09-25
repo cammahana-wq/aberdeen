@@ -95,6 +95,37 @@
   --font1: var(--font-ui);
   --font2: var(--font-titre);
   --font3: var(--font);
+  --tdf1-font: Georgia, "Times New Roman", serif;
+--tdf1-size: 30px;
+--tdf1-preview-size: 15px;
+--tdf1-weight: normal;
+--tdf1-spacing: 2px;
+--tdf1-color: var(--accc1);
+
+--st1-font: Georgia, "Times New Roman", serif;
+--st1-size: 21px;
+--st1-preview-size: 14px;
+--st1-weight: normal;
+--st1-spacing: 1px;
+--st1-color: var(--black);
+
+--ptt1-font: "Times New Roman", Times, serif;
+--ptt1-size: 13px;
+--ptt1-weight: bold;
+--ptt1-spacing: 2px;
+--ptt1-color: var(--accc1);
+--ptt1-highlight: var(--highlight);
+
+--qut1-font: Georgia, "Times New Roman", serif;
+--qut1-size: 15px;
+--qut1-color: var(--accc2);
+--qut1-quote: var(--degrag);
+
+--nte1-size: 13px;
+--nte1-color: var(--accc2);
+
+--impt1-color: var(--accc2);
+--impt1-border: var(--border);
 }
 
 /*** ROOT — MODE SOMBRE ***/
