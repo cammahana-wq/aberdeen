@@ -2722,7 +2722,7 @@ ptt1::before {
 }
 qut1 {
     display: block;
-    font-family: var(--qut1-font);
+    font-family: var(--font-titre);
     font-size: var(--qut1-size);
     font-style: italic;
     line-height: 1.6;
@@ -2731,7 +2731,7 @@ qut1 {
 }
 qut1rp {
     display: block;
-    font-family: var(--qut1-font);
+    font-family: var(--font-titre);
     font-size: 12px;
     font-style: italic;
     color: var(--qut1-color);
