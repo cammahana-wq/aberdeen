@@ -1659,15 +1659,126 @@ button.rep-button .rep-nb {
 }
 
 .post_profile {
-  padding: 10px;
-  border-right: 1px solid var(--neutralDark);
+  width: 200px;
+  padding: 15px 10px;
+  text-align: center;
+  background: var(--profil);
+  border-radius: 8px;
 }
-
 .post_pseudo {
-  font-weight: bold;
-  font-family: var(--font-ui);
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+/* Rang (badge pilule) */
+.post_rank {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--accc2);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
+/* Avatar */
+.post_avatar img {
+  border-radius: 6px;
+  border: 3px solid var(--white);
+  box-shadow: 0 2px 8px var(--ombre-legere);
+  max-width: 140px;
+}
+
+/* Statut en ligne */
+.presence.online {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: var(--statut-bg);
+  color: #2e7d32;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bloc des champs — scrollable */
+.post_userinfo {
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  padding: 8px 6px 8px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--degrag) transparent;
+}
+.post_userinfo::-webkit-scrollbar {
+  width: 4px;
+}
+.post_userinfo::-webkit-scrollbar-track {
+  background: transparent;
+}
+.post_userinfo::-webkit-scrollbar-thumb {
+  background-color: var(--degrag);
+  border-radius: 10px;
+}
+.post_userinfo::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accc1);
+}
+
+/* Un champ de profil */
+.user_field {
+  padding: 4px 0;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.field_label .label {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--textes);
+  font-size: 10px;
+}
+.field_content {
+  display: block;
+  color: var(--gris-champ);
+}
+.field_separator {
+  display: none;
+}
+
+/* Lien de contact (icône symbole plutôt qu'image native) */
+.post_contact {
+  margin-top: 10px;
+}
+.post_contact a.profile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--statut-bg);
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+.post_contact a.profile-icon:hover {
+  background: var(--btn-violet-hover-1);
+}
+.post_contact a.profile-icon img {
+  display: none;
+}
+.post_contact a.profile-icon::before {
+  content: '\2709';
+  font-size: 15px;
+  color: var(--gris-lien);
+}
 a.fa-mention {
   cursor: pointer;
 }
