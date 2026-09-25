@@ -1748,7 +1748,10 @@ button.rep-button .rep-nb {
 .field_label .label:not(:empty)::after {
   content: " : ";
 }
-.user_field:has(.field_content:empty) {
+.field_content img[src*="empty.gif"] {
+  display: none;
+}
+.user_field:has(.field_content img[src*="empty.gif"]:only-child) {
   display: none;
 }
 .field_label .label {
