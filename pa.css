@@ -1972,6 +1972,7 @@ a.fa-mention {
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  padding-top: 20px;
 }
 
 #quickreply_content:empty {
