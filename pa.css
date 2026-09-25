@@ -1839,18 +1839,20 @@ a.fa-mention {
 }
 
 .presence {
-  display: none
+  display: none;
 }
-
 .presence.online {
-  display: inline-block;
-  position: relative;
-  background-color: var(--neutralDarker);
-  border-radius: 20px;
-  padding: 0 5px;
-  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  color: var(--gris-moyen);
+  background: transparent;
+  padding: 0;
+  margin: 8px 0 4px;
+  border-radius: 0;
 }
-
 #list_awards {
   display: flex;
   flex-wrap: wrap;
