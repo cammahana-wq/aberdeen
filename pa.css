@@ -1,13 +1,5 @@
 /****** ============================================================
  ****** ADAPTATION DU BLANK THEME (Kim-Bnx) — palette "Somewhere by the Sea"
- ****** Base structurelle : Blank Theme (variables --neutral / --contrast / --accentClr...)
- ****** Palette, typo et arrondis : ton pa.css (variables --accc1 / --textes / --font1... conservées telles quelles)
- ****** Les deux jeux de variables coexistent : le Blank Theme garde ses propres noms de
- ****** variables (utilisés par TOUTE sa structure ci-dessous), mais elles pointent vers
- ****** tes couleurs. Tes classes perso (tdf1, ptt1, rpgprofile, ficheadmin, groupe-badge,
- ****** messenger FAM, etc.) n'ont pas besoin d'être touchées : elles continuent de lire
- ****** --accc1/--textes/--white... normalement, donc tu peux les recoller telles quelles
- ****** à la suite de ce fichier sans rien adapter.
  ****** ============================================================ ******/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500&display=swap');
@@ -1070,16 +1062,26 @@ a.mainmenu img {
 }
 
 .cate_title h2 {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: var(--font-titre);
-  margin: 10px 0 20px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-titre);
+    margin: 10px 0 20px;
+    position: relative;
+    color: var(--accc1);
 }
-
+.cate_title h2::after {
+    content: "";
+    display: block;
+    margin: 6px auto 0;
+    width: 60px;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--bordure-claire), transparent 80%);
+}
 .forum {
   margin-bottom: 10px;
   background: var(--neutral);
