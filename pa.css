@@ -1461,12 +1461,12 @@ a.groups:last-child {
 }
 
 .topic-type strong {
-  display: block;
+  display: inline;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--accc1);
-  margin-bottom: 2px;
+  margin-right: 6px;
 }
 
 .topictitle {
