@@ -1030,7 +1030,7 @@ background: var(--bordure-legere);
   width: 100%;
   z-index: 999;
   background: var(--link-brown);
-  opacity: 90%;
+  opacity: 100%;
   border-radius: 0;
   margin-top: 0;
   padding: 9px;
