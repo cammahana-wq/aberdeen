@@ -1721,7 +1721,7 @@ button.rep-button .rep-nb {
   max-height: 300px;
   overflow-y: auto;
   text-align: left;
-  padding: 0 4px 0 0;
+  padding: 2px 4px 0 0;
   scrollbar-width: thin;
   scrollbar-color: var(--degrag) transparent;
 }
