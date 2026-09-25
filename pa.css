@@ -548,9 +548,9 @@ a.specials_links:empty {
   padding: 8px 12px;
   position: fixed;
   z-index: 1000;
-  top: 10px;
+  top: 5px;
   right: 10px;
-  height: 35px;
+  height: 30px;
 }
 .ntf_button-text {
   display: none;
