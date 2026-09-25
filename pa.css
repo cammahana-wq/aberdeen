@@ -1290,7 +1290,8 @@ a.forumtitle:hover {
 }
 
 .qeel-left {
-  border-radius: 10px 0 0 10px;
+  order: 2;
+  border-radius: 0;
 }
 
 #last_user {
@@ -1327,7 +1328,10 @@ a.groups:last-child {
   margin-bottom: 0;
 }
 
-.qeel-middle {}
+.qeel-middle {
+  order: 1;
+  border-radius: 10px 0 0 10px;
+}
 
 #total_users {}
 
@@ -1349,6 +1353,7 @@ a.groups:last-child {
 }
 
 .qeel-right {
+  order: 3;
   border-radius: 0 10px 10px 0;
   text-align: justify;
 }
