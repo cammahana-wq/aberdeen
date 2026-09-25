@@ -1204,11 +1204,15 @@ a.forumtitle:hover {
   font-size: 13px;
   font-weight:500;
 }
-.forum_lastpost_date {
-  display: inline-block;
+.forum_lastpost_meta {
+  display: block;
   font-size: 10px;
   font-style: italic;
   color: var(--gris-moyen);
+}
+.forum_lastpost_meta strong {
+  font-style: normal;
+  color: var(--textColor);
 }
 .forum_details {
   display: contents;
