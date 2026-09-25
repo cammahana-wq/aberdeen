@@ -1504,13 +1504,16 @@ a.groups:last-child {
 }
 
 .topic-author strong {
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .topicslist-pagination {
   margin-left: 6px;
   font-size: 10px;
+}
+.topicslist-lastpost strong {
+  text-transform: uppercase;
 }
 
 .topicslist-stats {
