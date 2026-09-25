@@ -1753,7 +1753,41 @@ button.rep-button .rep-nb {
 .field_separator {
   display: none;
 }
-
+.profil-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.profil-tabs .profil-tab {
+  flex: 1;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: var(--statut-bg);
+  color: var(--textes);
+  transition: background 0.2s ease;
+}
+.profil-tabs .profil-tab.active {
+  background: var(--accc1);
+  color: var(--white);
+}
+.tab-irl {
+  display: none;
+}
+.post_userinfo.showing-irl > .user_field {
+  display: none;
+}
+.post_userinfo.showing-irl .tab-irl {
+  display: block;
+}
+.post_userinfo.showing-irl .tab-irl .user_field {
+  display: block;
+}
 /* Lien de contact (icône symbole plutôt qu'image native) */
 .post_contact {
   margin-top: 10px;
