@@ -2053,7 +2053,7 @@ a.fa-mention {
 }
 
 .post_message {
-  padding: 25px;
+  padding: 20px 10px 20px 15px;
 }
 
 .quickreply div.h3 {
@@ -2659,8 +2659,8 @@ ficheadmin {
     border: 1px solid var(--border);
     background-color: var(--white);
     border-radius: 10px;
-    padding: 10px;
-    width: 95%;
+    padding: 5px;
+    width: 100%;
     margin: 20px auto;
     box-sizing: border-box;
     box-shadow: 0 3px 6px var(--bordure-claire);
