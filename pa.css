@@ -193,6 +193,7 @@ margin: 60px auto 20px;
   border: var(--border);
   padding: 10px;
   margin: 25px 0;
+  border-radius: 10px;
 }
 
 .sidebar {
@@ -1091,7 +1092,7 @@ a.mainmenu img {
   background: var(--backcat);
   border-radius: 10px;
   padding: 0 2px 0 0;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .cate_title {
