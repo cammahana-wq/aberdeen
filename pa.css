@@ -1745,6 +1745,12 @@ button.rep-button .rep-nb {
   line-height: 1.5;
   margin-bottom: 4px;
 }
+.field_label .label:not(:empty)::after {
+  content: " : ";
+}
+.user_field:has(.field_content:empty) {
+  display: none;
+}
 .field_label .label {
   font-weight: 700;
   color: var(--textes);
