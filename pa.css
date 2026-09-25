@@ -9,7 +9,7 @@
   color-scheme: light;
 
   /* bannière — remplace par tes propres images (claire/sombre) */
-  --header: url('https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png');
+  --header: url('https://i.servimg.com/u/f54/20/66/24/62/header12.png');
 
   /* --- Variables natives du Blank Theme, repointées vers ta palette --- */
   --neutral: #ffffff;         /* était #fafbfc — devient ton --white */
