@@ -47,6 +47,7 @@
   --black: #000;
   --background: var(--neutralDark);
   --degrag: var(--contrastLighter);
+  --backcat: #D7D7C8;
   --accent: #3e718e;
   --highlight: #f2e6d8;
   --profil: #faf9fc;
@@ -1087,8 +1088,8 @@ a.mainmenu img {
 .introduction {}
 
 .category {
-  background: var(--degrag);
-  border-radius: 12px;
+  background: var(--backcat);
+  border-radius: 10px;
   padding: 2px;
   margin-bottom: 5px;
 }
@@ -1134,10 +1135,11 @@ a.mainmenu img {
   box-shadow: inset 3px 0 0 0 var(--degrag);
 }
 .forum[class*="row"]:not([class*="no_new"]) {
-  box-shadow: inset 4px 0 0 0 var(--accc1);
+  box-shadow: inset 3px 0 0 0 var(--accc1);
 }
 .forum:last-child {
   border-bottom: none;
+  border-radius : 0 0 12px 12px;
 }
 
 a.forumtitle {
