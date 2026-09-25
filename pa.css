@@ -1058,7 +1058,6 @@ a.mainmenu {
 }
 
 a.mainmenu:hover {
-  background: var(--neutral);
   border-radius: 20px;
 }
 
