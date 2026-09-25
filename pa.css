@@ -1162,7 +1162,6 @@ a.forumtitle:hover {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 6px;
 }
 
 .forum-img {
@@ -1244,7 +1243,6 @@ a.forumtitle:hover {
   font-size: 0;
   grid-column: 1 / -1;
   grid-row: 3;
-  margin-top: 6px;
 }
 #subforum a {
     display: inline-block;
