@@ -1150,20 +1150,15 @@ a.forumtitle {
 }
 
 .forum_details {
-  grid-column: 2;
-  grid-row: 1;
-  border-top: none;
-  padding-top: 0;
-  margin-top: 0;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+  display: contents;
 }
 
 #subforum {
   font-size: 0;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  margin-top: 6px;
 }
-
 #subforum a {
     display: inline-block;
     margin: 6px 4px 0 0;
@@ -1177,8 +1172,10 @@ a.forumtitle {
     color: var(--gris-lien);
 }
 .forum_stats {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
   font-weight: normal;
-  float: none;
   color: var(--gris-moyen);
   font-size: var(--little-size);
 }
