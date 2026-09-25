@@ -175,7 +175,7 @@ body {
   width: 940px;
   margin: 20px auto;
   padding: 20px;
-  background: var(--neutralDark);
+  background: var(--neutral);
   border-radius: 12px;
 }
 
@@ -1055,7 +1055,18 @@ a.mainmenu img {
 .introduction {}
 
 .category {
+  background: var(--neutralDark);
   padding: 10px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.category:first-of-type {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.category:last-of-type {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   margin-bottom: 25px;
 }
 
