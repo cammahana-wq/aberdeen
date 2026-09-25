@@ -513,7 +513,9 @@ summary {
   margin: 25px 0;
   clear: both;
 }
-
+.links_bar:has(+ .category) {
+  display: none;
+}
 .links_bar:empty {
   display: none;
 }
