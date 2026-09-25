@@ -1106,10 +1106,9 @@ a.mainmenu img {
   border-radius: 10px;
   background: var(--degrag);
 }
-.forum:not(.forum_no_new)::before {
+.forum[class*="row"]:not([class*="no_new"])::before {
   background: var(--accc1);
 }
-
 .forum:last-child {
   margin-bottom: 0;
 }
