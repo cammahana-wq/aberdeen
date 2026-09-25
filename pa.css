@@ -1107,28 +1107,22 @@ a.mainmenu img {
   margin-bottom: 25px;
 }
 
+.cate_title {
+  background: var(--accc1);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 10px 0 20px;
+}
 .cate_title h2 {
   display: block;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   font-family: var(--font-titre);
-  margin: 0px 0 20px;
-  padding-left: 15px;
-  position: relative;
-  color: var(--accc1);
-}
-.cate_title h2::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: -50px;
-  bottom: -6px;
-  height: 4px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--bordure-claire), transparent 80%);
+  margin: 0;
+  color: var(--neutral);
 }
 .forum {
   position: relative;
