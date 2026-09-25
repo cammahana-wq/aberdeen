@@ -1296,11 +1296,13 @@ a.forumtitle:hover {
 #last_user {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content : center;
 }
 
 #lastuser_avatar img {
   width: 40px;
-  height: 40px;
+  height: 60px;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
