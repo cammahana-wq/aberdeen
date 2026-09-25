@@ -1087,7 +1087,7 @@ a.mainmenu img {
 .introduction {}
 
 .category {
-  background: var(--neutral);
+  background: var(--neutralDark);
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 25px;
