@@ -1528,14 +1528,17 @@ a.groups:last-child {
 .topicslist-avatar-lastpost {
   flex-shrink: 0;
   width: 40px;
-  height: 40px;
+  height: 60px;
+  margin-right:10px;
 }
 
 .topicslist-avatar-lastpost img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
+    background: var(--neutralDark);
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
 }
 
 .topicslist-lastpost {
