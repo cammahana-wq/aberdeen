@@ -1667,25 +1667,42 @@ ul.profile-icons li:hover {
 .rep-button,
 .rep-button:active,
 .rep-button:focus {
-  background: var(--neutralDark);
+  background: transparent;
   color: var(--textColor);
   border: none;
   padding: 3px 5px;
   border-radius: 20px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
 }
 
 .rep-button:hover {
   background: var(--contrastLighter);
 }
 
-button.rep-button .like_text {}
+button.rep-button .like_text {
+  display: none;
+}
 
 button.rep-button .rep-nb {
-  margin-left: 5px;
+  display: inline-block !important;
+  margin-left: 0;
   padding: 0 3px;
   background: var(--neutral);
   border-radius: 3px;
+}
+
+.rep-button::before {
+  content: '\2764';
+  font-size: 16px;
+  color: var(--gris-moyen);
+}
+
+.rep-button.fa_liked::before {
+  color: var(--like-actif);
 }
 
 .post_profile {
