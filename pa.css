@@ -1560,10 +1560,10 @@ a.groups:last-child {
 }
 
 .topic_separator {
-  height: 5px;
-  background: var(--neutral);
-  margin-bottom: 10px;
-  border-radius: 8px;
+  height: 1px;
+  background: var(--degrag);
+  margin: 4px 0;
+  border-radius: 0;
 }
 
 #sort-topics {
