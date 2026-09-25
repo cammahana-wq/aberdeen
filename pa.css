@@ -1448,6 +1448,9 @@ a.groups:last-child {
   align-items: center;
   gap: 12px;
 }
+.liens-utiles a {
+  font-weight: normal;
+}
 .topics-list-wrap {
   background: var(--neutral);
   border-radius: 12px;
