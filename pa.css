@@ -8,23 +8,23 @@
 :root {
   color-scheme: light;
 
-  /* bannière — remplace par tes propres images (claire/sombre) */
+  /* bannière */
   --header: url('https://i.servimg.com/u/f54/20/66/24/62/header12.png');
 
   /* --- Variables natives du Blank Theme, repointées vers ta palette --- */
-  --neutral: #ffffff;         /* était #fafbfc — devient ton --white */
-  --neutralDark: #ebebeb;     /* devient ton --background */
-  --neutralDarker: #e4e4e4;   /* devient ton --bordure-carte */
+  --neutral: #ffffff;         
+  --neutralDark: #ebebeb;     
+  --neutralDarker: #e4e4e4;   
 
-  --contrast: #333333;        /* devient ton --gris-titre */
-  --contrastLight: #534842;   /* devient ton --textes */
-  --contrastLighter: #c1a89a; /* devient ton --degrag */
+  --contrast: #333333;        
+  --contrastLight: #534842;   
+  --contrastLighter: #c1a89a;
 
-  --accentClr: #8e3e49;       /* devient ton --accc1 */
-  --accentClrDark: #6b2e37;   /* variante foncée de --accc1 */
+  --accentClr: #8e3e49;       
+  --accentClrDark: #6b2e37;  
 
-  --textColor: #534842;       /* = --textes */
-  --textColorAccent: #1a070a; /* = --accc2 */
+  --textColor: #534842;       
+  --textColorAccent: #1a070a; 
 
   --border: 1px solid #ededed;
   --shadowBox: 0 0 20px rgba(142, 62, 73, 0.10);
@@ -35,13 +35,11 @@
   --large-size: 18px;
   --title-size: 22px;
 
-  --font: "Inter", sans-serif;            /* corps de texte, remplace Open Sans */
-  --font-titre: "Playfair Display", serif; /* titres h1/h2 */
-  --font-ui: "Poppins", sans-serif;        /* boutons, nav, petites majuscules */
-
-  /* --- Alias : variables de TON pa.css, pour que tes classes perso
-     (tdf1, ptt1, rpgprofile, ficheadmin, groupe-badge, messenger FAM...)
-     continuent de fonctionner sans aucune modification --- */
+  --font: "Inter", sans-serif;            
+  --font-titre: "Playfair Display", serif; 
+  --font-ui: "Poppins", sans-serif;        
+  
+  /* --- classes perso --- */
   --accc1: var(--accentClr);
   --accc2: var(--textColorAccent);
   --accc3: #660000;
@@ -101,7 +99,7 @@
 /*** ROOT — MODE SOMBRE ***/
 [data-color-scheme="dark"] {
   color-scheme: dark;
-  --header: url('https://images2.imgbox.com/89/30/IXFzrs0y_o.png');
+  --header: url('https://i.servimg.com/u/f54/20/66/24/62/header12.png');
 
   --neutral: #201c1a;
   --neutralDark: #14110f;
@@ -120,7 +118,7 @@
   --border: 1px solid #3a332e;
   --shadowBox: 0 0 20px #14110f;
 
-  /* alias pa.css, mode sombre */
+  /* alias, mode sombre */
   --accc2: var(--textColor);
   --structure: var(--degrag);
   --gris-fonce: #cfc7c0;
