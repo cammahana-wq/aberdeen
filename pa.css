@@ -1060,11 +1060,11 @@ a.mainmenu img {
   margin-bottom: 0;
   border-radius: 0;
 }
-.category:first-of-type {
+.links_bar + .category {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-.category:last-of-type {
+.category:has(+ .links_bar) {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   margin-bottom: 25px;
