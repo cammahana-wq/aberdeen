@@ -1095,19 +1095,10 @@ a.mainmenu img {
   background: var(--neutral);
   padding: 10px 10px 10px 16px;
   border-radius: 10px;
+  box-shadow: inset 3px 0 0 0 var(--degrag);
 }
-.forum::before {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 10px;
-  bottom: 10px;
-  width: 3px;
-  border-radius: 10px;
-  background: var(--degrag);
-}
-.forum[class*="row"]:not([class*="no_new"])::before {
-  background: var(--accc1);
+.forum[class*="row"]:not([class*="no_new"]) {
+  box-shadow: inset 3px 0 0 0 var(--accc1);
 }
 .forum:last-child {
   margin-bottom: 0;
