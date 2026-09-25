@@ -1268,12 +1268,13 @@ a.forumtitle:hover {
 
 /*** QUI EST EN LIGNE ***/
 .qeel {
-  background: var(--neutralDark);
+  background: var(--backcat);
   border-radius: 10px;
-  padding: 10px;
+ padding: 1px 4px 1px 2px;
   display: grid;
   grid-template-columns: 30% 40% 30%;
   grid-gap: 1px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
