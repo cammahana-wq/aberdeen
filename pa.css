@@ -1448,7 +1448,12 @@ a.groups:last-child {
   align-items: center;
   gap: 12px;
 }
-
+.topics-list-wrap {
+  background: var(--neutral);
+  border-radius: 12px;
+  padding: 16px;
+  overflow: hidden;
+}
 .topicslist_row:last-child {
   margin-bottom: 0;
 }
