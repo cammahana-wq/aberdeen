@@ -1431,6 +1431,7 @@ a.groups:last-child {
   background: var(--neutral);
   border-radius: 8px;
   padding: 10px;
+  display: none;
 }
 
 .topicslist_row {
