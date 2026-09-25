@@ -1094,10 +1094,11 @@ a.mainmenu img {
 .introduction {}
 
 .category {
-  background: var(--neutralDark);
-  padding: 10px;
-  margin-bottom: 0;
-  border-radius: 0;
+  background: var(--neutral);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px var(--ombre-carte);
 }
 
 .category:has(+ .links_bar) {
@@ -1136,19 +1137,16 @@ a.mainmenu img {
   column-gap: 10px;
   row-gap: 2px;
   align-items: baseline;
-  margin-bottom: 10px;
-  background: var(--neutral);
-  padding: 10px 10px 10px 16px;
-  border-radius: 10px;
+  padding: 16px 10px 16px 16px;
+  border-bottom: 1px solid var(--bordure-tres-claire);
   box-shadow: inset 3px 0 0 0 var(--degrag);
+}
+.forum:last-child {
+  border-bottom: none;
 }
 .forum[class*="row"]:not([class*="no_new"]) {
   box-shadow: inset 3px 0 0 0 var(--accc1);
 }
-.forum:last-child {
-  margin-bottom: 0;
-}
-
 a.forumtitle {
   font-family: var(--font-titre);
   font-size: 13px;
