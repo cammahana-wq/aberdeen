@@ -1373,18 +1373,23 @@ a.groups:last-child {
 /****** LISTE DES SUJETS ****** */
 
 .navigation_links {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
+      display: flex;
+    margin: 10px 0;
+    font-family: var(--font-titre);
+    text-transform: lowercase;
+    font-size: 5px;
+    justify-content: flex-start;
 }
 
 .navigation_chain {
   font-size: 0;
+  margin-left: 12px;
 }
 
 .navigation_chain a {
   font-size: initial;
   margin-right: 8px;
+  font-size: 13px;
 }
 
 .navigation_chain a:before {
