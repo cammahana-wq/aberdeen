@@ -45,9 +45,9 @@
   clear: both;
 }
 
-#modernbb #FAM i.bi,
-#modernbb #FAM-button i.bi,
-#modernbb #FAM-send {
+#blanktheme #FAM i.bi,
+#blanktheme #FAM-button i.bi,
+#blanktheme #FAM-send {
   margin: initial;
   vertical-align: initial;
 }
