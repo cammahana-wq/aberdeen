@@ -2133,6 +2133,8 @@ a.fa-mention {
   background: var(--neutralDark);
   border-radius: 8px;
   padding: 5px;
+  overflow-y: scroll;
+  max-height: 200px;
 }
 
 .codebox dt {
