@@ -538,7 +538,6 @@ a.specials_links:empty {
 
 #notiffi_button {
   cursor: pointer;
-  background: var(--neutral);
   border-radius: 10px;
   display: flex;
   align-items: center;
