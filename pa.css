@@ -2796,6 +2796,7 @@ infos {
     letter-spacing: 1px;
     font-weight: 600;
     color: var(--accc1);
+  font-family: var(--font-titre)
 }
 info b {
     color: var(--accc1);
