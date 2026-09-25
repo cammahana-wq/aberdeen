@@ -1180,6 +1180,21 @@ a.forumtitle:hover {
   max-height: 65px;
   overflow: auto;
   align-self: center;
+  scrollbar-width: thin;
+  scrollbar-color: var(--degrag) transparent;
+}
+.forum_desc::-webkit-scrollbar {
+  width: 4px;
+}
+.forum_desc::-webkit-scrollbar-track {
+  background: transparent;
+}
+.forum_desc::-webkit-scrollbar-thumb {
+  background-color: var(--degrag);
+  border-radius: 10px;
+}
+.forum_desc::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accc1);
 }
 
 .forum_avatar {
