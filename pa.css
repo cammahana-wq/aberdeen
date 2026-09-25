@@ -3126,14 +3126,12 @@ ficheadmin .prelien-info {
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 10px;
+  justify-content: space-between;
 }
 .groupe-badge[href="/g7-bean-nighe"] {
   display: none;
 }
 .groupe-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
     padding: 3px 10px;
     border-radius: 20px;
     background: var(--statut-bg);
