@@ -1202,6 +1202,7 @@ a.forumtitle:hover {
 .forum_lastpost a.lastpost_link {
   font-family: var(--font-titre);
   font-size: 13px;
+  font-weight:500;
 }
 .forum_details {
   display: contents;
