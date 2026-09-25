@@ -164,7 +164,7 @@ hr {
 body {
   background: var(--neutralDark);
   font-family: var(--font);
-  font-size: var(--normal-size);
+  font-size: var(--little-size);
   color: var(--textColor);
   margin: 0 !important;
 }
