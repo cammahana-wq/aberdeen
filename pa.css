@@ -1607,6 +1607,7 @@ div.post_row:last-of-type {
 
 .post_date {
   flex-grow: 100;
+  padding-left: 20px;
 }
 .post_date a {
   display: inline-flex;
