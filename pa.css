@@ -546,7 +546,7 @@ a.specials_links:empty {
   padding: 8px 12px;
   position: fixed;
   z-index: 1000;
-  top: 5px;
+  top: 4px;
   right: 10px;
   height: 30px;
 }
