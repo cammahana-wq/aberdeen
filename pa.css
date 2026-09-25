@@ -1108,7 +1108,7 @@ background: var(--bordure-legere);
 .navbar a[href^="/faq"],
 .navbar a[href^="/calendar"],
 .navbar a[href^="/groups"],
-.navbar a[href^="/images"]
+.navbar a[href^="/images"],
 .navbar a[href^="/discover"]
 {
   display: none;
