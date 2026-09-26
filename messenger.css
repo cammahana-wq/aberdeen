@@ -800,6 +800,7 @@ strong.FAM-page-link {
   height: 60px;
   border-radius: 100%;
   overflow: hidden;
+    width: 100%;
 }
 
 .FAM-msg-avatar .FAM-msg-name {
