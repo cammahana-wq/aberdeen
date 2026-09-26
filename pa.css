@@ -4783,3 +4783,12 @@ body.sms-bulle-chat .container {
   margin-left: auto;
   margin-right: auto;
 }
+
+body.sms-bulle-chat .sms-messages-wrap {
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
