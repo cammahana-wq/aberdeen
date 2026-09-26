@@ -2729,7 +2729,7 @@ ficheadmin {
     background-color: var(--white);
     border-radius: 10px;
     padding: 5px;
-    width: 100%;
+    width: 95%;
     margin: 20px auto;
     box-sizing: border-box;
     box-shadow: 0 3px 6px var(--bordure-claire);
