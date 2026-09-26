@@ -3593,7 +3593,7 @@ ficheadmin .prelien-info {
 .contexte-page info {
     display: block;
     text-align: justify;
-    font-size: 11px;
+    font-size: 12px;
 }
 .contexte-infos {
     max-width: 480px;
