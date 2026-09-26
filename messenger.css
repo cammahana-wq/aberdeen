@@ -1470,9 +1470,26 @@ blockquote.FAM-codebox > div {
 
 /* Avatar : même taille cohérente sur le conteneur ET le lien à l'intérieur */
 .FAM-msg-avatar,
-.FAM-msg-avatar a {
+.FAM-msg-avatar a,
+.FAM-msg-avatar a img {
   width: 48px !important;
   height: 48px !important;
   min-width: 48px !important;
+  min-height: 48px !important;
+  max-width: 48px !important;
+  max-height: 48px !important;
+  flex: none !important;
+  align-self: center !important;
   border: none;
+}
+
+.FAM-msg-avatar a {
+  display: flex !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.FAM-msg-avatar a img {
+  border-radius: 50% !important;
+  object-fit: cover !important;
 }
