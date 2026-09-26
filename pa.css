@@ -1504,6 +1504,7 @@ a.groups:last-child {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .liens-utiles a {
   font-weight: normal;
