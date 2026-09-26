@@ -168,7 +168,7 @@
 /* Bouton flèche de retour */
 .FAM-toolbar-button {
   color: var(--FAM-titleClr);
-  font-size: 24px;
+  font-size: 14px;
   cursor: pointer;
 }
 
