@@ -4742,7 +4742,10 @@ body.sms-bulle-chat .post_message {
   padding: 10px 16px !important;
   color: var(--textes) !important;
 }
-body.sms-bulle-chat .post-other .post_message { background: var(--neutralDark) !important; }
+body.sms-bulle-chat .post-other .post_message {
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
 body.sms-bulle-chat .post-mine .post_message { background: var(--accc1) !important; color: #fff !important; }
 
 body.sms-bulle-chat .post_details {
@@ -4750,6 +4753,8 @@ body.sms-bulle-chat .post_details {
   color: var(--gris-moyen);
   margin-top: 2px;
 }
+body.sms-bulle-chat .post-mine .post_details { text-align: right; }
+
 body.sms-bulle-chat .like_button { display: none; }
 body.sms-bulle-chat .profile-icons {
   opacity: 0;
@@ -4761,4 +4766,10 @@ body.sms-bulle-chat .profile-icons li { display: inline-block; margin-right: 6px
 body.sms-bulle-chat .profile-icons .fa-mention,
 body.sms-bulle-chat .profile-icons .btn-ip {
   display: none;
+}
+
+body.sms-bulle-chat .container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
