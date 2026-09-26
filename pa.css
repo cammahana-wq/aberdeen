@@ -1411,6 +1411,7 @@ a.groups:last-child {
   border-radius: 8px;
   padding: 5px;
   margin-top: 40px;
+  font-size: smaller;
 }
 
 .qeel-right {
