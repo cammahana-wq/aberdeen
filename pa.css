@@ -1944,9 +1944,10 @@ button.rep-button .rep-nb {
   margin-bottom: 8px;
 }
 .field-age .field_separator {
-  display: block;
-  border-top: 1px solid var(--bordure-tres-claire);
-  margin: 8px 0;
+      display: block;
+    border-top: 1px solid var(--bordure-fine);
+    margin: 4px 0 6px 0;
+    font-size: 0;
 }
 .profil-tabs .profil-tab {
   flex: 1;
