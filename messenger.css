@@ -127,9 +127,7 @@
   display: grid;
   place-items: center;
 }
-.FAM-chat[onclick*="t22-voter-pour-le-forum"] {
-  display: none !important;
-}
+
 #FAM-button-open:hover {
   background: var(--FAM-accentClr);
   color: var(--FAM-pluginBackground);
@@ -544,12 +542,21 @@ hr.FAM-hr {
   z-index: -1;
 }
 
+/* ============================================================
+   LISTES DE SUJETS / FORUMS DANS LA FENÊTRE FAM
+   ============================================================ */
 .FAM-chat {
   position: relative;
   cursor: pointer;
   display: grid;
   grid-template-columns: max-content 1fr;
   color: var(--FAM-fontLightClr);
+}
+
+/* Masque le sujet "voter pour le forum" (annonce) de la liste des sujets FAM,
+   ciblé via l'URL présente dans son onclick pour ne toucher que lui */
+.FAM-chat[onclick*="t22-voter-pour-le-forum"] {
+  display: none !important;
 }
 
 .FAM-chat:hover,
