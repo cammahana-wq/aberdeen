@@ -4695,23 +4695,28 @@ ficheadmin br {
 }
 body.sms-bulle-chat .post_row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 16px 0;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 20px;
   border: none;
   background: transparent;
 }
 
-/* Ordre d'affichage : pseudo, puis bulle, puis date */
-body.sms-bulle-chat .post_profile { order: 1; }
-body.sms-bulle-chat .post_message { order: 2; }
-body.sms-bulle-chat .post_details { order: 3; }
+body.sms-bulle-chat .post-other { flex-direction: row; }
+body.sms-bulle-chat .post-mine { flex-direction: row-reverse; }
 
-/* Masque tout dans la colonne profil sauf le pseudo */
-body.sms-bulle-chat .post_avatar,
-body.sms-bulle-chat .post_profile > center:nth-of-type(2),
-body.sms-bulle-chat .post_profile > center:nth-of-type(3),
+/* Colonne profil : garde seulement l'avatar, en rond */
+body.sms-bulle-chat .post_profile {
+  flex-shrink: 0;
+  width: 40px;
+}
+body.sms-bulle-chat .post_avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+body.sms-bulle-chat .post_profile center,
 body.sms-bulle-chat .profil-tabs,
 body.sms-bulle-chat .post_userinfo,
 body.sms-bulle-chat .post_profile br,
@@ -4719,29 +4724,45 @@ body.sms-bulle-chat .post_contact {
   display: none;
 }
 
-body.sms-bulle-chat .post_pseudo {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* La bulle elle-même */
+/* Bloc bulle + pseudo + date */
+body.sms-bulle-chat .post_details,
 body.sms-bulle-chat .post_message {
-  background: var(--neutralDark);
-  border-radius: 16px;
-  padding: 10px 16px;
-  max-width: 70%;
-  text-align: center;
-  color: var(--textes);
+  max-width: 65%;
 }
 
-/* Masque les boutons d'action et n'affiche que la date */
-body.sms-bulle-chat .profile-icons,
-body.sms-bulle-chat .like_button,
-body.sms-bulle-chat .post_date a {
-  display: none;
-}
-
-body.sms-bulle-chat .post_date {
+body.sms-bulle-chat .post_details {
+  order: 1;
   font-size: 11px;
   color: var(--gris-moyen);
+}
+body.sms-bulle-chat .post-mine .post_details { text-align: right; }
+body.sms-bulle-chat .post_date a { display: none; }
+body.sms-bulle-chat .like_button { display: none; }
+
+body.sms-bulle-chat .post_message {
+  order: 2;
+  border-radius: 16px;
+  padding: 10px 16px;
+  color: var(--textes);
+}
+body.sms-bulle-chat .post-other .post_message { background: var(--neutralDark); }
+body.sms-bulle-chat .post-mine .post_message { background: var(--accc1); color: #fff; }
+
+/* Boutons éditer/supprimer : gardés mais discrets, affichés au survol */
+body.sms-bulle-chat .profile-icons {
+  order: 3;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 10px;
+}
+body.sms-bulle-chat .post_row:hover .profile-icons {
+  opacity: 1;
+}
+body.sms-bulle-chat .profile-icons li {
+  display: inline-block;
+  margin-right: 6px;
+}
+body.sms-bulle-chat .profile-icons .fa-mention,
+body.sms-bulle-chat .profile-icons .btn-ip {
+  display: none;
 }
