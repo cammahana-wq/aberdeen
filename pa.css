@@ -206,12 +206,7 @@ hr {
 
 /*** ------------------------------- ***/
 /*** TOUTES LES PAGES --------------- ***/
-.container:has(.post_row) {
-  visibility: hidden;
-}
-.container:has(.post_row.sms-ready) {
-  visibility: visible;
-}
+
 body {
   background: var(--neutralDark);
   font-family: var(--font);
