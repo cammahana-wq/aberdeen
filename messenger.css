@@ -1471,7 +1471,7 @@ blockquote.FAM-codebox > div {
 /* Avatar : même taille cohérente sur le conteneur ET le lien à l'intérieur */
 .FAM-msg-avatar,
 .FAM-msg-avatar a {
-  width: 40px !important;
-  height: 40px !important;
+  width: 48px !important;
+  height: 48px !important;
   min-width: 40px !important;
 }
