@@ -2689,7 +2689,15 @@ div#tabs li:nth-child(5) {
   border-right: var(--border);
   font-size: var(--little-size);
 }
-
+.post_search .post_search {
+  grid-column: 1 / -1;
+  display: block;
+}
+.post_search .post_search > .postsearch_infos,
+.post_search .post_search > .postsearch_content {
+  width: auto;
+  border-right: none;
+}
 /*** PAGE DE CONNEXION ***/
 form[name="form_login"],
 form[name="form_login"]~.panel {
