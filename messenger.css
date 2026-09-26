@@ -1267,7 +1267,7 @@ blockquote.FAM-codebox > div {
 #FAM-tab-container {
   height: 30px;
   position: relative;
-  margin: 0 15px;
+  margin: 0 15px 0 0;
   display: flex;
 }
 
