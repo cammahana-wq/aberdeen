@@ -1009,8 +1009,9 @@ strong.FAM-page-link {
   align-items: center;
   gap: 5px;
   transition: 300ms;
-    margin-bottom: 60px;
-    margin-left: 160px;
+    margin-bottom: 90px;
+    margin-left: 190px;
+    flex-direction: column;
 }
 
 #FAM .FAM-msg:hover .FAM-msg-actions {
