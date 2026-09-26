@@ -101,7 +101,7 @@
 --tdf1-weight: normal;
 --tdf1-spacing: 2px;
 --tdf1-color: var(--accc1);
-
+  
 --st1-font: Georgia, "Times New Roman", serif;
 --st1-size: 21px;
 --st1-preview-size: 14px;
@@ -204,7 +204,9 @@ hr {
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--accc1);
 }
-
+font[color="#660000"] {
+  color: var(--accc3) !important;
+}
 /*** ------------------------------- ***/
 /*** TOUTES LES PAGES --------------- ***/
 
