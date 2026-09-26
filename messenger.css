@@ -19,8 +19,12 @@
     --FAM-pluginBackground: var(--white);
     --FAM-chatBackground: var(--background);
     --FAM-textareaBackground: var(--white);
-    --FAM-msgBackground: var(--bordure-claire);
-    --FAM-myMsgBackground: var(--highlight);
+    /* Corrigé : suivait #fff en dur via un second bloc :root plus bas dans le fichier
+       (qui écrasait silencieusement cette valeur) — d'où les bulles blanches illisibles
+       en mode sombre, le texte var(--textes) devenant quasi-blanc dessus. var(--white)
+       suit désormais correctement le thème dans les deux modes. */
+    --FAM-msgBackground: var(--white);
+    --FAM-myMsgBackground: var(--accc1);
     --FAM-quoteBackground: color-mix(in srgb, var(--degrag), transparent 80%);
 
     --FAM-shadowBox: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -864,6 +868,8 @@ strong.FAM-page-link {
   border-radius: 17px 17px 6px 17px;
   padding: 8px 15px 8px 20px;
   float: right;
+  /* Corrigé : texte forcé en blanc sur le fond var(--accc1) (rose clair en mode sombre) */
+  color: var(--white);
 }
 
 .FAM-msg-text {
@@ -872,6 +878,10 @@ strong.FAM-page-link {
   border-radius: 17px 17px 17px 6px;
   padding: 8px 20px 8px 15px;
   position: relative;
+  /* Corrigé : suit désormais var(--FAM-msgBackground) (donc var(--white)) au lieu d'être
+     figé en dur — le texte var(--textes) reste lisible dans les deux modes */
+  color: var(--textes);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 /* Pointe custom sur les messages reçus (remplace le triangle natif masqué ci-dessus) */
@@ -882,13 +892,13 @@ strong.FAM-page-link {
   left: -6px;
   width: 12px;
   height: 12px;
+  /* Corrigé : suit la couleur réelle de la bulle plutôt que #fff figé */
   background: var(--FAM-msgBackground);
   clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
 .FAM-my-msg .FAM-msg-content {
   flex-direction: row-reverse;
-    color:#000 !important;
 }
 #FAM-new-topic .fa-circle {
     color: var(--accc1) !important;
@@ -1448,24 +1458,6 @@ blockquote.FAM-codebox > div {
 /* Badge du nombre de pièces jointes (remplace le bleu par défaut) */
 #FAM-attachment-total {
   background: var(--degrag) !important;
-}
-/* Couleurs des bulles : on réutilise le système existant du fichier */
-:root {
-  --FAM-msgBackground: #fff;
-  --FAM-myMsgBackground: var(--accc1);
-}
-
-.FAM-msg-text {
-  color: var(--textes);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
-
-.FAM-my-msg .FAM-msg-text {
-  color: #fff;
-}
-
-.FAM-msg:not(.FAM-my-msg) .FAM-msg-text::after {
-  background: #fff;
 }
 
 /* Avatar : même taille cohérente sur le conteneur ET le lien à l'intérieur */
