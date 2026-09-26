@@ -3465,6 +3465,9 @@ ficheadmin .prelien-info {
     color: #c17a3e;
     font-style: italic;
 }
+.bottin-avatars br {
+  display: none;
+} 
 .bottin-nav-lettres {
     display: flex;
     justify-content: center;
