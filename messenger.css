@@ -1485,3 +1485,26 @@ blockquote.FAM-codebox > div {
   border-radius: 50% !important;
   object-fit: cover !important;
 }
+
+/* Boutons trombone / emoji / envoi — pas stylés nativement, hérités du navigateur
+   ou injectés en dur par fam.js : neutralisés avec !important comme pour #FAM-button */
+#FAM-attachment,
+#FAM-emoji,
+#FAM-send {
+  background: transparent !important;
+  border: none !important;
+  color: var(--FAM-fontLightClr) !important;
+  cursor: pointer;
+}
+
+#FAM-attachment:hover,
+#FAM-emoji:hover,
+#FAM-send:hover {
+  color: var(--accc1) !important;
+}
+
+#FAM-attachment i,
+#FAM-emoji i,
+#FAM-send i {
+  color: inherit !important;
+}
