@@ -4035,7 +4035,6 @@ a.groupe-badge:hover {
     max-height: 0;
     overflow: hidden;
     background-color: var(--link-brown);
-    opacity: 80%;
     margin: 0;
     padding: 0;
     list-style-type: none;
