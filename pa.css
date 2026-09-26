@@ -4695,7 +4695,10 @@ white-space: nowrap;
 ficheadmin br {
   display: none;
 }
-
+ficheadmin .liste-points br {
+  display: block !important;
+  margin-top: 10px;
+}
 .container:has(.post_row) {
   visibility: hidden;
 }
