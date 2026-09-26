@@ -170,6 +170,7 @@
   --statut-texte: #b8aec3;
   --profil: var(--neutral);
   --liensbefore: #d8c3b5;
+  --highlight: #46392f;
 }
 
 table.forumline {
