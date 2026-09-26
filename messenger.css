@@ -137,9 +137,9 @@
 /* Bouton flottant réel (#FAM-button, généré par fam.js) */
 #FAM-button {
   background: var(--statut-bg) !important;
-  color: var(--accc1) !important;
+  color: var(--textColor) !important;
   right: 10px !important;
-  bottom: 160px !important;
+  bottom: 40px !important;
   border-radius: 15px !important;
 }
 #FAM-button:hover {
