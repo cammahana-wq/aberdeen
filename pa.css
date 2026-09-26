@@ -756,7 +756,10 @@ background: var(--bordure-legere);
   position: relative;
   align-self: start;
 }
-
+.fa_suggested_avatar {
+  object-fit: cover;
+  object-position: center;
+}
 .notif_avatar {
   background: var(--neutral);
   height: 35px;
