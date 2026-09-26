@@ -801,16 +801,6 @@ strong.FAM-page-link {
     width: 100%;
 }
 
-.FAM-msg-avatar .FAM-msg-name {
-  width: auto;
-  height: auto;
-  order: unset !important;
-  font-size: 10px;
-  text-align: center;
-  line-height: 1.2;
-  white-space: normal;
-}
-
 .FAM-msg-online .FAM-msg-avatar {
   border-color: #39f;
 }
