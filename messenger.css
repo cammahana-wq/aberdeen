@@ -782,12 +782,13 @@ strong.FAM-page-link {
 /* Avatar des messages : agrandi et remonté */
 .FAM-msg-avatar {
   width: 60px !important;
+    height: 60px !important;
   min-width: 60px !important;
   padding: 2px;
   position: relative;
   top: 0 !important;
   flex-shrink: 0 !important;
-  align-self: flex-end;
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -796,7 +797,6 @@ strong.FAM-page-link {
 
 .FAM-msg-avatar a {
   display: block;
-  width: 60px;
   height: 60px;
   border-radius: 100%;
   overflow: hidden;
