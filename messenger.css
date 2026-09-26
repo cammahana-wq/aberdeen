@@ -127,7 +127,9 @@
   display: grid;
   place-items: center;
 }
-
+.FAM-chat[onclick*="t22-voter-pour-le-forum"] {
+  display: none !important;
+}
 #FAM-button-open:hover {
   background: var(--FAM-accentClr);
   color: var(--FAM-pluginBackground);
