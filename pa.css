@@ -1615,7 +1615,6 @@ a.groups:last-child {
 }
 
 .topicslist-description {
-  border-top: 1px solid var(--neutralDark);
   padding-top: 5px;
   width: 100%;
 }
