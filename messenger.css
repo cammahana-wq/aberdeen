@@ -888,6 +888,7 @@ strong.FAM-page-link {
 
 .FAM-my-msg .FAM-msg-content {
   flex-direction: row-reverse;
+    color:#000 !important;
 }
 #FAM-new-topic .fa-circle {
     color: var(--accc1) !important;
