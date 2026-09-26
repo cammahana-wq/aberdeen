@@ -2378,6 +2378,7 @@ blockquote cite a {
 }
 #wombat h1.page-title {
   margin: 0;
+  padding-bottom: 10px;
 }
 #wombat #list_awards {
   display: flex;
