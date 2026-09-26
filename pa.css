@@ -2674,7 +2674,7 @@ div#tabs li:nth-child(5) {
 /*** PAGES DE RECHERCHES ***/
 .post_search {
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 200px minmax(0, 1fr);
   border-radius: 10px;
   margin: 10px 0;
   background: var(--neutral);
@@ -2682,6 +2682,7 @@ div#tabs li:nth-child(5) {
 
 .post_search>div {
   padding: 10px;
+  min-width: 0;
 }
 
 .postsearch_infos {
