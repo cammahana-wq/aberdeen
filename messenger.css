@@ -855,6 +855,7 @@ strong.FAM-page-link {
   gap: 7px;
   position: relative;
   background: transparent !important;
+  max-width: 100% !important;  
 }
 
 /* Masque le petit triangle natif (mal coloré en dur par le script) */
