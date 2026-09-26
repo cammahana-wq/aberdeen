@@ -2380,8 +2380,12 @@ blockquote cite a {
   margin: 0;
 }
 #wombat #list_awards {
-  display: inline-flex;
-  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-top: 1px solid var(--bordure-tres-claire);
 }
 /*** PROFILS SIMPLIFIÉS DES TAGS ***/
 .tooltipster-arrow {
