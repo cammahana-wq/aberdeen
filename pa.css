@@ -1357,7 +1357,9 @@ a.forumtitle:hover {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content : center;
+  justify-content: center;
+  margin-top: 20px;
+  
 }
 
 #lastuser_avatar img {
@@ -1408,7 +1410,7 @@ a.groups:last-child {
   border: var(--border);
   border-radius: 8px;
   padding: 5px;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .qeel-right {
