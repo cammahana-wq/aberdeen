@@ -1000,7 +1000,6 @@ strong.FAM-page-link {
 }
 
 #FAM .FAM-msg-actions {
-  margin-top: -12px;
   height: 25px;
   white-space: nowrap;
   visibility: hidden;
@@ -1009,6 +1008,8 @@ strong.FAM-page-link {
   align-items: center;
   gap: 5px;
   transition: 300ms;
+    margin-bottom: 60px;
+    margin-left: 160px;
 }
 
 #FAM .FAM-msg:hover .FAM-msg-actions {
