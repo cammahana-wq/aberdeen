@@ -1119,6 +1119,7 @@ strong.FAM-page-link {
 .FAM-tab {
   height: 30px;
   cursor: pointer;
+    right:60px !important;
 }
 
 .FAM-codebox dd,
