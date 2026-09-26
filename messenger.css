@@ -1329,6 +1329,9 @@ blockquote.FAM-codebox > div {
 #FAM-tabs::-webkit-scrollbar-track {
   background: transparent;
 }
+#FAM-menu {
+    z-index:100 !important;
+}
 
 #FAM-menu-avatar,
 #FAM-profile-avatar,
