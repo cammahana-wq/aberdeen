@@ -4705,7 +4705,6 @@ body.sms-bulle-chat .post_row {
 body.sms-bulle-chat .post-other { flex-direction: row; }
 body.sms-bulle-chat .post-mine { flex-direction: row-reverse; }
 
-/* Colonne profil : garde seulement l'avatar, en rond */
 body.sms-bulle-chat .post_profile {
   flex-shrink: 0;
   width: 40px;
@@ -4724,44 +4723,41 @@ body.sms-bulle-chat .post_contact {
   display: none;
 }
 
-/* Bloc bulle + pseudo + date */
-body.sms-bulle-chat .post_details,
-body.sms-bulle-chat .post_message {
+body.sms-bulle-chat .sms-bubble-wrap {
+  display: flex;
+  flex-direction: column;
   max-width: 65%;
 }
+body.sms-bulle-chat .post-mine .sms-bubble-wrap { align-items: flex-end; }
+body.sms-bulle-chat .post-other .sms-bubble-wrap { align-items: flex-start; }
 
-body.sms-bulle-chat .post_details {
-  order: 1;
-  font-size: 11px;
-  color: var(--gris-moyen);
+body.sms-bulle-chat .post_pseudo {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
-body.sms-bulle-chat .post-mine .post_details { text-align: right; }
-body.sms-bulle-chat .post_date a { display: none; }
-body.sms-bulle-chat .like_button { display: none; }
 
 body.sms-bulle-chat .post_message {
-  order: 2;
-  border-radius: 16px;
-  padding: 10px 16px;
-  color: var(--textes);
+  border-radius: 16px !important;
+  padding: 10px 16px !important;
+  color: var(--textes) !important;
 }
-body.sms-bulle-chat .post-other .post_message { background: var(--neutralDark); }
-body.sms-bulle-chat .post-mine .post_message { background: var(--accc1); color: #fff; }
+body.sms-bulle-chat .post-other .post_message { background: var(--neutralDark) !important; }
+body.sms-bulle-chat .post-mine .post_message { background: var(--accc1) !important; color: #fff !important; }
 
-/* Boutons éditer/supprimer : gardés mais discrets, affichés au survol */
+body.sms-bulle-chat .post_details {
+  font-size: 11px;
+  color: var(--gris-moyen);
+  margin-top: 2px;
+}
+body.sms-bulle-chat .like_button { display: none; }
 body.sms-bulle-chat .profile-icons {
-  order: 3;
   opacity: 0;
   transition: opacity 0.2s;
   font-size: 10px;
 }
-body.sms-bulle-chat .post_row:hover .profile-icons {
-  opacity: 1;
-}
-body.sms-bulle-chat .profile-icons li {
-  display: inline-block;
-  margin-right: 6px;
-}
+body.sms-bulle-chat .post_row:hover .profile-icons { opacity: 1; }
+body.sms-bulle-chat .profile-icons li { display: inline-block; margin-right: 6px; }
 body.sms-bulle-chat .profile-icons .fa-mention,
 body.sms-bulle-chat .profile-icons .btn-ip {
   display: none;
