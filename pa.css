@@ -4830,10 +4830,9 @@ body.sms-bulle-chat .sms-messages-wrap {
 .sujets-admin .post_row:has(button[onglet]) {
   grid-row: 2;
   grid-column: 1;
-  width: 220px;
+  width: 190px;
   align-self: start;
   padding-right: 20px;
-  border-right: 1px solid var(--neutralDark);
 }
 .sujets-admin .post_row:has(div[onglet]) {
   grid-row: 2;
