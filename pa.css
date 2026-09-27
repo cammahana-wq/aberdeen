@@ -4226,7 +4226,7 @@ td.row1:has(img[id^="smiley_"]) {
     background-color: var(--statut-bg) !important;
 }
 .password-container {
-    display: flex;
+    display: contents;
     align-items: center;
     gap: 6px;
 }
@@ -4237,6 +4237,8 @@ td.row1:has(img[id^="smiley_"]) {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 0.2s ease;
+  margin-left: 5px;
+  
 }
 .password-container .show_hide_pwd:hover {
     opacity: 1;
