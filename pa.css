@@ -4868,12 +4868,14 @@ body.sms-bulle-chat .sms-messages-wrap {
   border: none;
   border-radius: 0;
   color: var(--textes);
-  font-size: 10px;
+  font-size: 11px;
   text-align: left;
   padding: 4px 0 4px 18px !important;
   position: relative;
    display: flex;
   align-items: center;
+  font-family: 'Playfair Display';
+  text-transform: lowercase;
 }
 
 
@@ -4895,10 +4897,12 @@ body.sms-bulle-chat .sms-messages-wrap {
 }
 .sujets-admin .titre-onglets-admin {
   font-family: var(--font-titre);
-  font-size: 14px;
   font-weight: 700;
   color: var(--accc1);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
+  text-align: end;
+  text-decoration-line: underline;
+  text-underline-position: under;
 }
