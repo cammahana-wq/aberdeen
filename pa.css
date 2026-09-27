@@ -4845,13 +4845,11 @@ body.sms-bulle-chat .sms-messages-wrap {
   display: block;
 }
 .sujets-admin .post_row .post_profile,
+.sujets-admin .post_row .post_details,
 .sujets-admin .post_row .like_button,
 .sujets-admin .post_row .fa_like_list {
   display: none;
 }
 .sujets-admin .post_row {
   grid-template-columns: 1fr;
-}
-.sujets-admin.cache-edition .post_row .post_details {
-  display: none;
 }
