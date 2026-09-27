@@ -4901,8 +4901,6 @@ body.sms-bulle-chat .sms-messages-wrap {
   color: var(--accc1);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 12px;
-  text-align: end;
   text-decoration-line: underline;
   text-underline-position: under;
 }
