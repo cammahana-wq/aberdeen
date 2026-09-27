@@ -4855,3 +4855,8 @@ body.sms-bulle-chat .sms-messages-wrap {
   display: flex;
   flex-direction: column;
 }
+.toggle-onglets-admin {
+  font-size: 11px;
+  color: var(--gris-moyen);
+  margin: 5px 0;
+}
