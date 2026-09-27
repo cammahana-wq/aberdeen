@@ -558,6 +558,10 @@ hr.FAM-hr {
 .FAM-chat[onclick*="t22-voter-pour-le-forum"] {
   display: none !important;
 }
+.FAM-chat[onclick*="t24-modele-conversation-telephonique"] {
+  display: none !important;
+}
+
 
 .FAM-chat:hover,
 .FAM-chat:hover a {
