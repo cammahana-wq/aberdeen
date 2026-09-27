@@ -4872,7 +4872,7 @@ body.sms-bulle-chat .sms-messages-wrap {
    display: flex;
   align-items: center;
 }
-}
+
 
 .sujets-admin button[onglet]::before {
   content: "☾";
