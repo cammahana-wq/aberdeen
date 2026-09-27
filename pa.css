@@ -4907,3 +4907,7 @@ body.sms-bulle-chat .sms-messages-wrap {
     text-align: justify;
   line-height: 20px;
 }
+
+.sujets-admin .post_row[id="0"] {
+  display: none;
+}
