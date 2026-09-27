@@ -4811,7 +4811,7 @@ body.sms-bulle-chat .sms-messages-wrap {
 
 
 
-/****** SUJETS ADMIN EN PLUSIEURS ONGLETS ET UN SEUL MESSAGE******/
+/****** SUJETS ADMIN EN PLUSIEURS ONGLETS ET UN SEUL MESSAGE - ADAPTATION DU CODE DE MURDOCK******/
 .container.sujets-admin {
   display: grid;
   grid-template-columns: max-content 1fr;
