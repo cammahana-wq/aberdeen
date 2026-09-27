@@ -4905,4 +4905,5 @@ body.sms-bulle-chat .sms-messages-wrap {
     text-underline-position: under;
     padding-bottom: 8px;
     text-align: justify;
+  line-height: 20px;
 }
