@@ -4896,11 +4896,13 @@ body.sms-bulle-chat .sms-messages-wrap {
   font-weight: 600;
 }
 .sujets-admin .titre-onglets-admin {
-  font-family: var(--font-titre);
-  font-weight: 700;
-  color: var(--accc1);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration-line: underline;
-  text-underline-position: under;
+     font-family: var(--font-titre);
+    font-weight: 700;
+    color: var(--accc1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    text-underline-position: under;
+    padding-bottom: 8px;
+    text-align: justify;
 }
