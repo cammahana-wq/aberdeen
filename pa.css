@@ -4860,3 +4860,18 @@ body.sms-bulle-chat .sms-messages-wrap {
   color: var(--gris-moyen);
   margin: 5px 0 0 10px;
 }
+.sujets-admin button[onglet] {
+  background: var(--neutralDarker);
+  color: var(--textes);
+  font-size: 11px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-align: left;
+}
+.sujets-admin button[onglet].active {
+  background: var(--accc1);
+  color: var(--white);
+}
+.sujets-admin button[onglet]:hover {
+  background: var(--degrag);
+}
