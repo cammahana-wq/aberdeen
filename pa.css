@@ -4893,3 +4893,12 @@ body.sms-bulle-chat .sms-messages-wrap {
 .sujets-admin button[onglet].active {
   font-weight: 600;
 }
+.sujets-admin .titre-onglets-admin {
+  font-family: var(--font-titre);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accc1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
