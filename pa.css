@@ -1441,9 +1441,7 @@ a.groups:last-child {
 .qeel-right {
   grid-row: 1;
 }
-.qeel > div:nth-child(n+4) {
-  display: none !important;
-}
+
 /****** LISTE DES SUJETS ****** */
 
 .navigation_links {
