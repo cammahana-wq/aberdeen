@@ -4865,18 +4865,22 @@ body.sms-bulle-chat .sms-messages-wrap {
   border: none;
   border-radius: 0;
   color: var(--textes);
-  font-size: 11px;
+  font-size: 10px;
   text-align: left;
-  padding: 4px 0 4px 18px;
+  padding: 4px 0 4px 18px !important;
   position: relative;
+   display: flex;
+  align-items: center;
+}
 }
 
 .sujets-admin button[onglet]::before {
   content: "☾";
   position: absolute;
   left: 0;
+   top: 50%;
+  transform: translateY(-50%);
   opacity: 0;
-  color: var(--accc1);
   transition: opacity 0.2s ease;
 }
 
@@ -4885,6 +4889,5 @@ body.sms-bulle-chat .sms-messages-wrap {
 }
 
 .sujets-admin button[onglet].active {
-  color: var(--accc1);
   font-weight: 600;
 }
