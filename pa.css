@@ -4879,7 +4879,7 @@ body.sms-bulle-chat .sms-messages-wrap {
   position: absolute;
   left: 0;
    top: 50%;
-  transform: translateY(-50%);
+  transform: translate(6px, -7px);
   opacity: 0;
 }
 
