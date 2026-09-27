@@ -4853,3 +4853,8 @@ body.sms-bulle-chat .sms-messages-wrap {
 .sujets-admin .post_row {
   grid-template-columns: 1fr;
 }
+.sujets-admin .ongletssujet {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
