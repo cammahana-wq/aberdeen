@@ -4861,17 +4861,30 @@ body.sms-bulle-chat .sms-messages-wrap {
   margin: 5px 0 0 10px;
 }
 .sujets-admin button[onglet] {
-  background: var(--neutralDarker);
+  background: transparent;
+  border: none;
+  border-radius: 0;
   color: var(--textes);
   font-size: 11px;
-  padding: 8px 14px;
-  border-radius: 20px;
   text-align: left;
+  padding: 4px 0 4px 18px;
+  position: relative;
 }
+
+.sujets-admin button[onglet]::before {
+  content: "☾";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  color: var(--accc1);
+  transition: opacity 0.2s ease;
+}
+
+.sujets-admin button[onglet].active::before {
+  opacity: 1;
+}
+
 .sujets-admin button[onglet].active {
-  background: var(--accc1);
-  color: var(--white);
-}
-.sujets-admin button[onglet]:hover {
-  background: var(--degrag);
+  color: var(--accc1);
+  font-weight: 600;
 }
