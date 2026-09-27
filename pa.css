@@ -4858,5 +4858,5 @@ body.sms-bulle-chat .sms-messages-wrap {
 .toggle-onglets-admin {
   font-size: 11px;
   color: var(--gris-moyen);
-  margin: 5px 0;
+  margin: 5px 0 0 10px;
 }
