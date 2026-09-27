@@ -4808,3 +4808,12 @@ body.sms-bulle-chat .sms-messages-wrap {
   box-shadow: none !important;
   border: none !important;
 }
+
+
+
+/****** SUJETS ADMIN EN PLUSIEURS ONGLETS ET UN SEUL MESSAGE******/
+.container.sujets-admin {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 20px;
+}
