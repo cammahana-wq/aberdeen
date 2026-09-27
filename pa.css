@@ -4881,7 +4881,6 @@ body.sms-bulle-chat .sms-messages-wrap {
    top: 50%;
   transform: translateY(-50%);
   opacity: 0;
-  transition: opacity 0.2s ease;
 }
 
 .sujets-admin button[onglet].active::before {
