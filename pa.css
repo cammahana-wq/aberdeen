@@ -1441,9 +1441,8 @@ a.groups:last-child {
 .qeel-right {
   grid-row: 1;
 }
-.qeel > div:nth-child(n+4):empty,
-.qeel > div:nth-child(n+4):not(:has(*)) {
-  background: transparent;
+.qeel > div:nth-child(n+4) {
+  display: none !important;
 }
 /****** LISTE DES SUJETS ****** */
 
