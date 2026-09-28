@@ -4755,6 +4755,8 @@ body.sms-bulle-chat .post_row {
   border: none;
   background: transparent;
 }
+.signature_div {
+  display: none;}
 
 body.sms-bulle-chat .post-other { flex-direction: row; }
 body.sms-bulle-chat .post-mine { flex-direction: row-reverse; }
