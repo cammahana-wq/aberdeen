@@ -2939,7 +2939,7 @@ info b {
     font-weight: bold;
 }
 
-baba  {   
+baba {   
    font-family: var(--font2);
    font-weight: var(--ptt1-weight);
    text-transform: lowercase;
