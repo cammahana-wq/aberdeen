@@ -2939,8 +2939,8 @@ info b {
     font-weight: bold;
 }
 
-aaa  {   
-font-size: 11px;
+baba  {   
+   font-size: 11px;
    font-family: var(--font2);
    font-weight: var(--ptt1-weight);
    text-transform: lowercase;
