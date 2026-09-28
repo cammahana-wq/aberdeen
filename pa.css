@@ -4389,7 +4389,13 @@ input.post[type="password"]:focus {
 input.radio[type="checkbox"] {
     accent-color: var(--accc1);
 }
-
+.wrapped .content img[src*="/smiles/"] {
+  max-width: 30px;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
 /*** BOUTON "SÉLECTIONNER" SUR LES BLOCS DE CODE (ta version, pas celle du Blank Theme) ***/
 dt:has(.selectCode) {
     display: flex;
