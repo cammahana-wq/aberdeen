@@ -2034,10 +2034,34 @@ button.rep-button .rep-nb {
 .post_contact a:hover::before {
   color: var(--btn-violet-hover-texte);
 }
-.post_contact a[title^="Visiter le site web"]::before {
-  content: '\1F4F7';
-  font-size: 13px;
+.post_contact a.contact-insta {
+  position: relative;
+}
+.post_contact a.contact-insta::before {
+  content: '';
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  box-sizing: border-box;
   color: var(--gris-lien);
+}
+.post_contact a.contact-insta::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  color: var(--gris-lien);
+}
+.post_contact a.contact-insta:hover::before,
+.post_contact a.contact-insta:hover::after {
+  color: var(--btn-violet-hover-texte);
 }
 
 .userlist_contact a {
