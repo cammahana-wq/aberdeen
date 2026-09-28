@@ -2939,6 +2939,79 @@ info b {
     font-weight: bold;
 }
 
+aaa  {   
+font-size: 11px;
+   font-family: var(--font2);
+   font-weight: var(--ptt1-weight);
+   text-transform: lowercase;
+   letter-spacing: 1px;
+   color: var(--ptt1-color);
+   line-height: 1;
+   box-shadow: inset 0px -7px 0px 0px #c1a89a61; 
+}
+
+bbb {
+    font-size: 11px;
+    font-family: var(--font2);
+    font-weight: var(--ptt1-weight);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ptt1-color);
+    line-height: 1;
+    box-shadow: inset 0 -6px 0 var(--ombre-violette-hover);
+}
+
+abc {
+    font-size: 12px;
+    font-family: var(--font1);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--FAM-dark);
+    line-height: 1;
+}
+zyx {
+    font-size: 12px;
+    font-family: var(--font1);
+    font-weight: 700;
+    text-transform: LOWERCASE;
+    letter-spacing: 0.2px;
+    color: #745E5C;
+    line-height: 1;
+}
+mlo {
+    font-size: 12px;
+    font-family: var(--font-titre);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #B5796E;
+    line-height: 1;
+}
+
+dd {
+    font-size: 12px;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ff9292;
+    line-height: 1;
+    text-decoration: underline 30%;
+    text-underline-position: under;
+}
+
+eef {
+    font-size: 12px;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--liensactif);
+    line-height: 1;
+    text-decoration: underline 10%;
+    text-underline-position: under;
+}
+
 /* barre des balises (aperçu cliquable dans l'éditeur, ta fiche de personnage) */
 .forum-tags-panel {
     width: 100%;
