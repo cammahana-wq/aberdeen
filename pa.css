@@ -2033,6 +2033,32 @@ button.rep-button .rep-nb {
 .post_contact a:hover::before {
   color: var(--btn-violet-hover-texte);
 }
+.userlist_contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--statut-bg);
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  margin: 0 2px;
+}
+.userlist_contact a:hover {
+  background: var(--btn-violet-hover-1);
+}
+.userlist_contact a img {
+  display: none;
+}
+.userlist_contact a:has(img.i_icon_pm)::before {
+  content: '\2709';
+  font-size: 15px;
+  color: var(--gris-lien);
+}
+.userlist_contact a:hover::before {
+  color: var(--btn-violet-hover-texte);
+}
 a.fa-mention {
   cursor: pointer;
 }
