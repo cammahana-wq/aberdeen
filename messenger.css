@@ -259,7 +259,25 @@
   top: 69px;
   cursor: pointer;
 }
-
+.FAM-msg-text img[src*="/smiles/"],
+.FAM-msg-text img.emojione {
+  max-width: 30px !important;
+  max-height: 30px !important;
+  width: auto !important;
+  height: auto !important;
+  vertical-align: middle;
+}
+#simple-wrap a {
+  margin: 3px !important;
+  display: inline-block;
+}
+#simple-wrap a img {
+  max-width: 30px !important;
+  max-height: 30px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
+}
 #FAM-tab-container[style*="none"] + #FAM-content #FAM-no-tabs {
   top: 39px;
 }
