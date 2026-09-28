@@ -2008,6 +2008,7 @@ button.rep-button .rep-nb {
   transition: background 0.2s ease;
   text-decoration: none;
   margin: 0 2px;
+  vertical-align: middle;
 }
 .post_contact a:hover {
   background: var(--btn-violet-hover-1);
