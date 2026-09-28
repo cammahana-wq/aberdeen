@@ -2939,17 +2939,17 @@ info b {
     font-weight: bold;
 }
 
-baba {   
-   font-family: var(--font2);
-   font-weight: var(--ptt1-weight);
-   text-transform: lowercase;
-   letter-spacing: 1px;
-   color: var(--ptt1-color);
-   line-height: 1;
-   box-shadow: inset 0px -7px 0px 0px #c1a89a61; 
+
+baba {
+  font-family: var(--font2);
+  font-weight: var(--ptt1-weight);
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: var(-ptt1-color);
+  line-height: 1;
+  box-shadow: inset 0px -7px 0px 0px #c1a89a61;
   font-size: 11px;
 }
-
 bbb {
     font-size: 11px;
     font-family: var(--font2);
