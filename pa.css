@@ -2033,6 +2033,15 @@ button.rep-button .rep-nb {
 .post_contact a:hover::before {
   color: var(--btn-violet-hover-texte);
 }
+.post_contact a.contact-insta::before {
+  content: '\1F4F7';
+  font-size: 13px;
+  color: var(--gris-lien);
+}
+.user_field.insta-done {
+  display: none;
+}
+
 .userlist_contact a {
   display: inline-flex;
   align-items: center;
