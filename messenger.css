@@ -271,7 +271,7 @@
   margin: 3px !important;
   display: inline-block;
 }
-#simple-wrap a img {
+html body #simple-wrap a img {
   max-width: 30px !important;
   max-height: 30px !important;
   width: auto !important;
