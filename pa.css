@@ -1345,7 +1345,7 @@ a.forumtitle:hover {
   padding: 15px 10px;
 }
 
-.qeel-left a[href*="/u1"]:before {
+.qeel-middle a[href*="/u1"]:before {
   font-family: bootstrap-icons;
   content: '\F589';
   font-size: 9px;
