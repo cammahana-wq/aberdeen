@@ -1345,6 +1345,11 @@ a.forumtitle:hover {
   padding: 15px 10px;
 }
 
+.qeel-left a[href*="/u1"]:before {
+  content: "\F589"
+  font-size: 9px;
+  padding-right: 2px;
+}
 .qeel-left {
   order: 2;
   border-radius: 0;
