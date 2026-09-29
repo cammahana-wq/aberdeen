@@ -1572,8 +1572,11 @@ a.groups:last-child {
   color: var(--accc1);
 }
 
-.topicslist_row[class*="row"]:not([class*="no_new"]) .topictitle::before {
+.topicslist_row[class*="row"]:not([class*="no_new"]) .topictitle:not(.titre-a-lune)::before {
   content: "☾ ";
+  color: var(--accc1);
+}
+.topicslist_row[class*="row"]:not([class*="no_new"]) .topictitle .lune-du-titre {
   color: var(--accc1);
 }
 
