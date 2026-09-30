@@ -1345,13 +1345,13 @@ a.forumtitle:hover {
   padding: 15px 10px;
 }
 
-.qeel-middle a[href="/u1"]:before, .qeel-middle a[href="/u5"]:before, .qeel-middle a[href="/u3"]:before, .qeel-middle a[href="/u2"]:before, .qeel-middle a[href="/u4"]:before {
-  font-family: bootstrap-icons;
-  content: '\F589';
-  font-size: 9px;
-  padding-right: 2px;
-}
-.qeel-right a[href="/u1"]:before, .qeel-right a[href="/u5"]:before, .qeel-right a[href="/u3"]:before, .qeel-right a[href="/u2"]:before, .qeel-right a[href="/u4"]:before {
+:is(.qeel-middle, .qeel-right) a:is(
+  [href="/u1"], [href^="/u1?"],
+  [href="/u2"], [href^="/u2?"],
+  [href="/u3"], [href^="/u3?"],
+  [href="/u4"], [href^="/u4?"],
+  [href="/u5"], [href^="/u5?"]
+)::before {
   font-family: bootstrap-icons;
   content: '\F589';
   font-size: 9px;
