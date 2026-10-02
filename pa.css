@@ -4674,6 +4674,9 @@ ficheadmin .mes-onglets .rp-liste {
 ficheadmin .mes-onglets .rp-item {
   font-size: 12px;
   color: var(--gris-champ);
+  display: flex;
+  gap: 5px;
+  
 }
 
 ficheadmin .mes-onglets .rp-item a {
