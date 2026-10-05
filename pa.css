@@ -2605,10 +2605,11 @@ blockquote cite a {
 .mp_img.nouveau-mp {
   background-color: var(--accc1);
   border-radius: 100%;
-    width: 27px;
+  width: 27px;
   padding: 5px;
-    margin-left: 5px;
+  margin-left: 5px;
 }
+
 .mp_img img[src*="folder_new"] {
   display: none;
 }
