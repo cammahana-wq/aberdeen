@@ -2602,6 +2602,13 @@ blockquote cite a {
     margin-left: 5px;
 }
 
+.mp_img.nouveau-mp {
+  background-color: var(--accc1);
+}
+.mp_img img[src*="folder_new"] {
+  display: none;
+}
+
 .message {
   background: var(--neutral);
   border-radius: 10px;
