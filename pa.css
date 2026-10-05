@@ -2595,19 +2595,16 @@ blockquote cite a {
 }
 
 .mp_img {
-      border-radius: 100%;
-    width: 27px;
-    background-color: var(--FAM-fontLightClr);
-    padding: 5px;
-    margin-left: 5px;
+  width: 27px;
+  height: 27px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--FAM-fontLightClr);
+  margin-left: 5px;
 }
 
 .mp_img.nouveau-mp {
   background-color: var(--accc1);
-  border-radius: 100%;
-  width: 27px;
-  padding: 5px;
-  margin-left: 5px;
 }
 
 .mp_img img[src*="folder_new"] {
