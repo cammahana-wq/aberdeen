@@ -487,6 +487,13 @@ body#sce_smilies_body {
   background: transparent !important;
 }
 
+.word-count {
+    text-align: center;
+    font-family: var(--font1);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 /*** PAGINATIONS ***/
 .pagination span a {
   font-size: var(--little-size);
