@@ -2594,6 +2594,14 @@ blockquote cite a {
   padding: 10px;
 }
 
+.mp_img {
+      border-radius: 100%;
+    width: 27px;
+    background-color: var(--FAM-fontLightClr);
+    padding: 5px;
+    margin-left: 5px;
+}
+
 .message {
   background: var(--neutral);
   border-radius: 10px;
