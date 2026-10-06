@@ -3709,6 +3709,7 @@ ficheadmin .prelien-info {
     align-items: center;
     gap: 6px;
     white-space: nowrap;
+  flex-wrap: wrap;
 }
 .bottin-groupe > .bottin-ligne:last-of-type {
     border-bottom: 1px solid var(--bordure-tres-claire);
