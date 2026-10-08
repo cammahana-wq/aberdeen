@@ -9,7 +9,7 @@
   color-scheme: light;
 
   /* bannière */
-  --header: url('https://i54.servimg.com/u/f54/20/66/24/62/maj_no11.jpg');
+  --header: url('https://i.servimg.com/u/f89/20/66/08/06/maj_no11.jpg');
 
   /* --- Variables natives du Blank Theme, repointées vers ta palette --- */
   --neutral: #ffffff;         
@@ -131,7 +131,7 @@
 /*** ROOT — MODE SOMBRE ***/
 [data-color-scheme="dark"] {
   color-scheme: dark;
-  --header: url('https://i54.servimg.com/u/f54/20/66/24/62/maj_no10.jpg');
+  --header: url('https://i.servimg.com/u/f89/20/66/08/06/maj_no10.jpg');
 
   --neutral: #201c1a;
   --neutralDark: #14110f;
