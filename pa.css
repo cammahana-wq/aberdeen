@@ -3972,7 +3972,7 @@ a.groupe-badge:hover {
 }
 
 .pumpkin:hover {
-    opacity: 100%;
+    opacity: 100% !important;
 }
 .météo strong {
     font-size: 17px;
