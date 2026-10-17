@@ -12,7 +12,7 @@
   --header: url('https://i89.servimg.com/u/f89/20/66/08/06/maj_no12.jpg');
 
   /* --- Variables natives du Blank Theme, repointées vers ta palette --- */
-  --neutral: #c0c1c4d4;         
+  --neutral: #E6E6E6;         
   --neutralDark: #ebebeb;     
   --neutralDarker: #e4e4e4;   
 
@@ -3853,7 +3853,7 @@ a.groupe-badge:hover {
 .pa_1 {
     font-family: var(--font3);
     border: 1px solid var(--border);
-    background-color: var(--white);
+    background-color: var(--neutral);
     border-radius: 10px;
     display: grid;
     text-align: center;
