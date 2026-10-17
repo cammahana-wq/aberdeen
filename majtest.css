@@ -234,7 +234,7 @@ body::before {
   width: 940px;
 margin: 60px auto 20px;
   padding: 20px;
-  background: var(--neutral);
+  background: var(--white);
   border-radius: 12px;
 }
 
