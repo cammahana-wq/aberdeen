@@ -43,7 +43,7 @@
   --accc1: var(--accentClr);
   --accc2: var(--textColorAccent);
   --accc3: #0f363b;
-  --white: var(--neutral);
+  --white: #041035bd;
   --black: #000;
   --background: var(--neutralDark);
   --degrag: var(--contrastLighter);
