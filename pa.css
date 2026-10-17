@@ -1595,6 +1595,17 @@ a.groups:last-child {
   display: none;
 }
 
+.icon-participated img {
+    display: none !important;
+}
+
+.icon-participated::before {
+     font-family: bootstrap-icons;
+    content: '\F589';
+    font-size: 9px;
+    padding-right: 2px;
+}
+  
 .topic-author {
   display: block;
   margin-top: 5px;
